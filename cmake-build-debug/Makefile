@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+zerrolite/srcs/GameCore.obj: zerrolite/srcs/GameCore.cpp.obj
+.PHONY : zerrolite/srcs/GameCore.obj
+
+# target to build an object file
+zerrolite/srcs/GameCore.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj
+.PHONY : zerrolite/srcs/GameCore.cpp.obj
+
+zerrolite/srcs/GameCore.i: zerrolite/srcs/GameCore.cpp.i
+.PHONY : zerrolite/srcs/GameCore.i
+
+# target to preprocess a source file
+zerrolite/srcs/GameCore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.i
+.PHONY : zerrolite/srcs/GameCore.cpp.i
+
+zerrolite/srcs/GameCore.s: zerrolite/srcs/GameCore.cpp.s
+.PHONY : zerrolite/srcs/GameCore.s
+
+# target to generate assembly for a file
+zerrolite/srcs/GameCore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.s
+.PHONY : zerrolite/srcs/GameCore.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... zerrolite/srcs/GameCore.obj
+	@echo ... zerrolite/srcs/GameCore.i
+	@echo ... zerrolite/srcs/GameCore.s
 .PHONY : help
 
 

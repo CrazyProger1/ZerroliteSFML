@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ZerroliteSFML.dir/main.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj"
   "ZerroliteSFML.exe"
   "ZerroliteSFML.exe.manifest"
   "ZerroliteSFML.pdb"

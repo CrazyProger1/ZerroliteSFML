@@ -87,6 +87,12 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/main.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
