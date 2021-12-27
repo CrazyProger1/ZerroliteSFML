@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/C++/Projects/ZerroliteSFML/main.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/main.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/include/Scene.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

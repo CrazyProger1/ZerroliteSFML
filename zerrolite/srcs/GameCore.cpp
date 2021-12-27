@@ -16,5 +16,15 @@ namespace zl {
         m_pMainWindow = mainWindow;
     }
 
+    void GameCore::run() {
+        while (m_pMainWindow->isOpen() && !m_stop) {
+
+        }
+    }
+
+    void GameCore::setActiveScene(Scene *scene) {
+        m_pActiveScene = scene;
+    }
+
 
 }
