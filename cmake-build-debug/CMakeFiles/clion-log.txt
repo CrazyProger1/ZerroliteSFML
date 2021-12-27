@@ -1,0 +1,5 @@
+"D:\Programs\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=D:/Programming/C++/Compilers/mingw64/bin/g++.exe -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" D:\Programming\C++\Projects\ZerroliteSFML
+-- Found SFML 2.5.1 in D:/Programming/C++/Projects/ZerroliteSFML/libs/SFML-2.5.1/lib/cmake/SFML
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug

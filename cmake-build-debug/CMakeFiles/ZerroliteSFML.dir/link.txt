@@ -1,0 +1,3 @@
+"D:\Programs\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\ZerroliteSFML.dir/objects.a
+D:\Programming\C++\Compilers\mingw64\bin\ar.exe cr CMakeFiles\ZerroliteSFML.dir/objects.a @CMakeFiles\ZerroliteSFML.dir\objects1.rsp
+D:\Programming\C++\Compilers\mingw64\bin\g++.exe -g -static -static-libgcc -Wl,--whole-archive CMakeFiles\ZerroliteSFML.dir/objects.a -Wl,--no-whole-archive -o ZerroliteSFML.exe -Wl,--out-implib,libZerroliteSFML.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ZerroliteSFML.dir\linklibs.rsp
