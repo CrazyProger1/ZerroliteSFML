@@ -6,11 +6,11 @@
 #define ZERROLITESFML_SCENE_H
 
 #include <SFML/Graphics.hpp>
+#include "./Entity.h"
 
 namespace zl {
     class Scene {
     private:
-
 
     public:
 
@@ -22,6 +22,7 @@ namespace zl {
 
         virtual void updateState();
 
+//        void attach();
     };
 }
 

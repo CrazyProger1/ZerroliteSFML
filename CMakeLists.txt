@@ -6,7 +6,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
 set(SFML_DIR "libs/SFML-2.5.1/lib/cmake/SFML")
 set(SFML_STATIC_LIBRARIES TRUE)
 
-add_executable(ZerroliteSFML main.cpp zerrolite/srcs/GameCore.cpp zerrolite/include/GameCore.h zerrolite/srcs/Scene.cpp zerrolite/include/Scene.h)
+add_executable(ZerroliteSFML main.cpp zerrolite/srcs/GameCore.cpp zerrolite/include/GameCore.h zerrolite/srcs/Scene.cpp zerrolite/include/Scene.h zerrolite/include/Entity.cpp zerrolite/include/Entity.h)
 
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics)
