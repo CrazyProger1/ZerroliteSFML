@@ -8,8 +8,9 @@ class Game : public zl::GameCore {
 };
 
 class MainMenu : public zl::Scene {
-    
+
 };
+
 
 int main() {
 
@@ -17,7 +18,11 @@ int main() {
 
     Game game;
 
+    MainMenu mainMenuScene;
+
     game.setMainWindow(&window);
+    game.setActiveScene(&mainMenuScene);
+
     game.run();
 
     return 0;

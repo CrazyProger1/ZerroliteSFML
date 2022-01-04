@@ -681,14 +681,26 @@ iostream
 -
 zerrolite/include/GameCore.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h
+zerrolite/include/Scene.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h
 SFML/Graphics.hpp
 -
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h
+SFML/Graphics.hpp
+-
+./Scene.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h
 SFML/Graphics.hpp
 -
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp
 ../include/GameCore.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Scene.cpp
+../include/Scene.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h
 

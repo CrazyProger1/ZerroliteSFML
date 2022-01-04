@@ -17,13 +17,34 @@ namespace zl {
     }
 
     void GameCore::run() {
-        while (m_pMainWindow->isOpen() && !m_stop) {
-
+        while (m_pMainWindow->isOpen()) {
+            tick();
         }
     }
 
     void GameCore::setActiveScene(Scene *scene) {
         m_pActiveScene = scene;
+    }
+
+    void GameCore::handleSFMLEvents() {
+        sf::Event event{};
+        while (m_pMainWindow->pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                m_pMainWindow->close();
+
+            m_pActiveScene->handleSFMLEvent(event);
+        }
+    }
+
+    void GameCore::tick() {
+        handleSFMLEvents();
+
+
+//        m_pActiveScene->draw(*m_pMainWindow);
+    }
+
+    void GameCore::terminate() {
+        m_pMainWindow->close();
     }
 
 

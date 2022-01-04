@@ -90,13 +90,13 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.cpp">
-			<Option target="ZerroliteSFML"/>
-		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Scene.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/CMakeLists.txt">

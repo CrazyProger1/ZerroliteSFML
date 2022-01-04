@@ -13,8 +13,12 @@ namespace zl {
     class GameCore {
     private:
         sf::RenderWindow *m_pMainWindow{};
-        bool m_stop = false;
         Scene *m_pActiveScene{};
+
+
+        void handleSFMLEvents();
+
+        void tick();
 
     public:
         GameCore();
@@ -26,6 +30,8 @@ namespace zl {
         void setActiveScene(Scene *scene);
 
         void run();
+
+        void terminate();
 
 
     };
