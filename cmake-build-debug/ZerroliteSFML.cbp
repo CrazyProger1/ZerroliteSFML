@@ -87,9 +87,6 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/main.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.cpp">
-			<Option target="ZerroliteSFML"/>
-		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -97,6 +94,9 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Entity.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp">

@@ -24,6 +24,7 @@ namespace zl {
 
     void GameCore::setActiveScene(Scene *scene) {
         m_pActiveScene = scene;
+        m_pActiveScene->entitiesInitialization();
     }
 
     void GameCore::handleSFMLEvents() {
@@ -39,8 +40,8 @@ namespace zl {
     void GameCore::tick() {
         handleSFMLEvents();
 
-
-//        m_pActiveScene->draw(*m_pMainWindow);
+        m_pActiveScene->updateState();
+        m_pActiveScene->draw(*m_pMainWindow);
     }
 
     void GameCore::terminate() {

@@ -6,15 +6,17 @@
 #define ZERROLITESFML_SCENE_H
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include "./Entity.h"
+
 
 namespace zl {
     class Scene {
     private:
-
+        std::vector<Entity *> m_entitiesContainer;
     public:
 
-        virtual void draw(sf::RenderTarget &renderTarget);
+        virtual void draw(sf::RenderWindow &renderWindow);
 
         virtual void handleSFMLEvent(sf::Event &event);
 
@@ -22,7 +24,7 @@ namespace zl {
 
         virtual void updateState();
 
-//        void attach();
+        void attach(Entity &entity);
     };
 }
 

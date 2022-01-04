@@ -2,6 +2,7 @@
 #include "zerrolite/include/GameCore.h"
 #include "zerrolite/include/Scene.h"
 #include <SFML/Graphics.hpp>
+#include "zerrolite/include/Entity.h"
 
 class Game : public zl::GameCore {
 

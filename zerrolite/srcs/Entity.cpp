@@ -7,4 +7,7 @@
 
 namespace zl {
 
+    void Entity::draw(sf::RenderTarget &renderTarget) {
+
+    }
 }

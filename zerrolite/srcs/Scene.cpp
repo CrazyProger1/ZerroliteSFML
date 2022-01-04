@@ -7,8 +7,12 @@
 
 namespace zl {
 
-    void Scene::draw(sf::RenderTarget &renderTarget) {
-        std::printf("d\n");
+    void Scene::draw(sf::RenderWindow &renderWindow) {
+        renderWindow.clear();
+        for (auto &entity: m_entitiesContainer) {
+            entity->draw(renderWindow);
+        }
+        renderWindow.display();
     }
 
     void Scene::handleSFMLEvent(sf::Event &event) {
@@ -21,5 +25,9 @@ namespace zl {
 
     void Scene::updateState() {
 
+    }
+
+    void Scene::attach(Entity &entity) {
+        m_entitiesContainer.emplace_back(&entity);
     }
 }

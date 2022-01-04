@@ -5,9 +5,12 @@
 #ifndef ZERROLITESFML_ENTITY_H
 #define ZERROLITESFML_ENTITY_H
 
-namespace zl{
-    class Entity {
+#include <SFML/Graphics.hpp>
 
+namespace zl {
+    class Entity {
+    public:
+        virtual void draw(sf::RenderTarget &renderTarget);
     };
 
 }
