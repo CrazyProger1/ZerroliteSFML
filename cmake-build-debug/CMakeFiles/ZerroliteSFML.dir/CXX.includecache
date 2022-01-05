@@ -687,10 +687,24 @@ SFML/Graphics.hpp
 -
 zerrolite/include/Entity.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h
+zerrolite/include/GUI/Button.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h
+zerrolite/include/GUI/Text.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h
 SFML/Graphics.hpp
 -
+types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h
+../Entity.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h
+../Entity.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h
 SFML/Graphics.hpp
@@ -706,11 +720,11 @@ vector
 ./Entity.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Entity.h
 
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GameCore.cpp
-../include/GameCore.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GameCore.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+SFML/Graphics.hpp
+-
 
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Scene.cpp
-../include/Scene.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Scene.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Text.cpp
+../../include/GUI/Text.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h
 

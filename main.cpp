@@ -3,13 +3,30 @@
 #include "zerrolite/include/Scene.h"
 #include <SFML/Graphics.hpp>
 #include "zerrolite/include/Entity.h"
+#include "zerrolite/include/GUI/Button.h"
+#include "zerrolite/include/GUI/Text.h"
 
 class Game : public zl::GameCore {
 
 };
 
-class MainMenu : public zl::Scene {
+class SinglePlayer : public zl::Scene {
+    void initializeEntities() override {
 
+    }
+};
+
+class MainMenu : public zl::Scene {
+//    zl::Button buttonPlay;
+    zl::Text text;
+
+
+    void initializeEntities() override {
+        text.setPosition({100, 100});
+        attach(text);
+//        buttonPlay.setPosition({100, 100});
+//        attach(buttonPlay);
+    }
 };
 
 

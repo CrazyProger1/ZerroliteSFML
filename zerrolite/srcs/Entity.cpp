@@ -10,4 +10,23 @@ namespace zl {
     void Entity::draw(sf::RenderTarget &renderTarget) {
 
     }
+
+    void Entity::setPosition(fCoords coords) {
+        m_position = coords;
+    }
+
+    void Entity::move(fCoords &offset) {
+        m_position.x += offset.x;
+        m_position.y += offset.y;
+    }
+
+    fCoords &Entity::getPosition() {
+        return m_position;
+    }
+
+    Entity::Entity(fCoords &position) {
+        m_position = position;
+    }
+
+    Entity::Entity() = default;
 }

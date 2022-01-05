@@ -121,12 +121,42 @@ CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.s"
 	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\Entity.cpp -o CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\Entity.cpp.s
 
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj: CMakeFiles/ZerroliteSFML.dir/flags.make
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj: CMakeFiles/ZerroliteSFML.dir/includes_CXX.rsp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj: ../zerrolite/srcs/GUI/Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programming\C++\Projects\ZerroliteSFML\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Button.cpp.obj -c D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Button.cpp
+
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.i"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Button.cpp > CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Button.cpp.i
+
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.s"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Button.cpp -o CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Button.cpp.s
+
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj: CMakeFiles/ZerroliteSFML.dir/flags.make
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj: CMakeFiles/ZerroliteSFML.dir/includes_CXX.rsp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj: ../zerrolite/srcs/GUI/Text.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programming\C++\Projects\ZerroliteSFML\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Text.cpp.obj -c D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Text.cpp
+
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.i"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Text.cpp > CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Text.cpp.i
+
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s"
+	D:\Programming\C++\Compilers\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Programming\C++\Projects\ZerroliteSFML\zerrolite\srcs\GUI\Text.cpp -o CMakeFiles\ZerroliteSFML.dir\zerrolite\srcs\GUI\Text.cpp.s
+
 # Object files for target ZerroliteSFML
 ZerroliteSFML_OBJECTS = \
 "CMakeFiles/ZerroliteSFML.dir/main.cpp.obj" \
 "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj" \
 "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Scene.cpp.obj" \
-"CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.obj"
+"CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.obj" \
+"CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj" \
+"CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj"
 
 # External object files for target ZerroliteSFML
 ZerroliteSFML_EXTERNAL_OBJECTS =
@@ -135,6 +165,8 @@ ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/main.cpp.obj
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Scene.cpp.obj
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.obj
+ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj
+ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/build.make
 ZerroliteSFML.exe: ../libs/SFML-2.5.1/lib/libsfml-graphics-s-d.a
 ZerroliteSFML.exe: ../libs/SFML-2.5.1/lib/libsfml-window-s-d.a
@@ -143,7 +175,7 @@ ZerroliteSFML.exe: ../libs/SFML-2.5.1/lib/libfreetype.a
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/linklibs.rsp
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/objects1.rsp
 ZerroliteSFML.exe: CMakeFiles/ZerroliteSFML.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Programming\C++\Projects\ZerroliteSFML\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ZerroliteSFML.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Programming\C++\Projects\ZerroliteSFML\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ZerroliteSFML.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ZerroliteSFML.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

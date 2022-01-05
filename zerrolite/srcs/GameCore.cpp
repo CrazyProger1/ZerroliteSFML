@@ -24,7 +24,8 @@ namespace zl {
 
     void GameCore::setActiveScene(Scene *scene) {
         m_pActiveScene = scene;
-        m_pActiveScene->entitiesInitialization();
+        m_pActiveScene->initializeEntities();
+        m_pActiveScene->setSelfReference(m_pActiveScene);
     }
 
     void GameCore::handleSFMLEvents() {

@@ -6,11 +6,25 @@
 #define ZERROLITESFML_ENTITY_H
 
 #include <SFML/Graphics.hpp>
+#include "types.h"
 
 namespace zl {
+
     class Entity {
+    private:
+        fCoords m_position;
     public:
+        Entity();
+
+        explicit Entity(fCoords &position);
+
         virtual void draw(sf::RenderTarget &renderTarget);
+
+        void setPosition(fCoords coords);
+
+        void move(fCoords &offset);
+
+        fCoords &getPosition();
     };
 
 }

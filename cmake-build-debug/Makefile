@@ -176,6 +176,54 @@ zerrolite/srcs/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.s
 .PHONY : zerrolite/srcs/Entity.cpp.s
 
+zerrolite/srcs/GUI/Button.obj: zerrolite/srcs/GUI/Button.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Button.obj
+
+# target to build an object file
+zerrolite/srcs/GUI/Button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Button.cpp.obj
+
+zerrolite/srcs/GUI/Button.i: zerrolite/srcs/GUI/Button.cpp.i
+.PHONY : zerrolite/srcs/GUI/Button.i
+
+# target to preprocess a source file
+zerrolite/srcs/GUI/Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.i
+.PHONY : zerrolite/srcs/GUI/Button.cpp.i
+
+zerrolite/srcs/GUI/Button.s: zerrolite/srcs/GUI/Button.cpp.s
+.PHONY : zerrolite/srcs/GUI/Button.s
+
+# target to generate assembly for a file
+zerrolite/srcs/GUI/Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.s
+.PHONY : zerrolite/srcs/GUI/Button.cpp.s
+
+zerrolite/srcs/GUI/Text.obj: zerrolite/srcs/GUI/Text.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Text.obj
+
+# target to build an object file
+zerrolite/srcs/GUI/Text.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Text.cpp.obj
+
+zerrolite/srcs/GUI/Text.i: zerrolite/srcs/GUI/Text.cpp.i
+.PHONY : zerrolite/srcs/GUI/Text.i
+
+# target to preprocess a source file
+zerrolite/srcs/GUI/Text.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.i
+.PHONY : zerrolite/srcs/GUI/Text.cpp.i
+
+zerrolite/srcs/GUI/Text.s: zerrolite/srcs/GUI/Text.cpp.s
+.PHONY : zerrolite/srcs/GUI/Text.s
+
+# target to generate assembly for a file
+zerrolite/srcs/GUI/Text.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s
+.PHONY : zerrolite/srcs/GUI/Text.cpp.s
+
 zerrolite/srcs/GameCore.obj: zerrolite/srcs/GameCore.cpp.obj
 .PHONY : zerrolite/srcs/GameCore.obj
 
@@ -239,6 +287,12 @@ help:
 	@echo ... zerrolite/srcs/Entity.obj
 	@echo ... zerrolite/srcs/Entity.i
 	@echo ... zerrolite/srcs/Entity.s
+	@echo ... zerrolite/srcs/GUI/Button.obj
+	@echo ... zerrolite/srcs/GUI/Button.i
+	@echo ... zerrolite/srcs/GUI/Button.s
+	@echo ... zerrolite/srcs/GUI/Text.obj
+	@echo ... zerrolite/srcs/GUI/Text.i
+	@echo ... zerrolite/srcs/GUI/Text.s
 	@echo ... zerrolite/srcs/GameCore.obj
 	@echo ... zerrolite/srcs/GameCore.i
 	@echo ... zerrolite/srcs/GameCore.s

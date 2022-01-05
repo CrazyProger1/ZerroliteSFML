@@ -19,7 +19,7 @@ namespace zl {
 
     }
 
-    void Scene::entitiesInitialization() {
+    void Scene::initializeEntities() {
 
     }
 
@@ -30,4 +30,17 @@ namespace zl {
     void Scene::attach(Entity &entity) {
         m_entitiesContainer.emplace_back(&entity);
     }
+
+    void Scene::setSelfReference(Scene *scene) {
+        m_pActiveScene = scene;
+    }
+
+    void Scene::setActiveScene(Scene *scene) {
+
+            m_pActiveScene = scene;
+            m_pActiveScene->initializeEntities();
+            m_pActiveScene->setSelfReference(m_pActiveScene);
+
+    }
+
 }

@@ -14,17 +14,24 @@ namespace zl {
     class Scene {
     private:
         std::vector<Entity *> m_entitiesContainer;
+        Scene *m_pActiveScene;
+
     public:
 
         virtual void draw(sf::RenderWindow &renderWindow);
 
         virtual void handleSFMLEvent(sf::Event &event);
 
-        virtual void entitiesInitialization();
+        virtual void initializeEntities();
 
         virtual void updateState();
 
         void attach(Entity &entity);
+
+        void setSelfReference(Scene *scene);
+
+        void setActiveScene(Scene *scene);
+
     };
 }
 
