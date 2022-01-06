@@ -50,7 +50,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class holding a valid drawing context.  <a href="classsf_1_1Context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1ContextSettings.html">sf::ContextSettings</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure defining the settings of the OpenGL context attached to a window.  <a href="structsf_1_1ContextSettings.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure defining the settings of the OpenGL context attached to a m_pParentWindow.  <a href="structsf_1_1ContextSettings.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Cursor.html">sf::Cursor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Cursor.html" title="Cursor defines the appearance of a system cursor. ">Cursor</a> defines the appearance of a system cursor.  <a href="classsf_1_1Cursor.html#details">More...</a><br /></td></tr>
@@ -86,7 +86,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gaed947028b0698a812cad2f97bfe9caa3"><td class="memItemLeft" align="right" valign="top">typedef platform specific&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__window.html#gaed947028b0698a812cad2f97bfe9caa3">sf::WindowHandle</a></td></tr>
-<tr class="memdesc:gaed947028b0698a812cad2f97bfe9caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a low-level window handle type, specific to each platform.  <a href="group__window.html#gaed947028b0698a812cad2f97bfe9caa3">More...</a><br /></td></tr>
+<tr class="memdesc:gaed947028b0698a812cad2f97bfe9caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a low-level m_pParentWindow handle type, specific to each platform.  <a href="group__window.html#gaed947028b0698a812cad2f97bfe9caa3">More...</a><br /></td></tr>
 <tr class="separator:gaed947028b0698a812cad2f97bfe9caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -101,7 +101,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="group__window.html#gga97d7ee508bea4507ab40271518c732ffa5597cd420fc461807e4a201c92adea37">sf::Style::Default</a> = Titlebar | Resize | Close
 <br />
  }</td></tr>
-<tr class="memdesc:ga97d7ee508bea4507ab40271518c732ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of the window styles.  <a href="group__window.html#ga97d7ee508bea4507ab40271518c732ff">More...</a><br /></td></tr>
+<tr class="memdesc:ga97d7ee508bea4507ab40271518c732ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of the m_pParentWindow styles.  <a href="group__window.html#ga97d7ee508bea4507ab40271518c732ff">More...</a><br /></td></tr>
 <tr class="separator:ga97d7ee508bea4507ab40271518c732ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -119,7 +119,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Define a low-level window handle type, specific to each platform. </p>
+<p>Define a low-level m_pParentWindow handle type, specific to each platform. </p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Platform  </th><th class="markdownTableHeadNone">Type -------------&mdash;   </th></tr>
@@ -135,7 +135,7 @@ Enumerations</h2></td></tr>
 <td class="markdownTableBodyNone">Android  </td><td class="markdownTableBodyNone"><code>ANativeWindow*</code>   </td></tr>
 </table>
 <dl class="section user"><dt>Mac OS X Specification</dt><dd></dd></dl>
-<p>On Mac OS X, a <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> can be created either from an existing <code>NSWindow*</code> or an <code>NSView*</code>. When the window is created from a window, SFML will use its content view as the OpenGL area. <a class="el" href="classsf_1_1Window.html#ad2fa6be5104ec0bfe79af7a5f524ea90" title="Get the OS-specific handle of the window. ">sf::Window::getSystemHandle()</a> will return the handle that was used to create the window, which is a <code>NSWindow*</code> by default. </p>
+<p>On Mac OS X, a <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> can be created either from an existing <code>NSWindow*</code> or an <code>NSView*</code>. When the m_pParentWindow is created from a m_pParentWindow, SFML will use its content view as the OpenGL area. <a class="el" href="classsf_1_1Window.html#ad2fa6be5104ec0bfe79af7a5f524ea90" title="Get the OS-specific handle of the m_pParentWindow. ">sf::Window::getSystemHandle()</a> will return the handle that was used to create the m_pParentWindow, which is a <code>NSWindow*</code> by default. </p>
 
 <p class="definition">Definition at line <a class="el" href="WindowHandle_8hpp_source.html#l00068">68</a> of file <a class="el" href="WindowHandle_8hpp_source.html">WindowHandle.hpp</a>.</p>
 
@@ -154,7 +154,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enumeration of the window styles. </p>
+<p>Enumeration of the m_pParentWindow styles. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga97d7ee508bea4507ab40271518c732ffa8c35a9c8507559e455387fc4a83ce422"></a>None&#160;</td><td class="fielddoc"><p>No border / title bar (this flag and all others are mutually exclusive) </p>
 </td></tr>
@@ -166,7 +166,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga97d7ee508bea4507ab40271518c732ffa6288ec86830245cf957e2d234f79f50d"></a>Fullscreen&#160;</td><td class="fielddoc"><p>Fullscreen mode (this flag and all others are mutually exclusive) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga97d7ee508bea4507ab40271518c732ffa5597cd420fc461807e4a201c92adea37"></a>Default&#160;</td><td class="fielddoc"><p>Default window style. </p>
+<tr><td class="fieldname"><a id="gga97d7ee508bea4507ab40271518c732ffa5597cd420fc461807e4a201c92adea37"></a>Default&#160;</td><td class="fielddoc"><p>Default m_pParentWindow style. </p>
 </td></tr>
 </table>
 

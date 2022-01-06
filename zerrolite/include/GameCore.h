@@ -7,7 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "./Scene.h"
-
+#include <iostream>
 
 namespace zl {
     class GameCore {

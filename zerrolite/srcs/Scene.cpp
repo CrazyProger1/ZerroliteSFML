@@ -16,7 +16,9 @@ namespace zl {
     }
 
     void Scene::handleSFMLEvent(sf::Event &event) {
-
+        for (auto &entity: m_entitiesContainer) {
+            entity->handleSFMLEvent(event);
+        }
     }
 
     void Scene::initializeEntities() {
@@ -28,6 +30,7 @@ namespace zl {
     }
 
     void Scene::attach(Entity &entity) {
+        entity.setParentWindow(*m_pParentWindow);
         m_entitiesContainer.emplace_back(&entity);
     }
 
@@ -37,10 +40,15 @@ namespace zl {
 
     void Scene::setActiveScene(Scene *scene) {
 
-            m_pActiveScene = scene;
-            m_pActiveScene->initializeEntities();
-            m_pActiveScene->setSelfReference(m_pActiveScene);
+        m_pActiveScene = scene;
+        m_pActiveScene->setSelfReference(m_pActiveScene);
+        m_pActiveScene->initializeEntities();
+        m_pActiveScene->setParentWindow(*m_pParentWindow);
 
+    }
+
+    void Scene::setParentWindow(sf::RenderWindow &window) {
+        m_pParentWindow = &window;
     }
 
 }

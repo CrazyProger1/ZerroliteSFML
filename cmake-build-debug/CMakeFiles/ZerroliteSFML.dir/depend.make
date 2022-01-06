@@ -238,6 +238,7 @@ CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
  ../zerrolite/include/Entity.h \
  ../zerrolite/include/GUI/Button.h \
+ ../zerrolite/include/GUI/Text.h \
  ../zerrolite/include/types.h \
  ../zerrolite/srcs/GUI/Button.cpp
 CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj: \

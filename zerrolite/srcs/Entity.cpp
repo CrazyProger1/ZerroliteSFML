@@ -11,6 +11,10 @@ namespace zl {
 
     }
 
+    void Entity::handleSFMLEvent(sf::Event &event) {
+
+    }
+
     void Entity::setPosition(fCoords coords) {
         m_position = coords;
     }
@@ -27,6 +31,15 @@ namespace zl {
     Entity::Entity(fCoords &position) {
         m_position = position;
     }
+
+    void Entity::setParentWindow(sf::RenderWindow &window) {
+        m_pParentWindow = &window;
+    }
+
+    sf::RenderWindow *Entity::getParentWindow() {
+        return m_pParentWindow;
+    }
+
 
     Entity::Entity() = default;
 }

@@ -51,7 +51,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Structure defining the settings of the OpenGL context attached to a window.  
+<p>Structure defining the settings of the OpenGL context attached to a m_pParentWindow.
  <a href="structsf_1_1ContextSettings.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>&gt;</code></p>
@@ -96,8 +96,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac93b041bfb6cbd36034997797708a0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Structure defining the settings of the OpenGL context attached to a window. </p>
-<p><a class="el" href="structsf_1_1ContextSettings.html" title="Structure defining the settings of the OpenGL context attached to a window. ">ContextSettings</a> allows to define several advanced settings of the OpenGL context attached to a window.</p>
+<div class="textblock"><p>Structure defining the settings of the OpenGL context attached to a m_pParentWindow. </p>
+<p><a class="el" href="structsf_1_1ContextSettings.html" title="Structure defining the settings of the OpenGL context attached to a m_pParentWindow. ">ContextSettings</a> allows to define several advanced settings of the OpenGL context attached to a m_pParentWindow.</p>
 <p>All these settings with the exception of the compatibility flag and anti-aliasing level have no impact on the regular SFML rendering (graphics module), so you may need to use this structure only if you're using SFML as a windowing system for custom OpenGL rendering.</p>
 <p>The depthBits and stencilBits members define the number of bits per pixel requested for the (respectively) depth and stencil buffers.</p>
 <p>antialiasingLevel represents the requested number of multisampling levels for anti-aliasing.</p>
@@ -105,7 +105,7 @@ Public Attributes</h2></td></tr>
 <p>When requesting a context with a version greater or equal to 3.2, you have the option of specifying whether the context should follow the core or compatibility profile of all newer (&gt;= 3.2) OpenGL specifications. For versions 3.0 and 3.1 there is only the core profile. By default a compatibility context is created. You only need to specify the core flag if you want a core profile context to use with your own OpenGL rendering. <b>Warning: The graphics module will not function if you request a core profile context. Make sure the attributes are set to Default if you want to use the graphics module.</b></p>
 <p>Setting the debug attribute flag will request a context with additional debugging features enabled. Depending on the system, this might be required for advanced OpenGL debugging. OpenGL debugging is disabled by default.</p>
 <p><b>Special Note for OS X:</b> Apple only supports choosing between either a legacy context (OpenGL 2.1) or a core context (OpenGL version depends on the operating system version but is at least 3.2). Compatibility contexts are not supported. Further information is available on the <a href="https://developer.apple.com/opengl/capabilities/index.html">OpenGL Capabilities Tables</a> page. OS X also currently does not support debug contexts.</p>
-<p>Please note that these values are only a hint. No failure will be reported if one or more of these values are not supported by the system; instead, SFML will try to find the closest valid match. You can then retrieve the settings that the window actually used to create its context, with <a class="el" href="classsf_1_1Window.html#ae5b8065e92bbd0408e1fd8328e80d7d1" title="Get the settings of the OpenGL context of the window. ">Window::getSettings()</a>. </p>
+<p>Please note that these values are only a hint. No failure will be reported if one or more of these values are not supported by the system; instead, SFML will try to find the closest valid match. You can then retrieve the settings that the m_pParentWindow actually used to create its context, with <a class="el" href="classsf_1_1Window.html#ae5b8065e92bbd0408e1fd8328e80d7d1" title="Get the settings of the OpenGL context of the m_pParentWindow. ">Window::getSettings()</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00037">37</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>

@@ -23,9 +23,13 @@ namespace zl {
     }
 
     void GameCore::setActiveScene(Scene *scene) {
+        if (m_pMainWindow == nullptr) {
+            std::cerr << "Window is not set";
+        }
         m_pActiveScene = scene;
-        m_pActiveScene->initializeEntities();
+        m_pActiveScene->setParentWindow(*m_pMainWindow);
         m_pActiveScene->setSelfReference(m_pActiveScene);
+        m_pActiveScene->initializeEntities();
     }
 
     void GameCore::handleSFMLEvents() {

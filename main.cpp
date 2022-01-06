@@ -17,16 +17,50 @@ class SinglePlayer : public zl::Scene {
 };
 
 class MainMenu : public zl::Scene {
-//    zl::Button buttonPlay;
     zl::Text text;
+    zl::Button button;
+    zl::Text tfb;
 
 
     void initializeEntities() override {
         text.setPosition({100, 100});
+        text.setFont("../resources/fonts/lucon.ttf");
+        text.setText("hello");
+        text.setTextColor({200, 0, 0});
+        text.setFontSize(64);
+        text.setUnderlineWidth(2);
+        text.setUnderlineOffset(10);
         attach(text);
-//        buttonPlay.setPosition({100, 100});
-//        attach(buttonPlay);
+
+
+        tfb.setFont("../resources/fonts/lucon.ttf");
+        tfb.setText("MY BUTTON");
+        tfb.setTextColor({0, 0, 255});
+        tfb.setFontSize(20);
+
+
+        button.setPosition({400, 100});
+        button.setSize({150, 40});
+        button.setBorderWidth(2);
+        button.setBorderColor({255, 0, 0});
+        button.setText(tfb);
+        button.setHoverColor({30, 150, 0});
+        button.setCenterText();
+        attach(button);
+
+
     }
+
+    void updateState() override {
+        if (text.isClicked())
+            std::cerr << "link clicked" << std::endl;
+
+        if (button.isClicked())
+            std::cerr << "button clicked" << std::endl;
+
+    }
+
+
 };
 
 
@@ -45,3 +79,5 @@ int main() {
 
     return 0;
 }
+
+

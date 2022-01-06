@@ -51,7 +51,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Define the states used for drawing to a <a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (window, texture, ...) ">RenderTarget</a>.  
+<p>Define the states used for drawing to a <a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (m_pParentWindow, texture, ...) ">RenderTarget</a>.
  <a href="classsf_1_1RenderStates.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="RenderStates_8hpp_source.html">RenderStates.hpp</a>&gt;</code></p>
@@ -99,7 +99,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:ad29672df29f19ce50c3021d95f2bb062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Define the states used for drawing to a <a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (window, texture, ...) ">RenderTarget</a>. </p>
+<div class="textblock"><p>Define the states used for drawing to a <a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (m_pParentWindow, texture, ...) ">RenderTarget</a>. </p>
 <p>There are four global states that can be applied to the drawn objects:</p>
 <ul>
 <li>the blend mode: how pixels of the object are blended with the background </li>
@@ -109,8 +109,8 @@ Static Public Attributes</h2></td></tr>
 </ul>
 <p>High-level objects such as sprites or text force some of these states when they are drawn. For example, a sprite will set its own texture, so that you don't have to care about it when drawing the sprite.</p>
 <p>The transform is a special case: sprites, texts and shapes (and it's a good idea to do it with your own drawable classes too) combine their transform with the one that is passed in the <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">RenderStates</a> structure. So that you can use a "global" transform on top of each object's transform.</p>
-<p>Most objects, especially high-level drawables, can be drawn directly without defining render states explicitly &ndash; the default set of states is ok in most cases. </p><div class="fragment"><div class="line">window.draw(sprite);</div></div><!-- fragment --><p>If you want to use a single specific render state, for example a shader, you can pass it directly to the Draw function: <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">sf::RenderStates</a> has an implicit one-argument constructor for each state. </p><div class="fragment"><div class="line">window.draw(sprite, <a class="code" href="classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8">shader</a>);</div></div><!-- fragment --><p>When you're inside the Draw function of a drawable object (inherited from <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a>), you can either pass the render states unmodified, or change some of them. For example, a transformable object will combine the current transform with its own transform. A sprite will set its texture. Etc.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (window, texture, ...) ">sf::RenderTarget</a>, <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a> </dd></dl>
+<p>Most objects, especially high-level drawables, can be drawn directly without defining render states explicitly &ndash; the default set of states is ok in most cases. </p><div class="fragment"><div class="line">m_pParentWindow.draw(sprite);</div></div><!-- fragment --><p>If you want to use a single specific render state, for example a shader, you can pass it directly to the Draw function: <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">sf::RenderStates</a> has an implicit one-argument constructor for each state. </p><div class="fragment"><div class="line">m_pParentWindow.draw(sprite, <a class="code" href="classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8">shader</a>);</div></div><!-- fragment --><p>When you're inside the Draw function of a drawable object (inherited from <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a>), you can either pass the render states unmodified, or change some of them. For example, a transformable object will combine the current transform with its own transform. A sprite will set its texture. Etc.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (m_pParentWindow, texture, ...) ">sf::RenderTarget</a>, <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="RenderStates_8hpp_source.html#l00045">45</a> of file <a class="el" href="RenderStates_8hpp_source.html">RenderStates.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

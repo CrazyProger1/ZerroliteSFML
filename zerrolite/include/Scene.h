@@ -16,6 +16,8 @@ namespace zl {
         std::vector<Entity *> m_entitiesContainer;
         Scene *m_pActiveScene;
 
+        sf::RenderWindow *m_pParentWindow = nullptr;
+
     public:
 
         virtual void draw(sf::RenderWindow &renderWindow);
@@ -31,6 +33,9 @@ namespace zl {
         void setSelfReference(Scene *scene);
 
         void setActiveScene(Scene *scene);
+
+        void setParentWindow(sf::RenderWindow &window);
+
 
     };
 }

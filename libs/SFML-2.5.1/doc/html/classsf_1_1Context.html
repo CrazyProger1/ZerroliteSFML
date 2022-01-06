@@ -107,7 +107,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class holding a valid drawing context. </p>
-<p>If you need to make OpenGL calls without having an active window (like in a thread), you can use an instance of this class to get a valid context.</p>
+<p>If you need to make OpenGL calls without having an active m_pParentWindow (like in a thread), you can use an instance of this class to get a valid context.</p>
 <p>Having a valid context is necessary for <em>every</em> OpenGL call.</p>
 <p>Note that a context is only active in its current thread, if you create a new thread it will have no valid context by default.</p>
 <p>To use a <a class="el" href="classsf_1_1Context.html" title="Class holding a valid drawing context. ">sf::Context</a> instance, just construct it and let it live as long as you need a valid context. No explicit activation is needed, all it has to do is to exist. Its destructor will take care of deactivating and freeing all the attached resources.</p>
