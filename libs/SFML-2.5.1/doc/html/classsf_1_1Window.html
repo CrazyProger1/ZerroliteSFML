@@ -127,13 +127,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a59041c4556e0351048f8aff366034f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable vertical synchronization.  <a href="#a59041c4556e0351048f8aff366034f61">More...</a><br /></td></tr>
 <tr class="separator:a59041c4556e0351048f8aff366034f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad3991c25e0a83afbb4d62febf9b7b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aad3991c25e0a83afbb4d62febf9b7b14">setMouseCursorVisible</a> (bool visible)</td></tr>
-<tr class="memdesc:aad3991c25e0a83afbb4d62febf9b7b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide the mouse cursor.  <a href="#aad3991c25e0a83afbb4d62febf9b7b14">More...</a><br /></td></tr>
+<tr class="memdesc:aad3991c25e0a83afbb4d62febf9b7b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide the mouse m_cursor.  <a href="#aad3991c25e0a83afbb4d62febf9b7b14">More...</a><br /></td></tr>
 <tr class="separator:aad3991c25e0a83afbb4d62febf9b7b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#a5b4ef8ede77531e17b7a0287fa6ff9ce">setMouseCursorGrabbed</a> (bool grabbed)</td></tr>
-<tr class="memdesc:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grab or release the mouse cursor.  <a href="#a5b4ef8ede77531e17b7a0287fa6ff9ce">More...</a><br /></td></tr>
+<tr class="memdesc:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grab or release the mouse m_cursor.  <a href="#a5b4ef8ede77531e17b7a0287fa6ff9ce">More...</a><br /></td></tr>
 <tr class="separator:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab7a05baece72b08ad120063b143d19b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aab7a05baece72b08ad120063b143d19b">setMouseCursor</a> (const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;cursor)</td></tr>
-<tr class="memdesc:aab7a05baece72b08ad120063b143d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed cursor to a native system cursor.  <a href="#aab7a05baece72b08ad120063b143d19b">More...</a><br /></td></tr>
+<tr class="memitem:aab7a05baece72b08ad120063b143d19b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aab7a05baece72b08ad120063b143d19b">setMouseCursor</a> (const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;m_cursor)</td></tr>
+<tr class="memdesc:aab7a05baece72b08ad120063b143d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed m_cursor to a native system m_cursor.  <a href="#aab7a05baece72b08ad120063b143d19b">More...</a><br /></td></tr>
 <tr class="separator:aab7a05baece72b08ad120063b143d19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef9f2b14c10ecba8a8df95dd51c5bb73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aef9f2b14c10ecba8a8df95dd51c5bb73">setKeyRepeatEnabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:aef9f2b14c10ecba8a8df95dd51c5bb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable automatic key-repeat.  <a href="#aef9f2b14c10ecba8a8df95dd51c5bb73">More...</a><br /></td></tr>
@@ -180,7 +180,7 @@ Static Private Member Functions</h2></td></tr>
 <p><a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> is the main class of the <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">Window</a> module.</p>
 <p>It defines an OS m_pParentWindow that is able to receive an OpenGL rendering.</p>
 <p>A <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> can create its own new m_pParentWindow, or be embedded into an already existing control using the create(handle) function. This can be useful for embedding an OpenGL rendering area into a view which is part of a bigger GUI with existing windows, controls, etc. It can also serve as embedding an OpenGL rendering area into a m_pParentWindow created by another (probably richer) GUI library like Qt or wxWidgets.</p>
-<p>The <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> class provides a simple interface for manipulating the m_pParentWindow: move, resize, show/hide, control mouse cursor, etc. It also provides event handling through its <a class="el" href="classsf_1_1Window.html#a338e996585faf82e93069858e3b531b7" title="Pop the event on top of the event queue, if any, and return it. ">pollEvent()</a> and <a class="el" href="classsf_1_1Window.html#aaf02ab64fbc1d374eef3696df54137bc" title="Wait for an event and return it. ">waitEvent()</a> functions.</p>
+<p>The <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> class provides a simple interface for manipulating the m_pParentWindow: move, resize, show/hide, control mouse m_cursor, etc. It also provides event handling through its <a class="el" href="classsf_1_1Window.html#a338e996585faf82e93069858e3b531b7" title="Pop the event on top of the event queue, if any, and return it. ">pollEvent()</a> and <a class="el" href="classsf_1_1Window.html#aaf02ab64fbc1d374eef3696df54137bc" title="Wait for an event and return it. ">waitEvent()</a> functions.</p>
 <p>Note that OpenGL experts can pass their own parameters (antialiasing level, bits for the depth and stencil buffers, etc.) to the OpenGL context attached to the m_pParentWindow, with the <a class="el" href="structsf_1_1ContextSettings.html" title="Structure defining the settings of the OpenGL context attached to a m_pParentWindow. ">sf::ContextSettings</a> structure which is passed as an optional argument when creating the m_pParentWindow.</p>
 <p>On dual-graphics systems consisting of a low-power integrated GPU and a powerful discrete GPU, the driver picks which GPU will run an SFML application. In order to inform the driver that an SFML application can benefit from being run on the more powerful discrete GPU, <a class="el" href="GpuPreference_8hpp.html#ab0233c2d867cbd561036ed2440a4fec0" title="A macro to encourage usage of the discrete GPU. ">SFML_DEFINE_DISCRETE_GPU_PREFERENCE</a> can be placed in a source file that is compiled and linked into the final application. The macro should be placed outside of any scopes in the global namespace.</p>
 <p>Usage example: </p><div class="fragment"><div class="line"><span class="comment">// Declare and create a new m_pParentWindow</span></div><div class="line"><a class="code" href="classsf_1_1Window.html">sf::Window</a> m_pParentWindow(<a class="code" href="classsf_1_1VideoMode.html">sf::VideoMode</a>(800, 600), <span class="stringliteral">&quot;SFML m_pParentWindow&quot;</span>);</div><div class="line"></div><div class="line"><span class="comment">// Limit the framerate to 60 frames per second (this step is optional)</span></div><div class="line">m_pParentWindow.<a class="code" href="classsf_1_1Window.html#af4322d315baf93405bf0d5087ad5e784">setFramerateLimit</a>(60);</div><div class="line"></div><div class="line"><span class="comment">// The main loop - ends as soon as the m_pParentWindow is closed</span></div><div class="line"><span class="keywordflow">while</span> (m_pParentWindow.<a class="code" href="classsf_1_1Window.html#ae873503db7d48157bb9cbf6129562bce">isOpen</a>())</div><div class="line">{</div><div class="line">   <span class="comment">// Event processing</span></div><div class="line">   <a class="code" href="classsf_1_1Event.html">sf::Event</a> event;</div><div class="line">   <span class="keywordflow">while</span> (m_pParentWindow.<a class="code" href="classsf_1_1Window.html#a338e996585faf82e93069858e3b531b7">pollEvent</a>(event))</div><div class="line">   {</div><div class="line">       <span class="comment">// Request for closing the m_pParentWindow</span></div><div class="line">       <span class="keywordflow">if</span> (event.<a class="code" href="classsf_1_1Event.html#adf2f8044f713fd9d6019077b0d1ffe0a">type</a> == <a class="code" href="classsf_1_1Event.html#af41fa9ed45c02449030699f671331d4aa316e4212e083f1dce79efd8d9e9c0a95">sf::Event::Closed</a>)</div><div class="line">           m_pParentWindow.<a class="code" href="classsf_1_1Window.html#a99d1e030387b0c26f5995670504fe7b5">close</a>();</div><div class="line">   }</div><div class="line"></div><div class="line">   <span class="comment">// Activate the m_pParentWindow for OpenGL rendering</span></div><div class="line">   m_pParentWindow.<a class="code" href="classsf_1_1RenderWindow.html#aee6c53eced675e885931eb3e91f11155">setActive</a>();</div><div class="line"></div><div class="line">   <span class="comment">// OpenGL drawing commands go here...</span></div><div class="line"></div><div class="line">   <span class="comment">// End the current frame and display its contents on screen</span></div><div class="line">   m_pParentWindow.<a class="code" href="classsf_1_1Window.html#adabf839cb103ac96cfc82f781638772a">display</a>();</div><div class="line">}</div></div><!-- fragment -->
@@ -872,26 +872,26 @@ Static Private Member Functions</h2></td></tr>
           <td class="memname">void sf::Window::setMouseCursor </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;&#160;</td>
-          <td class="paramname"><em>cursor</em></td><td>)</td>
+          <td class="paramname"><em>m_cursor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the displayed cursor to a native system cursor. </p>
-<p>Upon m_pParentWindow creation, the arrow cursor is used by default.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The cursor must not be destroyed while in use by the m_pParentWindow.</dd>
+<p>Set the displayed m_cursor to a native system m_cursor. </p>
+<p>Upon m_pParentWindow creation, the arrow m_cursor is used by default.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The m_cursor must not be destroyed while in use by the m_pParentWindow.</dd>
 <dd>
-Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor defines the appearance of a system cursor. ">Cursor</a> are not supported on iOS and Android.</dd></dl>
+Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor defines the appearance of a system m_cursor. ">Cursor</a> are not supported on iOS and Android.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cursor</td><td>Native system cursor type to display</td></tr>
+    <tr><td class="paramname">m_cursor</td><td>Native system m_cursor type to display</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Cursor.html#ad41999c8633c2fbaa2364e379c1ab25b" title="Create a native system cursor. ">sf::Cursor::loadFromSystem</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Cursor.html#ad41999c8633c2fbaa2364e379c1ab25b" title="Create a native system m_cursor. ">sf::Cursor::loadFromSystem</a> </dd>
 <dd>
-<a class="el" href="classsf_1_1Cursor.html#ac24ecf82ac7d9ba6703389397f948b3a" title="Create a cursor with the provided image. ">sf::Cursor::loadFromPixels</a> </dd></dl>
+<a class="el" href="classsf_1_1Cursor.html#ac24ecf82ac7d9ba6703389397f948b3a" title="Create a m_cursor with the provided image. ">sf::Cursor::loadFromPixels</a> </dd></dl>
 
 </div>
 </div>
@@ -911,8 +911,8 @@ Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor de
       </table>
 </div><div class="memdoc">
 
-<p>Grab or release the mouse cursor. </p>
-<p>If set, grabs the mouse cursor inside this m_pParentWindow's client area so it may no longer be moved outside its bounds. Note that grabbing is only active while the m_pParentWindow has focus.</p>
+<p>Grab or release the mouse m_cursor. </p>
+<p>If set, grabs the mouse m_cursor inside this m_pParentWindow's client area so it may no longer be moved outside its bounds. Note that grabbing is only active while the m_pParentWindow has focus.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">grabbed</td><td>True to enable, false to disable </td></tr>
@@ -938,11 +938,11 @@ Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor de
       </table>
 </div><div class="memdoc">
 
-<p>Show or hide the mouse cursor. </p>
-<p>The mouse cursor is visible by default.</p>
+<p>Show or hide the mouse m_cursor. </p>
+<p>The mouse m_cursor is visible by default.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">visible</td><td>True to show the mouse cursor, false to hide it </td></tr>
+    <tr><td class="paramname">visible</td><td>True to show the mouse m_cursor, false to hide it </td></tr>
   </table>
   </dd>
 </dl>

@@ -164,7 +164,7 @@ public:
     /// (150, 75) in your 2D world -- if the view is translated by (140, 25).
     ///
     /// For render-windows, this function is typically used to find
-    /// which point (or object) is located below the mouse cursor.
+    /// which point (or object) is located below the mouse m_cursor.
     ///
     /// This version uses a custom view for calculations, see the other
     /// overload of the function if you want to use the current view of the

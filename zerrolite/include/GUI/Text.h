@@ -1,11 +1,12 @@
 //
-// Created by crazy on 05.01.2022.
+// Created by crazy on 07.01.2022.
 //
 
 #ifndef ZERROLITESFML_TEXT_H
 #define ZERROLITESFML_TEXT_H
 
-#include "../Entity.h"
+
+#include "../Core/Entity.h"
 #include <string>
 #include <utility>
 #include <iostream>
@@ -13,14 +14,16 @@
 namespace zl {
     class Text : public Entity {
     private:
-        str m_text;
-        str m_font;
+        str m_textString;
+        str m_fontFilepath = "../resources/fonts/arial.ttf";
+        unsigned int m_textStyle = 0;
         int m_fontSize = 20;
         int m_underlineOffset = 5;
         int m_underlineWidth = 0;
 
-        sf::Font m_sf_font;
-        sf::Text m_sf_text;
+
+        sf::Font m_font;
+        sf::Text m_text;
 
 
         RGBAColor m_textColor = {30, 0, 200};
@@ -31,25 +34,35 @@ namespace zl {
         sf::RectangleShape m_underlineRect;
 
         bool m_isClicked = false;
+        bool m_isHovered = false;
+
 
         void init();
 
+        void checkClick(sf::Event &event);
+
+        void checkHover();
+
+
     public:
-
-        void initialize();
-
-
         Text();
 
-        Text(const str &text, const str &font, int fontSize, int underlineOffset, int underlineWidth,
-             const RGBAColor &textColor,
-             const RGBAColor &underlineColor, const RGBAColor &textHoverColor, const RGBAColor &underlineHoverColor);
+        explicit Text(const str &text,
+                      const str &fontFilepath = "../resources/fonts/arial.ttf",
+                      int fontSize = 20,
+                      unsigned int style = 0,
+                      int underlineOffset = 0,
+                      int underlineWidth = 0,
+                      const RGBAColor &textColor = {100, 100, 100},
+                      const RGBAColor &underlineColor = {20, 100, 200},
+                      const RGBAColor &textHoverColor = {200, 200, 200},
+                      const RGBAColor &underlineHoverColor = {100, 100, 250});
+
+        void initialize() override;
 
         void setText(const str &text);
 
-        str getText();
-
-        void setFont(const str &font);
+        void setFont(const str &filepath);
 
         void setFontSize(int size);
 
@@ -65,19 +78,30 @@ namespace zl {
 
         void setUnderlineHoverColor(const RGBAColor &color);
 
-        bool isHovered();
+        void setTextStyle(unsigned int style);
 
         void draw(sf::RenderTarget &renderTarget) override;
 
         void handleSFMLEvent(sf::Event &event) override;
 
+        void updateState() override;
+
+        bool isHovered();
+
         bool isClicked();
 
-        fSize getTextSize();
+        str &getText();
 
-        fSize getFullSize();
+        fVector getTextSize();
+
+        fVector getFullSize();
+
+        RGBAColor &getTextHoverColor();
+
+        RGBAColor &getTextColor();
+
+
     };
 }
-
 
 #endif //ZERROLITESFML_TEXT_H

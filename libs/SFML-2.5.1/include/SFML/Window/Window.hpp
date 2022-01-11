@@ -340,19 +340,19 @@ public:
     void setVerticalSyncEnabled(bool enabled);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Show or hide the mouse cursor
+    /// \brief Show or hide the mouse m_cursor
     ///
-    /// The mouse cursor is visible by default.
+    /// The mouse m_cursor is visible by default.
     ///
-    /// \param visible True to show the mouse cursor, false to hide it
+    /// \param visible True to show the mouse m_cursor, false to hide it
     ///
     ////////////////////////////////////////////////////////////
     void setMouseCursorVisible(bool visible);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Grab or release the mouse cursor
+    /// \brief Grab or release the mouse m_cursor
     ///
-    /// If set, grabs the mouse cursor inside this window's client
+    /// If set, grabs the mouse m_cursor inside this window's client
     /// area so it may no longer be moved outside its bounds.
     /// Note that grabbing is only active while the window has
     /// focus.
@@ -363,17 +363,17 @@ public:
     void setMouseCursorGrabbed(bool grabbed);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Set the displayed cursor to a native system cursor
+    /// \brief Set the displayed m_cursor to a native system m_cursor
     ///
-    /// Upon window creation, the arrow cursor is used by default.
+    /// Upon window creation, the arrow m_cursor is used by default.
     ///
-    /// \warning The cursor must not be destroyed while in use by
+    /// \warning The m_cursor must not be destroyed while in use by
     ///          the window.
     ///
     /// \warning Features related to Cursor are not supported on
     ///          iOS and Android.
     ///
-    /// \param cursor Native system cursor type to display
+    /// \param cursor Native system m_cursor type to display
     ///
     /// \see sf::Cursor::loadFromSystem
     /// \see sf::Cursor::loadFromPixels
@@ -571,7 +571,7 @@ private:
 /// like Qt or wxWidgets.
 ///
 /// The sf::Window class provides a simple interface for manipulating
-/// the window: move, resize, show/hide, control mouse cursor, etc.
+/// the window: move, resize, show/hide, control mouse m_cursor, etc.
 /// It also provides event handling through its pollEvent() and waitEvent()
 /// functions.
 ///

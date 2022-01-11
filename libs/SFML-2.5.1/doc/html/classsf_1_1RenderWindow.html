@@ -134,13 +134,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a59041c4556e0351048f8aff366034f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable vertical synchronization.  <a href="#a59041c4556e0351048f8aff366034f61">More...</a><br /></td></tr>
 <tr class="separator:a59041c4556e0351048f8aff366034f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad3991c25e0a83afbb4d62febf9b7b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aad3991c25e0a83afbb4d62febf9b7b14">setMouseCursorVisible</a> (bool visible)</td></tr>
-<tr class="memdesc:aad3991c25e0a83afbb4d62febf9b7b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide the mouse cursor.  <a href="#aad3991c25e0a83afbb4d62febf9b7b14">More...</a><br /></td></tr>
+<tr class="memdesc:aad3991c25e0a83afbb4d62febf9b7b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show or hide the mouse m_cursor.  <a href="#aad3991c25e0a83afbb4d62febf9b7b14">More...</a><br /></td></tr>
 <tr class="separator:aad3991c25e0a83afbb4d62febf9b7b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#a5b4ef8ede77531e17b7a0287fa6ff9ce">setMouseCursorGrabbed</a> (bool grabbed)</td></tr>
-<tr class="memdesc:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grab or release the mouse cursor.  <a href="#a5b4ef8ede77531e17b7a0287fa6ff9ce">More...</a><br /></td></tr>
+<tr class="memdesc:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grab or release the mouse m_cursor.  <a href="#a5b4ef8ede77531e17b7a0287fa6ff9ce">More...</a><br /></td></tr>
 <tr class="separator:a5b4ef8ede77531e17b7a0287fa6ff9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab7a05baece72b08ad120063b143d19b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aab7a05baece72b08ad120063b143d19b">setMouseCursor</a> (const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;cursor)</td></tr>
-<tr class="memdesc:aab7a05baece72b08ad120063b143d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed cursor to a native system cursor.  <a href="#aab7a05baece72b08ad120063b143d19b">More...</a><br /></td></tr>
+<tr class="memitem:aab7a05baece72b08ad120063b143d19b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aab7a05baece72b08ad120063b143d19b">setMouseCursor</a> (const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;m_cursor)</td></tr>
+<tr class="memdesc:aab7a05baece72b08ad120063b143d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed m_cursor to a native system m_cursor.  <a href="#aab7a05baece72b08ad120063b143d19b">More...</a><br /></td></tr>
 <tr class="separator:aab7a05baece72b08ad120063b143d19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef9f2b14c10ecba8a8df95dd51c5bb73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Window.html#aef9f2b14c10ecba8a8df95dd51c5bb73">setKeyRepeatEnabled</a> (bool enabled)</td></tr>
 <tr class="memdesc:aef9f2b14c10ecba8a8df95dd51c5bb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable automatic key-repeat.  <a href="#aef9f2b14c10ecba8a8df95dd51c5bb73">More...</a><br /></td></tr>
@@ -1275,7 +1275,7 @@ Protected Member Functions</h2></td></tr>
 <p>Convert a point from target coordinates to world coordinates. </p>
 <p>This function finds the 2D position that matches the given pixel of the render target. In other words, it does the inverse of what the graphics card does, to find the initial position of a rendered pixel.</p>
 <p>Initially, both coordinate systems (world units and target pixels) match perfectly. But if you define a custom view or resize your render target, this assertion is not true anymore, i.e. a point located at (10, 50) in your render target may map to the point (150, 75) in your 2D world &ndash; if the view is translated by (140, 25).</p>
-<p>For render-windows, this function is typically used to find which point (or object) is located below the mouse cursor.</p>
+<p>For render-windows, this function is typically used to find which point (or object) is located below the mouse m_cursor.</p>
 <p>This version uses a custom view for calculations, see the other overload of the function if you want to use the current view of the render target.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1753,7 +1753,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">void sf::Window::setMouseCursor </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classsf_1_1Cursor.html">Cursor</a> &amp;&#160;</td>
-          <td class="paramname"><em>cursor</em></td><td>)</td>
+          <td class="paramname"><em>m_cursor</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1764,20 +1764,20 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the displayed cursor to a native system cursor. </p>
-<p>Upon m_pParentWindow creation, the arrow cursor is used by default.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The cursor must not be destroyed while in use by the m_pParentWindow.</dd>
+<p>Set the displayed m_cursor to a native system m_cursor. </p>
+<p>Upon m_pParentWindow creation, the arrow m_cursor is used by default.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The m_cursor must not be destroyed while in use by the m_pParentWindow.</dd>
 <dd>
-Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor defines the appearance of a system cursor. ">Cursor</a> are not supported on iOS and Android.</dd></dl>
+Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor defines the appearance of a system m_cursor. ">Cursor</a> are not supported on iOS and Android.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cursor</td><td>Native system cursor type to display</td></tr>
+    <tr><td class="paramname">m_cursor</td><td>Native system m_cursor type to display</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Cursor.html#ad41999c8633c2fbaa2364e379c1ab25b" title="Create a native system cursor. ">sf::Cursor::loadFromSystem</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Cursor.html#ad41999c8633c2fbaa2364e379c1ab25b" title="Create a native system m_cursor. ">sf::Cursor::loadFromSystem</a> </dd>
 <dd>
-<a class="el" href="classsf_1_1Cursor.html#ac24ecf82ac7d9ba6703389397f948b3a" title="Create a cursor with the provided image. ">sf::Cursor::loadFromPixels</a> </dd></dl>
+<a class="el" href="classsf_1_1Cursor.html#ac24ecf82ac7d9ba6703389397f948b3a" title="Create a m_cursor with the provided image. ">sf::Cursor::loadFromPixels</a> </dd></dl>
 
 </div>
 </div>
@@ -1805,8 +1805,8 @@ Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor de
 </table>
 </div><div class="memdoc">
 
-<p>Grab or release the mouse cursor. </p>
-<p>If set, grabs the mouse cursor inside this m_pParentWindow's client area so it may no longer be moved outside its bounds. Note that grabbing is only active while the m_pParentWindow has focus.</p>
+<p>Grab or release the mouse m_cursor. </p>
+<p>If set, grabs the mouse m_cursor inside this m_pParentWindow's client area so it may no longer be moved outside its bounds. Note that grabbing is only active while the m_pParentWindow has focus.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">grabbed</td><td>True to enable, false to disable </td></tr>
@@ -1840,11 +1840,11 @@ Features related to <a class="el" href="classsf_1_1Cursor.html" title="Cursor de
 </table>
 </div><div class="memdoc">
 
-<p>Show or hide the mouse cursor. </p>
-<p>The mouse cursor is visible by default.</p>
+<p>Show or hide the mouse m_cursor. </p>
+<p>The mouse m_cursor is visible by default.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">visible</td><td>True to show the mouse cursor, false to hide it </td></tr>
+    <tr><td class="paramname">visible</td><td>True to show the mouse m_cursor, false to hide it </td></tr>
   </table>
   </dd>
 </dl>

@@ -6,9 +6,9 @@ set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
 set(SFML_DIR "libs/SFML-2.5.1/lib/cmake/SFML")
 set(SFML_STATIC_LIBRARIES TRUE)
 
-add_executable(ZerroliteSFML main.cpp zerrolite/srcs/GameCore.cpp zerrolite/include/GameCore.h zerrolite/srcs/Scene.cpp zerrolite/include/Scene.h zerrolite/srcs/Entity.cpp zerrolite/include/Entity.h zerrolite/srcs/GUI/Button.cpp zerrolite/include/GUI/Button.h zerrolite/include/types.h zerrolite/srcs/GUI/Text.cpp zerrolite/include/GUI/Text.h)
+#add_executable(ZerroliteSFML main.cpp zerrolite_old/srcs/GameCore.cpp zerrolite_old/include/GameCore.h zerrolite_old/srcs/Scene.cpp zerrolite_old/include/Scene.h zerrolite_old/srcs/Entity.cpp zerrolite_old/include/Entity.h zerrolite_old/srcs/GUI/Button.cpp zerrolite_old/include/GUI/Button.h zerrolite_old/include/types.h zerrolite_old/srcs/GUI/Text.cpp zerrolite_old/include/GUI/Text.h main.h scenes.h)
 #add_executable(ZerroliteSFML tempMain.cpp)
-
+add_executable(${PROJECT_NAME} main.cpp zerrolite/zerrolite.h zerrolite/srcs/Core/GameCore.cpp zerrolite/include/Core/GameCore.h zerrolite/srcs/Core/Scene.cpp zerrolite/include/Core/Scene.h zerrolite/include/types.h scenes.cpp scenes.h zerrolite/srcs/Core/Entity.cpp zerrolite/include/Core/Entity.h zerrolite/include/Core/Scene.h zerrolite/srcs/GUI/Button.cpp zerrolite/include/GUI/Button.h zerrolite/srcs/GUI/Text.cpp zerrolite/include/GUI/Text.h)
 target_link_libraries(${PROJECT_NAME} sfml-graphics)
 target_link_libraries(${PROJECT_NAME} stdc++fs)
 

@@ -83,7 +83,7 @@ public:
     /// \brief Get the current position of the mouse in desktop coordinates
     ///
     /// This function returns the global position of the mouse
-    /// cursor on the desktop.
+    /// m_cursor on the desktop.
     ///
     /// \return Current position of the mouse
     ///
@@ -94,7 +94,7 @@ public:
     /// \brief Get the current position of the mouse in window coordinates
     ///
     /// This function returns the current position of the mouse
-    /// cursor, relative to the given window.
+    /// m_cursor, relative to the given window.
     ///
     /// \param relativeTo Reference window
     ///
@@ -107,7 +107,7 @@ public:
     /// \brief Set the current position of the mouse in desktop coordinates
     ///
     /// This function sets the global position of the mouse
-    /// cursor on the desktop.
+    /// m_cursor on the desktop.
     ///
     /// \param position New position of the mouse
     ///
@@ -118,7 +118,7 @@ public:
     /// \brief Set the current position of the mouse in window coordinates
     ///
     /// This function sets the current position of the mouse
-    /// cursor, relative to the given window.
+    /// m_cursor, relative to the given window.
     ///
     /// \param position New position of the mouse
     /// \param relativeTo Reference window
@@ -145,7 +145,7 @@ public:
 /// time and directly, without having to deal with a window and
 /// its events. Compared to the MouseMoved, MouseButtonPressed
 /// and MouseButtonReleased events, sf::Mouse can retrieve the
-/// state of the cursor and the buttons at any time
+/// state of the m_cursor and the buttons at any time
 /// (you don't need to store and update a boolean on your side
 /// in order to know if a button is pressed or released), and you
 /// always get the real state of the mouse, even if it is

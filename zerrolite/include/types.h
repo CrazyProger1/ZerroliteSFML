@@ -7,11 +7,13 @@
 
 #include <SFML/Graphics.hpp>
 
+
 namespace zl {
-    typedef sf::Vector2<float> fCoords, fSize;
-    typedef sf::Vector2<int> iCoords, iSize;
+    typedef sf::Vector2<float> fVector;
+    typedef sf::Vector2<int> iVector;
     typedef sf::Color RGBColor, RGBAColor;
     typedef std::string str;
+
 }
 
 

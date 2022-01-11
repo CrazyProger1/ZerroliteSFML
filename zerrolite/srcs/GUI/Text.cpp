@@ -1,5 +1,5 @@
 //
-// Created by crazy on 05.01.2022.
+// Created by crazy on 07.01.2022.
 //
 
 #include "../../include/GUI/Text.h"
@@ -8,11 +8,17 @@
 zl::Text::Text() = default;
 
 
-zl::Text::Text(const zl::str &text, const zl::str &font, int fontSize, int underlineOffset, int underlineWidth,
+zl::Text::Text(const zl::str &text,
+               const zl::str &fontFilepath,
+               int fontSize,
+               unsigned int style,
+               int underlineOffset,
+               int underlineWidth,
                const zl::RGBAColor &textColor, const zl::RGBAColor &underlineColor, const zl::RGBAColor &textHoverColor,
                const zl::RGBAColor &underlineHoverColor) {
-    m_text = text;
-    m_font = font;
+
+    m_textString = text;
+    m_fontFilepath = fontFilepath;
     m_fontSize = fontSize;
     m_underlineOffset = underlineOffset;
     m_underlineWidth = underlineWidth;
@@ -20,17 +26,19 @@ zl::Text::Text(const zl::str &text, const zl::str &font, int fontSize, int under
     m_underlineColor = underlineColor;
     m_textHoverColor = textHoverColor;
     m_underlineHoverColor = underlineHoverColor;
+    m_textStyle = style;
+
     init();
 
 }
 
 void zl::Text::setText(const zl::str &text) {
-    m_text = text;
+    m_textString = text;
     init();
 }
 
-void zl::Text::setFont(const zl::str &font) {
-    m_font = font;
+void zl::Text::setFont(const zl::str &filepath) {
+    m_fontFilepath = filepath;
     init();
 }
 
@@ -69,82 +77,118 @@ void zl::Text::setUnderlineHoverColor(const zl::RGBAColor &color) {
     init();
 }
 
-void zl::Text::draw(sf::RenderTarget &renderTarget) {
-    if (m_underlineWidth != 0) {
-        renderTarget.draw(m_underlineRect);
-    }
-    renderTarget.draw(m_sf_text);
-
+void zl::Text::setTextStyle(unsigned int style) {
+    m_textStyle = style;
+    init();
 }
 
 void zl::Text::init() {
+    fVector pos = getPosition();
 
-    if (!m_sf_font.loadFromFile(m_font)) {
+    if (!m_font.loadFromFile(m_fontFilepath)) {
+        std::cerr << "File did not found" << std::endl;
         throw std::exception();
     }
 
-    m_sf_text.setFont(m_sf_font);
-    m_sf_text.setString(m_text);
-    m_sf_text.setCharacterSize(m_fontSize);
-    m_sf_text.setFillColor(m_textColor);
-    m_sf_text.setPosition(getPosition());
 
-    fSize size = getTextSize();
-    fCoords pos = getPosition();
+    m_text.setFont(m_font);
+    m_text.setString(m_textString);
+    m_text.setCharacterSize(m_fontSize);
+    m_text.setFillColor(m_textColor);
+    m_text.setPosition(pos);
+    m_text.setStyle(m_textStyle);
+
+
+    fVector size = getTextSize();
+
 
     if (m_underlineWidth > 0) {
         m_underlineRect.setSize({size.x, (float) m_underlineWidth});
-        m_underlineRect.setPosition({pos.x, pos.y + size.y + m_underlineOffset});
+        m_underlineRect.setPosition({pos.x + 1, pos.y + size.y + m_underlineOffset});
         m_underlineRect.setFillColor(m_underlineColor);
     }
 
 }
 
+void zl::Text::draw(sf::RenderTarget &renderTarget) {
+    if (m_underlineWidth > 0)
+        renderTarget.draw(m_underlineRect);
+
+    renderTarget.draw(m_text);
+
+}
 
 void zl::Text::handleSFMLEvent(sf::Event &event) {
+    checkHover();
+    checkClick(event);
 
-    if (isHovered()) {
-        m_sf_text.setFillColor(m_textHoverColor);
+    if (m_isHovered) {
+        m_text.setFillColor(m_textHoverColor);
         m_underlineRect.setFillColor(m_underlineHoverColor);
-        if (event.type == sf::Event::MouseButtonPressed) {
-            m_isClicked = true;
-
-        }
-
     } else {
-        m_sf_text.setFillColor(m_textColor);
+        m_text.setFillColor(m_textColor);
         m_underlineRect.setFillColor(m_underlineColor);
-
     }
+}
+
+void zl::Text::updateState() {
 
 }
 
-bool zl::Text::isHovered() {
-    sf::RenderWindow *window = getParentWindow();
-    iCoords mousePos = sf::Mouse::getPosition(*window);
 
-    fSize size = getFullSize();
-    fCoords pos = getPosition();
-
-
-    if (mousePos.x > pos.x && mousePos.x < pos.x + size.x) {
-        if (mousePos.y > pos.y && mousePos.y < pos.y + size.y) {
-            return true;
-        }
-    }
-    return false;
-}
-
-zl::fSize zl::Text::getTextSize() {
-    float width = m_sf_text.getLocalBounds().width;
+zl::fVector zl::Text::getTextSize() {
+    float width = m_text.getLocalBounds().width;
     float height = m_fontSize;
     return {width, height};
 }
 
-zl::fSize zl::Text::getFullSize() {
-    float width = m_sf_text.getLocalBounds().width;
+zl::fVector zl::Text::getFullSize() {
+    float width = m_text.getLocalBounds().width;
     float height = m_fontSize;
     return {width, height + (float) m_underlineWidth + (float) m_underlineOffset};
+}
+
+
+zl::str &zl::Text::getText() {
+    return m_textString;
+}
+
+
+zl::RGBAColor &zl::Text::getTextHoverColor() {
+    return m_textHoverColor;
+}
+
+zl::RGBAColor &zl::Text::getTextColor() {
+    return m_textColor;
+}
+
+void zl::Text::checkClick(sf::Event &event) {
+    if (m_isHovered)
+        if (event.type == sf::Event::MouseButtonPressed) {
+            m_isClicked = true;
+            return;
+        }
+
+    m_isClicked = false;
+}
+
+void zl::Text::checkHover() {
+    sf::RenderWindow *window = getParentWindow();
+    fVector size = getFullSize();
+    fVector pos = getPosition();
+    iVector mousePos = sf::Mouse::getPosition(*window);
+
+    if (mousePos.x > pos.x && mousePos.x < pos.x + size.x)
+        if (mousePos.y > pos.y && mousePos.y < pos.y + size.y) {
+            m_isHovered = true;
+            return;
+        }
+
+    m_isHovered = false;
+}
+
+bool zl::Text::isHovered() {
+    return m_isHovered;
 }
 
 bool zl::Text::isClicked() {
@@ -153,13 +197,10 @@ bool zl::Text::isClicked() {
     return buff;
 }
 
-zl::str zl::Text::getText() {
-    return m_text;
-}
-
 void zl::Text::initialize() {
     init();
 }
+
 
 
 

@@ -152,29 +152,101 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-zerrolite/srcs/Entity.obj: zerrolite/srcs/Entity.cpp.obj
-.PHONY : zerrolite/srcs/Entity.obj
+scenes.obj: scenes.cpp.obj
+.PHONY : scenes.obj
 
 # target to build an object file
-zerrolite/srcs/Entity.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.obj
-.PHONY : zerrolite/srcs/Entity.cpp.obj
+scenes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.obj
+.PHONY : scenes.cpp.obj
 
-zerrolite/srcs/Entity.i: zerrolite/srcs/Entity.cpp.i
-.PHONY : zerrolite/srcs/Entity.i
+scenes.i: scenes.cpp.i
+.PHONY : scenes.i
 
 # target to preprocess a source file
-zerrolite/srcs/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.i
-.PHONY : zerrolite/srcs/Entity.cpp.i
+scenes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.i
+.PHONY : scenes.cpp.i
 
-zerrolite/srcs/Entity.s: zerrolite/srcs/Entity.cpp.s
-.PHONY : zerrolite/srcs/Entity.s
+scenes.s: scenes.cpp.s
+.PHONY : scenes.s
 
 # target to generate assembly for a file
-zerrolite/srcs/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Entity.cpp.s
-.PHONY : zerrolite/srcs/Entity.cpp.s
+scenes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.s
+.PHONY : scenes.cpp.s
+
+zerrolite/srcs/Core/Entity.obj: zerrolite/srcs/Core/Entity.cpp.obj
+.PHONY : zerrolite/srcs/Core/Entity.obj
+
+# target to build an object file
+zerrolite/srcs/Core/Entity.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj
+.PHONY : zerrolite/srcs/Core/Entity.cpp.obj
+
+zerrolite/srcs/Core/Entity.i: zerrolite/srcs/Core/Entity.cpp.i
+.PHONY : zerrolite/srcs/Core/Entity.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.i
+.PHONY : zerrolite/srcs/Core/Entity.cpp.i
+
+zerrolite/srcs/Core/Entity.s: zerrolite/srcs/Core/Entity.cpp.s
+.PHONY : zerrolite/srcs/Core/Entity.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.s
+.PHONY : zerrolite/srcs/Core/Entity.cpp.s
+
+zerrolite/srcs/Core/GameCore.obj: zerrolite/srcs/Core/GameCore.cpp.obj
+.PHONY : zerrolite/srcs/Core/GameCore.obj
+
+# target to build an object file
+zerrolite/srcs/Core/GameCore.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj
+.PHONY : zerrolite/srcs/Core/GameCore.cpp.obj
+
+zerrolite/srcs/Core/GameCore.i: zerrolite/srcs/Core/GameCore.cpp.i
+.PHONY : zerrolite/srcs/Core/GameCore.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/GameCore.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.i
+.PHONY : zerrolite/srcs/Core/GameCore.cpp.i
+
+zerrolite/srcs/Core/GameCore.s: zerrolite/srcs/Core/GameCore.cpp.s
+.PHONY : zerrolite/srcs/Core/GameCore.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/GameCore.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.s
+.PHONY : zerrolite/srcs/Core/GameCore.cpp.s
+
+zerrolite/srcs/Core/Scene.obj: zerrolite/srcs/Core/Scene.cpp.obj
+.PHONY : zerrolite/srcs/Core/Scene.obj
+
+# target to build an object file
+zerrolite/srcs/Core/Scene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj
+.PHONY : zerrolite/srcs/Core/Scene.cpp.obj
+
+zerrolite/srcs/Core/Scene.i: zerrolite/srcs/Core/Scene.cpp.i
+.PHONY : zerrolite/srcs/Core/Scene.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.i
+.PHONY : zerrolite/srcs/Core/Scene.cpp.i
+
+zerrolite/srcs/Core/Scene.s: zerrolite/srcs/Core/Scene.cpp.s
+.PHONY : zerrolite/srcs/Core/Scene.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.s
+.PHONY : zerrolite/srcs/Core/Scene.cpp.s
 
 zerrolite/srcs/GUI/Button.obj: zerrolite/srcs/GUI/Button.cpp.obj
 .PHONY : zerrolite/srcs/GUI/Button.obj
@@ -224,54 +296,6 @@ zerrolite/srcs/GUI/Text.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s
 .PHONY : zerrolite/srcs/GUI/Text.cpp.s
 
-zerrolite/srcs/GameCore.obj: zerrolite/srcs/GameCore.cpp.obj
-.PHONY : zerrolite/srcs/GameCore.obj
-
-# target to build an object file
-zerrolite/srcs/GameCore.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.obj
-.PHONY : zerrolite/srcs/GameCore.cpp.obj
-
-zerrolite/srcs/GameCore.i: zerrolite/srcs/GameCore.cpp.i
-.PHONY : zerrolite/srcs/GameCore.i
-
-# target to preprocess a source file
-zerrolite/srcs/GameCore.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.i
-.PHONY : zerrolite/srcs/GameCore.cpp.i
-
-zerrolite/srcs/GameCore.s: zerrolite/srcs/GameCore.cpp.s
-.PHONY : zerrolite/srcs/GameCore.s
-
-# target to generate assembly for a file
-zerrolite/srcs/GameCore.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GameCore.cpp.s
-.PHONY : zerrolite/srcs/GameCore.cpp.s
-
-zerrolite/srcs/Scene.obj: zerrolite/srcs/Scene.cpp.obj
-.PHONY : zerrolite/srcs/Scene.obj
-
-# target to build an object file
-zerrolite/srcs/Scene.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Scene.cpp.obj
-.PHONY : zerrolite/srcs/Scene.cpp.obj
-
-zerrolite/srcs/Scene.i: zerrolite/srcs/Scene.cpp.i
-.PHONY : zerrolite/srcs/Scene.i
-
-# target to preprocess a source file
-zerrolite/srcs/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Scene.cpp.i
-.PHONY : zerrolite/srcs/Scene.cpp.i
-
-zerrolite/srcs/Scene.s: zerrolite/srcs/Scene.cpp.s
-.PHONY : zerrolite/srcs/Scene.s
-
-# target to generate assembly for a file
-zerrolite/srcs/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Scene.cpp.s
-.PHONY : zerrolite/srcs/Scene.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -284,21 +308,24 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... zerrolite/srcs/Entity.obj
-	@echo ... zerrolite/srcs/Entity.i
-	@echo ... zerrolite/srcs/Entity.s
+	@echo ... scenes.obj
+	@echo ... scenes.i
+	@echo ... scenes.s
+	@echo ... zerrolite/srcs/Core/Entity.obj
+	@echo ... zerrolite/srcs/Core/Entity.i
+	@echo ... zerrolite/srcs/Core/Entity.s
+	@echo ... zerrolite/srcs/Core/GameCore.obj
+	@echo ... zerrolite/srcs/Core/GameCore.i
+	@echo ... zerrolite/srcs/Core/GameCore.s
+	@echo ... zerrolite/srcs/Core/Scene.obj
+	@echo ... zerrolite/srcs/Core/Scene.i
+	@echo ... zerrolite/srcs/Core/Scene.s
 	@echo ... zerrolite/srcs/GUI/Button.obj
 	@echo ... zerrolite/srcs/GUI/Button.i
 	@echo ... zerrolite/srcs/GUI/Button.s
 	@echo ... zerrolite/srcs/GUI/Text.obj
 	@echo ... zerrolite/srcs/GUI/Text.i
 	@echo ... zerrolite/srcs/GUI/Text.s
-	@echo ... zerrolite/srcs/GameCore.obj
-	@echo ... zerrolite/srcs/GameCore.i
-	@echo ... zerrolite/srcs/GameCore.s
-	@echo ... zerrolite/srcs/Scene.obj
-	@echo ... zerrolite/srcs/Scene.i
-	@echo ... zerrolite/srcs/Scene.s
 .PHONY : help
 
 

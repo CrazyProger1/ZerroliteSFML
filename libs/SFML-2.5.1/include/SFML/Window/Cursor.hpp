@@ -40,7 +40,7 @@ namespace priv
 }
 
 ////////////////////////////////////////////////////////////
-/// \brief Cursor defines the appearance of a system cursor
+/// \brief Cursor defines the appearance of a system m_cursor
 ///
 ////////////////////////////////////////////////////////////
 class SFML_WINDOW_API Cursor : NonCopyable
@@ -48,9 +48,9 @@ class SFML_WINDOW_API Cursor : NonCopyable
 public:
 
     ////////////////////////////////////////////////////////////
-    /// \brief Enumeration of the native system cursor types
+    /// \brief Enumeration of the native system m_cursor types
     ///
-    /// Refer to the following table to determine which cursor
+    /// Refer to the following table to determine which m_cursor
     /// is available on which platform.
     ///
     ///  Type                               | Linux | Mac OS X | Windows  |
@@ -69,25 +69,25 @@ public:
     ///  sf::Cursor::Help                   |  yes  |    yes*  |   yes    |
     ///  sf::Cursor::NotAllowed             |  yes  |    yes   |   yes    |
     ///
-    ///  * These cursor types are undocumented so may not
+    ///  * These m_cursor types are undocumented so may not
     ///    be available on all versions, but have been tested on 10.13
     ///
     ////////////////////////////////////////////////////////////
     enum Type
     {
-        Arrow,                  ///< Arrow cursor (default)
-        ArrowWait,              ///< Busy arrow cursor
-        Wait,                   ///< Busy cursor
-        Text,                   ///< I-beam, cursor when hovering over a field allowing text entry
-        Hand,                   ///< Pointing hand cursor
-        SizeHorizontal,         ///< Horizontal double arrow cursor
-        SizeVertical,           ///< Vertical double arrow cursor
-        SizeTopLeftBottomRight, ///< Double arrow cursor going from top-left to bottom-right
-        SizeBottomLeftTopRight, ///< Double arrow cursor going from bottom-left to top-right
+        Arrow,                  ///< Arrow m_cursor (default)
+        ArrowWait,              ///< Busy arrow m_cursor
+        Wait,                   ///< Busy m_cursor
+        Text,                   ///< I-beam, m_cursor when hovering over a field allowing text entry
+        Hand,                   ///< Pointing hand m_cursor
+        SizeHorizontal,         ///< Horizontal double arrow m_cursor
+        SizeVertical,           ///< Vertical double arrow m_cursor
+        SizeTopLeftBottomRight, ///< Double arrow m_cursor going from top-left to bottom-right
+        SizeBottomLeftTopRight, ///< Double arrow m_cursor going from bottom-left to top-right
         SizeAll,                ///< Combination of SizeHorizontal and SizeVertical
-        Cross,                  ///< Crosshair cursor
-        Help,                   ///< Help cursor
-        NotAllowed              ///< Action not allowed cursor
+        Cross,                  ///< Crosshair m_cursor
+        Help,                   ///< Help m_cursor
+        NotAllowed              ///< Action not allowed m_cursor
     };
 
 public:
@@ -95,10 +95,10 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Default constructor
     ///
-    /// This constructor doesn't actually create the cursor;
+    /// This constructor doesn't actually create the m_cursor;
     /// initially the new instance is invalid and must not be
     /// used until either loadFromPixels() or loadFromSystem()
-    /// is called and successfully created a cursor.
+    /// is called and successfully created a m_cursor.
     ///
     ////////////////////////////////////////////////////////////
     Cursor();
@@ -107,24 +107,24 @@ public:
     /// \brief Destructor
     ///
     /// This destructor releases the system resources
-    /// associated with this cursor, if any.
+    /// associated with this m_cursor, if any.
     ///
     ////////////////////////////////////////////////////////////
     ~Cursor();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Create a cursor with the provided image
+    /// \brief Create a m_cursor with the provided image
     ///
     /// \a pixels must be an array of \a width by \a height pixels
     /// in 32-bit RGBA format. If not, this will cause undefined behavior.
     ///
     /// If \a pixels is null or either \a width or \a height are 0,
-    /// the current cursor is left unchanged and the function will
+    /// the current m_cursor is left unchanged and the function will
     /// return false.
     ///
     /// In addition to specifying the pixel data, you can also
-    /// specify the location of the hotspot of the cursor. The
-    /// hotspot is the pixel coordinate within the cursor image
+    /// specify the location of the hotspot of the m_cursor. The
+    /// hotspot is the pixel coordinate within the m_cursor image
     /// which will be located exactly where the mouse pointer
     /// position is. Any mouse actions that are performed will
     /// return the window/screen location of the hotspot.
@@ -137,22 +137,22 @@ public:
     /// \param pixels   Array of pixels of the image
     /// \param size     Width and height of the image
     /// \param hotspot  (x,y) location of the hotspot
-    /// \return true if the cursor was successfully loaded;
+    /// \return true if the m_cursor was successfully loaded;
     ///         false otherwise
     ///
     ////////////////////////////////////////////////////////////
     bool loadFromPixels(const Uint8* pixels, Vector2u size, Vector2u hotspot);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Create a native system cursor
+    /// \brief Create a native system m_cursor
     ///
-    /// Refer to the list of cursor available on each system
-    /// (see sf::Cursor::Type) to know whether a given cursor is
+    /// Refer to the list of m_cursor available on each system
+    /// (see sf::Cursor::Type) to know whether a given m_cursor is
     /// expected to load successfully or is not supported by
     /// the operating system.
     ///
-    /// \param type Native system cursor type
-    /// \return true if and only if the corresponding cursor is
+    /// \param type Native system m_cursor type
+    /// \return true if and only if the corresponding m_cursor is
     ///         natively supported by the operating system;
     ///         false otherwise
     ///
@@ -179,7 +179,7 @@ private:
     ////////////////////////////////////////////////////////////
     // Member data
     ////////////////////////////////////////////////////////////
-    priv::CursorImpl* m_impl; ///< Platform-specific implementation of the cursor
+    priv::CursorImpl* m_impl; ///< Platform-specific implementation of the m_cursor
 };
 
 } // namespace sf
@@ -196,14 +196,14 @@ private:
 ///          iOS and Android.
 ///
 /// This class abstracts the operating system resources
-/// associated with either a native system cursor or a custom
-/// cursor.
+/// associated with either a native system m_cursor or a custom
+/// m_cursor.
 ///
-/// After loading the cursor the graphical appearance
+/// After loading the m_cursor the graphical appearance
 /// with either loadFromPixels() or loadFromSystem(), the
-/// cursor can be changed with sf::Window::setMouseCursor().
+/// m_cursor can be changed with sf::Window::setMouseCursor().
 ///
-/// The behaviour is undefined if the cursor is destroyed while
+/// The behaviour is undefined if the m_cursor is destroyed while
 /// in use by the window.
 ///
 /// Usage example:
@@ -212,9 +212,9 @@ private:
 ///
 /// // ... create window as usual ...
 ///
-/// sf::Cursor cursor;
-/// if (cursor.loadFromSystem(sf::Cursor::Hand))
-///     window.setMouseCursor(cursor);
+/// sf::Cursor m_cursor;
+/// if (m_cursor.loadFromSystem(sf::Cursor::Hand))
+///     window.setMouseCursor(m_cursor);
 /// \endcode
 ///
 /// \see sf::Window::setMouseCursor
