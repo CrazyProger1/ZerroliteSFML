@@ -176,6 +176,30 @@ scenes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.s
 .PHONY : scenes.cpp.s
 
+zerrolite/srcs/Containers/Grid.obj: zerrolite/srcs/Containers/Grid.cpp.obj
+.PHONY : zerrolite/srcs/Containers/Grid.obj
+
+# target to build an object file
+zerrolite/srcs/Containers/Grid.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.obj
+.PHONY : zerrolite/srcs/Containers/Grid.cpp.obj
+
+zerrolite/srcs/Containers/Grid.i: zerrolite/srcs/Containers/Grid.cpp.i
+.PHONY : zerrolite/srcs/Containers/Grid.i
+
+# target to preprocess a source file
+zerrolite/srcs/Containers/Grid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.i
+.PHONY : zerrolite/srcs/Containers/Grid.cpp.i
+
+zerrolite/srcs/Containers/Grid.s: zerrolite/srcs/Containers/Grid.cpp.s
+.PHONY : zerrolite/srcs/Containers/Grid.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Containers/Grid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.s
+.PHONY : zerrolite/srcs/Containers/Grid.cpp.s
+
 zerrolite/srcs/Core/Entity.obj: zerrolite/srcs/Core/Entity.cpp.obj
 .PHONY : zerrolite/srcs/Core/Entity.obj
 
@@ -296,6 +320,54 @@ zerrolite/srcs/GUI/Text.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s
 .PHONY : zerrolite/srcs/GUI/Text.cpp.s
 
+zerrolite/srcs/Styles/ButtonStyle.obj: zerrolite/srcs/Styles/ButtonStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.obj
+
+# target to build an object file
+zerrolite/srcs/Styles/ButtonStyle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.cpp.obj
+
+zerrolite/srcs/Styles/ButtonStyle.i: zerrolite/srcs/Styles/ButtonStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.i
+
+# target to preprocess a source file
+zerrolite/srcs/Styles/ButtonStyle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.cpp.i
+
+zerrolite/srcs/Styles/ButtonStyle.s: zerrolite/srcs/Styles/ButtonStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Styles/ButtonStyle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/ButtonStyle.cpp.s
+
+zerrolite/srcs/Styles/TextStyle.obj: zerrolite/srcs/Styles/TextStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/TextStyle.obj
+
+# target to build an object file
+zerrolite/srcs/Styles/TextStyle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/TextStyle.cpp.obj
+
+zerrolite/srcs/Styles/TextStyle.i: zerrolite/srcs/Styles/TextStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/TextStyle.i
+
+# target to preprocess a source file
+zerrolite/srcs/Styles/TextStyle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/TextStyle.cpp.i
+
+zerrolite/srcs/Styles/TextStyle.s: zerrolite/srcs/Styles/TextStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/TextStyle.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Styles/TextStyle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/TextStyle.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -311,6 +383,9 @@ help:
 	@echo ... scenes.obj
 	@echo ... scenes.i
 	@echo ... scenes.s
+	@echo ... zerrolite/srcs/Containers/Grid.obj
+	@echo ... zerrolite/srcs/Containers/Grid.i
+	@echo ... zerrolite/srcs/Containers/Grid.s
 	@echo ... zerrolite/srcs/Core/Entity.obj
 	@echo ... zerrolite/srcs/Core/Entity.i
 	@echo ... zerrolite/srcs/Core/Entity.s
@@ -326,6 +401,12 @@ help:
 	@echo ... zerrolite/srcs/GUI/Text.obj
 	@echo ... zerrolite/srcs/GUI/Text.i
 	@echo ... zerrolite/srcs/GUI/Text.s
+	@echo ... zerrolite/srcs/Styles/ButtonStyle.obj
+	@echo ... zerrolite/srcs/Styles/ButtonStyle.i
+	@echo ... zerrolite/srcs/Styles/ButtonStyle.s
+	@echo ... zerrolite/srcs/Styles/TextStyle.obj
+	@echo ... zerrolite/srcs/Styles/TextStyle.i
+	@echo ... zerrolite/srcs/Styles/TextStyle.s
 .PHONY : help
 
 

@@ -3,6 +3,11 @@
 //
 
 #include "../../include/Core/GameCore.h"
+#include <chrono>
+#include <iostream>
+
+std::chrono::high_resolution_clock::time_point start;
+std::chrono::high_resolution_clock::time_point end;
 
 zl::GameCore::GameCore(sf::RenderWindow *mainWindow) {
     m_pMainWindow = mainWindow;
@@ -11,6 +16,7 @@ zl::GameCore::GameCore(sf::RenderWindow *mainWindow) {
 zl::GameCore::GameCore() = default;
 
 void zl::GameCore::tick() {
+    start = std::chrono::high_resolution_clock::now();
     handleSFMLEvents();
     m_pActiveScene->draw(*m_pMainWindow);
     m_pActiveScene->updateState();
@@ -20,6 +26,11 @@ void zl::GameCore::tick() {
         m_pActiveScene->onDestroy();
         setActiveScene(newScene);
     }
+
+    end = std::chrono::high_resolution_clock::now();
+
+    int fps = (float) 1e9 / (float) std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
+//    std::cout << fps << std::endl;
 }
 
 void zl::GameCore::run() {

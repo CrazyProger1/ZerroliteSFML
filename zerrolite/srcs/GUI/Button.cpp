@@ -36,18 +36,30 @@ void zl::Button::init() {
 
     m_mainRect.setSize(m_size);
     m_mainRect.setPosition(pos);
-    m_mainRect.setFillColor(m_color);
+
+    if (!m_isDeactivated)
+        m_mainRect.setFillColor(m_color);
+    else
+        m_mainRect.setFillColor(m_deactivatedColor);
 
     if (m_cornerRadius > 0) {
+
         m_mainRect.setPosition({pos.x + m_cornerRadius, pos.y});
         m_mainRect.setSize({m_size.x - m_cornerRadius * 2, m_size.y});
-        m_cornerCircle.setFillColor(m_color);
-        m_sideRect.setFillColor(m_color);
+
         m_cornerCircle.setRadius(m_cornerRadius);
 
-        m_sideRect.setFillColor(m_color);
         m_sideRect.setSize({(float) m_cornerRadius, m_size.y - m_cornerRadius * 2});
 
+        if (!m_isDeactivated) {
+            m_cornerCircle.setFillColor(m_color);
+            m_sideRect.setFillColor(m_color);
+            m_sideRect.setFillColor(m_color);
+        } else {
+            m_cornerCircle.setFillColor(m_deactivatedColor);
+            m_sideRect.setFillColor(m_deactivatedColor);
+            m_sideRect.setFillColor(m_deactivatedColor);
+        }
     }
 
     if (m_borderWidth > 0 && m_cornerRadius == 0) {
@@ -99,10 +111,12 @@ void zl::Button::centralizeText() {
 
 void zl::Button::activate() {
     m_isDeactivated = false;
+    init();
 }
 
 void zl::Button::deactivate() {
     m_isDeactivated = true;
+    init();
 }
 
 
@@ -206,40 +220,48 @@ void zl::Button::draw(sf::RenderTarget &rt) {
 }
 
 void zl::Button::handleSFMLEvent(sf::Event &event) {
-    checkHover();
+
     checkClick(event);
 
-    if (m_isHovered) {
-        if (m_isTextSet)
-            m_text.setTextColor(m_textHoverColor);
 
-        m_mainRect.setFillColor(m_hoverColor);
+}
 
-        if (m_cornerRadius > 0) {
-            m_cornerCircle.setFillColor(m_hoverColor);
-            m_sideRect.setFillColor(m_hoverColor);
+void zl::Button::updateState() {
+    checkHover();
 
-        }
+    if (!m_isDeactivated) {
+        if (m_isHovered) {
+            if (m_isTextSet)
+                m_text.setTextColor(m_textHoverColor);
 
+            m_mainRect.setFillColor(m_hoverColor);
 
-    } else {
-        if (m_isTextSet)
-            m_text.setTextColor(m_textColor);
+            if (m_cornerRadius > 0) {
+                m_cornerCircle.setFillColor(m_hoverColor);
+                m_sideRect.setFillColor(m_hoverColor);
 
-        m_mainRect.setFillColor(m_color);
+            }
 
-        if (m_cornerRadius > 0) {
-            m_cornerCircle.setFillColor(m_color);
-            m_sideRect.setFillColor(m_color);
+        } else {
+            if (m_isTextSet)
+                m_text.setTextColor(m_textColor);
+
+            m_mainRect.setFillColor(m_color);
+
+            if (m_cornerRadius > 0) {
+                m_cornerCircle.setFillColor(m_color);
+                m_sideRect.setFillColor(m_color);
+            }
         }
     }
 }
 
-void zl::Button::updateState() {
-
-}
-
 void zl::Button::checkClick(sf::Event &event) {
+    if (m_isDeactivated) {
+        m_isClicked = false;
+        return;
+    }
+
     if (m_isHovered)
         if (event.type == sf::Event::MouseButtonPressed) {
             m_isClicked = true;
@@ -291,5 +313,19 @@ void zl::Button::drawBorder(sf::RenderTarget &rt) {
     }
 
 
+}
+
+void zl::Button::setStyle(zl::ButtonStyle &buttonStyle) {
+    m_size = buttonStyle.getSize();
+    m_borderWidth = buttonStyle.getBorderWidth();
+    m_cornerRadius = buttonStyle.getCornerRadius();
+    m_color = buttonStyle.getColor();
+    m_borderColor = buttonStyle.getBorderColor();
+    m_isDeactivated = buttonStyle.isDeactivated();
+    m_textOffset = buttonStyle.getTextOffset();
+    m_hoverColor = buttonStyle.getHoverColor();
+    m_deactivatedColor = buttonStyle.getDeactivatedColor();
+    m_centerText = buttonStyle.centerText();
+    init();
 }
 

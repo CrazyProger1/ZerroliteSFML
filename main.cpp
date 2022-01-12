@@ -7,19 +7,25 @@ class Game : public zl::GameCore {
 
 int main() {
     Game game;
-    MainMenu mainMenu;
+    MainMenu mm;
     SinglePlayerMenu spm;
     MultiPlayerMenu mpm;
+    Shop shop;
+    About about;
 
-    sf::RenderWindow window(sf::VideoMode(640, 480), "hello world");
+    sf::RenderWindow window(sf::VideoMode(640, 480), "Snake");
+
+    window.setVerticalSyncEnabled(true);
 
     game.setMainWindow(&window);
 
-    game.addScene("main menu", &mainMenu);
+    game.addScene("mm", &mm);
     game.addScene("mpm", &mpm);
     game.addScene("spm", &spm);
+    game.addScene("shop", &shop);
+    game.addScene("about", &about);
 
-    game.setActiveScene("main menu");
+    game.setActiveScene("mm");
     game.run();
 
 }

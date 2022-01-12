@@ -725,6 +725,8 @@ utility
 -
 iostream
 -
+../Styles/ButtonStyle.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/ButtonStyle.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h
 ../Core/Entity.h
@@ -735,6 +737,32 @@ utility
 -
 iostream
 -
+../Styles/TextStyle.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/ButtonStyle.h
+string
+-
+utility
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h
+string
+-
+utility
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 SFML/Graphics.hpp
@@ -749,4 +777,6 @@ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Scene.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h
 ./include/GUI/Text.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h
+./include/Styles/ButtonStyle.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/ButtonStyle.h
 

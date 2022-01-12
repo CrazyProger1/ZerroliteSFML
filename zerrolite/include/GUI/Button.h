@@ -10,6 +10,7 @@
 #include <string>
 #include <utility>
 #include <iostream>
+#include "../Styles/ButtonStyle.h"
 
 namespace zl {
     class Button : public Entity {
@@ -93,6 +94,7 @@ namespace zl {
 
         void setText(Text &text);
 
+        void setStyle(ButtonStyle &buttonStyle);
 
         void draw(sf::RenderTarget &rt) override;
 

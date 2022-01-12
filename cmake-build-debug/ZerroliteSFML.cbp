@@ -93,6 +93,9 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/scenes.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Grid.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -108,7 +111,16 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/ButtonStyle.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Containers/Grid.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Entity.cpp">
@@ -124,6 +136,12 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Text.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/ButtonStyle.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/TextStyle.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h">

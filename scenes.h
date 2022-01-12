@@ -8,24 +8,32 @@
 #include "zerrolite/zerrolite.h"
 #include <iostream>
 
+class About : public zl::Scene {
+    void onInitializeScene() override {
+    }
+
+    void onUpdateState() override {
+
+    }
+};
+
+class Shop : public zl::Scene {
+    void onInitializeScene() override {
+    }
+
+    void onUpdateState() override {
+
+    }
+};
 
 class SinglePlayerMenu : public zl::Scene {
-    zl::Button btn;
-    zl::Text txt;
 
 
     void onInitializeScene() override {
-        btn.setSize({200, 100});
-        btn.setPosition({100, 100});
-        btn.setCornerRadius(20);
-        btn.setBorderWidth(40);
-        txt.setText("HELLO WORLD!");
-        txt.setFontSize(20);
-        btn.setCenteringText(true);
-        txt.setTextColor({200, 250, 0});
+    }
 
-        btn.setText(txt);
-        attach(&btn);
+    void onUpdateState() override {
+
     }
 };
 
@@ -36,25 +44,123 @@ class MultiPlayerMenu : public zl::Scene {
 };
 
 class MainMenu : public zl::Scene {
-    zl::Text testText;
+    zl::Text gameName;
+
+    zl::Button buttonPlaySinglePlayer;
+    zl::Text textPlaySinglePlayer;
+
+    zl::Button buttonPlayMultiPlayer;
+    zl::Text textPlayMultiPlayer;
+
+    zl::Button buttonShop;
+    zl::Text textShop;
+
+    zl::Button buttonAbout;
+    zl::Text textAbout;
+
+    zl::Button buttonExit;
+    zl::Text textExit;
 
 
     void onInitializeScene() override {
-        testText.setText("hello");
-        testText.setPosition({100, 200});
-        testText.setFontSize(20);
-        testText.setUnderlineWidth(1);
-        testText.setTextHoverColor({250, 0, 100});
+        zl::ButtonStyle buttonStyle(
+                {220, 40},
+                {0, 0, 0},
+                {0, 255, 0},
+                {0, 0},
+                1,
+                {0, 255, 0},
+                true,
+                10,
+                false
+        );
 
-        attach(&testText);
+        zl::TextStyle textStyle(
+                "../resources/fonts/consola.ttf",
+                0,
+                20,
+                5,
+                0,
+                {0, 255, 0},
+                {0, 0, 0},
+                {255, 0, 0}
+        );
+
+        gameName.setFont("../resources/fonts/consola.ttf");
+        gameName.setTextColor({0, 220, 0});
+        gameName.setTextHoverColor({0, 255, 0});
+        gameName.setText("Snake");
+        gameName.setFontSize(64);
+        gameName.setPosition({10, 20});
+
+        textPlaySinglePlayer.setText("SINGLEPLAYER");
+        textPlayMultiPlayer.setText("MULTIPLAYER");
+        textShop.setText("SHOP");
+        textAbout.setText("ABOUT");
+        textExit.setText("EXIT");
+
+        textPlaySinglePlayer.setStyle(textStyle);
+        textPlayMultiPlayer.setStyle(textStyle);
+        textShop.setStyle(textStyle);
+        textAbout.setStyle(textStyle);
+        textExit.setStyle(textStyle);
+
+        buttonPlaySinglePlayer.setText(textPlaySinglePlayer);
+        buttonPlayMultiPlayer.setText(textPlayMultiPlayer);
+        buttonShop.setText(textShop);
+        buttonAbout.setText(textAbout);
+        buttonExit.setText(textExit);
+
+
+
+
+        buttonPlaySinglePlayer.setPosition({10, 100});
+        buttonPlayMultiPlayer.setPosition({10, 150});
+        buttonShop.setPosition({10, 200});
+        buttonAbout.setPosition({10, 250});
+        buttonExit.setPosition({10, 300});
+
+        buttonPlaySinglePlayer.setStyle(buttonStyle);
+        buttonPlayMultiPlayer.setStyle(buttonStyle);
+        buttonShop.setStyle(buttonStyle);
+        buttonAbout.setStyle(buttonStyle);
+        buttonExit.setStyle(buttonStyle);
+
+
+
+        buttonPlayMultiPlayer.deactivate();
+
+        attach(&gameName);
+        attach(&buttonPlaySinglePlayer);
+        attach(&buttonPlayMultiPlayer);
+        attach(&buttonShop);
+        attach(&buttonAbout);
+        attach(&buttonExit);
     }
 
     void onUpdateState() override {
-        if (testText.isHovered()) {
-            std::cout << "hovered" << std::endl;
+        if (gameName.isClicked()) {
+            system("start https://github.com/CrazyProger1/ZerroliteSFML");
         }
-        if (testText.isClicked()) {
+
+        if (buttonPlaySinglePlayer.isClicked()) {
             setNewScene("spm");
+        }
+
+        if (buttonPlayMultiPlayer.isClicked()) {
+            setNewScene("mpm");
+        }
+
+        if (buttonShop.isClicked()) {
+            setNewScene("shop");
+        }
+
+        if (buttonAbout.isClicked()) {
+            setNewScene("about");
+        }
+
+        if (buttonExit.isClicked()) {
+            exit(0);
         }
     }
 

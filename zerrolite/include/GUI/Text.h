@@ -10,13 +10,14 @@
 #include <string>
 #include <utility>
 #include <iostream>
+#include "../Styles/TextStyle.h"
 
 namespace zl {
     class Text : public Entity {
     private:
         str m_textString;
         str m_fontFilepath = "../resources/fonts/arial.ttf";
-        unsigned int m_textStyle = 0;
+        unsigned int m_textSFMLStyle = 0;
         int m_fontSize = 20;
         int m_underlineOffset = 5;
         int m_underlineWidth = 0;
@@ -50,7 +51,7 @@ namespace zl {
         explicit Text(const str &text,
                       const str &fontFilepath = "../resources/fonts/arial.ttf",
                       int fontSize = 20,
-                      unsigned int style = 0,
+                      unsigned int textSFMLStyle = 0,
                       int underlineOffset = 0,
                       int underlineWidth = 0,
                       const RGBAColor &textColor = {100, 100, 100},
@@ -78,7 +79,9 @@ namespace zl {
 
         void setUnderlineHoverColor(const RGBAColor &color);
 
-        void setTextStyle(unsigned int style);
+        void setTextSFMLStyle(unsigned int style);
+
+        void setStyle(TextStyle &style);
 
         void draw(sf::RenderTarget &renderTarget) override;
 

@@ -11,7 +11,7 @@ zl::Text::Text() = default;
 zl::Text::Text(const zl::str &text,
                const zl::str &fontFilepath,
                int fontSize,
-               unsigned int style,
+               unsigned int textSFMLStyle,
                int underlineOffset,
                int underlineWidth,
                const zl::RGBAColor &textColor, const zl::RGBAColor &underlineColor, const zl::RGBAColor &textHoverColor,
@@ -26,7 +26,7 @@ zl::Text::Text(const zl::str &text,
     m_underlineColor = underlineColor;
     m_textHoverColor = textHoverColor;
     m_underlineHoverColor = underlineHoverColor;
-    m_textStyle = style;
+    m_textSFMLStyle = textSFMLStyle;
 
     init();
 
@@ -77,8 +77,8 @@ void zl::Text::setUnderlineHoverColor(const zl::RGBAColor &color) {
     init();
 }
 
-void zl::Text::setTextStyle(unsigned int style) {
-    m_textStyle = style;
+void zl::Text::setTextSFMLStyle(unsigned int style) {
+    m_textSFMLStyle = style;
     init();
 }
 
@@ -96,7 +96,7 @@ void zl::Text::init() {
     m_text.setCharacterSize(m_fontSize);
     m_text.setFillColor(m_textColor);
     m_text.setPosition(pos);
-    m_text.setStyle(m_textStyle);
+    m_text.setStyle(m_textSFMLStyle);
 
 
     fVector size = getTextSize();
@@ -198,6 +198,20 @@ bool zl::Text::isClicked() {
 }
 
 void zl::Text::initialize() {
+    init();
+}
+
+void zl::Text::setStyle(zl::TextStyle &style) {
+
+    m_textColor = style.getTextColor();
+    m_underlineColor = style.getUnderlineColor();
+    m_textHoverColor = style.getTextHoverColor();
+    m_underlineHoverColor = style.getUnderlineHoverColor();
+    m_textSFMLStyle = style.getTextSFMLStyle();
+    m_underlineWidth = style.getUnderlineWidth();
+    m_underlineOffset = style.getUnderlineOffset();
+    m_fontSize = style.getFontSize();
+    m_fontFilepath = style.getFontFilepath();
     init();
 }
 
