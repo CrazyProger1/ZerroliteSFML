@@ -99,7 +99,7 @@ void zl::Text::init() {
     m_text.setStyle(m_textSFMLStyle);
 
 
-    fVector size = getTextSize();
+    fVector size = getSize();
 
 
     if (m_underlineWidth > 0) {
@@ -136,7 +136,7 @@ void zl::Text::updateState() {
 }
 
 
-zl::fVector zl::Text::getTextSize() {
+zl::fVector zl::Text::getSize() {
     float width = m_text.getLocalBounds().width;
     float height = m_fontSize;
     return {width, height};

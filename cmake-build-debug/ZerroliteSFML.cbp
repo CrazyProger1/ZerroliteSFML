@@ -87,9 +87,6 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/main.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/scenes.cpp">
-			<Option target="ZerroliteSFML"/>
-		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/scenes.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -106,6 +103,12 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/CheckBox.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Image.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Text.h">
@@ -133,6 +136,12 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Button.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/CheckBox.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Image.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Text.cpp">

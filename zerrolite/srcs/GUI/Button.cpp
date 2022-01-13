@@ -10,23 +10,37 @@ zl::Button::Button(const zl::fVector &size,
                    const zl::RGBAColor &color,
                    const zl::RGBAColor &hoverColor,
                    zl::Text *text,
+                   Image *image,
                    const zl::fVector &textOffset,
+                   const fVector &imageOffset,
                    int borderWidth,
                    const zl::RGBAColor &borderColor,
                    bool centerText,
+                   bool centerImage,
                    int cornerRadius) {
 
     m_size = size;
     m_color = color;
     m_hoverColor = hoverColor;
     if (text != nullptr) {
-        m_text = *text;
+        m_text = text;
         m_isTextSet = true;
+        m_textColor = text->getTextColor();
+        m_textHoverColor = text->getTextHoverColor();
+
+    }
+
+    if (image != nullptr) {
+        m_image = image;
+        m_isImageSet = true;
+
     }
     m_textOffset = textOffset;
+    m_imageOffset = imageOffset;
     m_borderWidth = borderWidth;
     m_borderColor = borderColor;
     m_centerText = centerText;
+    m_centerImage = centerImage;
     m_cornerRadius = cornerRadius;
     init();
 }
@@ -86,9 +100,18 @@ void zl::Button::init() {
     if (m_isTextSet) {
         centralizeText();
 
-        m_text.initialize();
+        m_text->initialize();
 
     }
+
+    if (m_isImageSet) {
+
+        centralizeImage();
+
+        m_image->initialize();
+    }
+
+
 }
 
 void zl::Button::initialize() {
@@ -99,13 +122,28 @@ void zl::Button::centralizeText() {
     fVector pos = getPosition();
 
     if (!m_centerText)
-        m_text.setPosition({pos.x + m_textOffset.x, pos.y + m_textOffset.y});
+        m_text->setPosition({pos.x + m_textOffset.x, pos.y + m_textOffset.y});
     else {
-        fVector textSize = m_text.getFullSize();
+        fVector textSize = m_text->getFullSize();
 
-        m_text.setPosition(
+        m_text->setPosition(
                 {pos.x + m_textOffset.x + m_size.x / 2 - textSize.x / 2,
                  pos.y + m_textOffset.y + m_size.y / 2 - textSize.y / 2});
+    }
+}
+
+
+void zl::Button::centralizeImage() {
+    fVector pos = getPosition();
+
+    if (!m_centerImage)
+        m_image->setPosition({pos.x + m_imageOffset.x, pos.y + m_imageOffset.y});
+    else {
+        fVector textSize = m_image->getSize();
+
+        m_image->setPosition(
+                {pos.x + m_imageOffset.x + m_size.x / 2 - textSize.x / 2,
+                 pos.y + m_imageOffset.y + m_size.y / 2 - textSize.y / 2});
     }
 }
 
@@ -130,6 +168,12 @@ void zl::Button::setTextOffset(const zl::fVector &offset) {
     init();
 }
 
+void zl::Button::setImageOffset(const zl::fVector &offset) {
+    m_imageOffset = offset;
+    init();
+}
+
+
 void zl::Button::setBorderWidth(int width) {
     m_borderWidth = width;
     init();
@@ -142,12 +186,19 @@ void zl::Button::setCornerRadius(int radius) {
 
 
 void zl::Button::setText(zl::Text &text) {
-    m_text = text;
+    m_text = &text;
     m_textColor = text.getTextColor();
     m_textHoverColor = text.getTextHoverColor();
     m_isTextSet = true;
     init();
 }
+
+void zl::Button::setImage(zl::Image &image) {
+    m_image = &image;
+    m_isImageSet = true;
+    init();
+}
+
 
 void zl::Button::setBorderColor(const zl::RGBAColor &color) {
     m_borderColor = color;
@@ -164,6 +215,12 @@ void zl::Button::setCenteringText(bool center) {
     init();
 }
 
+void zl::Button::setCenteringImage(bool center) {
+    m_centerImage = center;
+    init();
+}
+
+
 void zl::Button::setColor(const zl::RGBAColor &color) {
     m_color = color;
     init();
@@ -173,6 +230,7 @@ void zl::Button::setDeactivatedColor(const zl::RGBAColor &color) {
     m_deactivatedColor = color;
     init();
 }
+
 
 bool zl::Button::isHovered() {
     return m_isHovered;
@@ -213,7 +271,11 @@ void zl::Button::draw(sf::RenderTarget &rt) {
     }
 
     if (m_isTextSet) {
-        m_text.draw(rt);
+        m_text->draw(rt);
+    }
+
+    if (m_isImageSet) {
+        m_image->draw(rt);
     }
 
 
@@ -232,7 +294,7 @@ void zl::Button::updateState() {
     if (!m_isDeactivated) {
         if (m_isHovered) {
             if (m_isTextSet)
-                m_text.setTextColor(m_textHoverColor);
+                m_text->setTextColor(m_textHoverColor);
 
             m_mainRect.setFillColor(m_hoverColor);
 
@@ -244,7 +306,7 @@ void zl::Button::updateState() {
 
         } else {
             if (m_isTextSet)
-                m_text.setTextColor(m_textColor);
+                m_text->setTextColor(m_textColor);
 
             m_mainRect.setFillColor(m_color);
 
@@ -323,9 +385,14 @@ void zl::Button::setStyle(zl::ButtonStyle &buttonStyle) {
     m_borderColor = buttonStyle.getBorderColor();
     m_isDeactivated = buttonStyle.isDeactivated();
     m_textOffset = buttonStyle.getTextOffset();
+    m_imageOffset = buttonStyle.getImageOffset();
     m_hoverColor = buttonStyle.getHoverColor();
     m_deactivatedColor = buttonStyle.getDeactivatedColor();
     m_centerText = buttonStyle.centerText();
+    m_centerImage = buttonStyle.centerImage();
     init();
 }
+
+
+
 

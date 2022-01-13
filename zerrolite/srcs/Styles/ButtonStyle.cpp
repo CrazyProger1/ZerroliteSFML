@@ -8,9 +8,11 @@ zl::ButtonStyle::ButtonStyle(const zl::fVector &size,
                              const zl::RGBAColor &color,
                              const zl::RGBAColor &hoverColor,
                              const zl::fVector &textOffset,
+                             const zl::fVector &imageOffset,
                              int borderWidth,
                              const zl::RGBAColor &borderColor,
                              bool centerText,
+                             bool centerImage,
                              int cornerRadius,
                              bool isDeactivated,
                              const RGBAColor &deactivatedColor) {
@@ -18,9 +20,11 @@ zl::ButtonStyle::ButtonStyle(const zl::fVector &size,
     m_color = color;
     m_hoverColor = hoverColor;
     m_textOffset = textOffset;
+    m_imageOffset = imageOffset;
     m_borderWidth = borderWidth;
     m_borderColor = borderColor;
     m_centerText = centerText;
+    m_centerImage = centerImage;
     m_cornerRadius = cornerRadius;
     m_isDeactivated = isDeactivated;
     m_deactivatedColor = deactivatedColor;
@@ -66,6 +70,14 @@ zl::RGBAColor &zl::ButtonStyle::getDeactivatedColor() {
 
 bool zl::ButtonStyle::centerText() {
     return m_centerText;
+}
+
+bool zl::ButtonStyle::centerImage() {
+    return m_centerImage;
+}
+
+zl::fVector zl::ButtonStyle::getImageOffset() {
+    return m_imageOffset;
 }
 
 

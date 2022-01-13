@@ -95,7 +95,7 @@ namespace zl {
 
         str &getText();
 
-        fVector getTextSize();
+        fVector getSize();
 
         fVector getFullSize();
 

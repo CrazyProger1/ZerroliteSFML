@@ -10,5 +10,6 @@
 #include "./include/GUI/Button.h"
 #include "./include/GUI/Text.h"
 #include "./include/Styles/ButtonStyle.h"
+#include "./include/GUI/Image.h"
 
 #endif //ZERROLITESFML_ZERROLITE_H

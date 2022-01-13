@@ -18,6 +18,7 @@ namespace zl {
 
         fVector m_size;
         fVector m_textOffset;
+        fVector m_imageOffset;
 
         int m_borderWidth = 0;
         int m_cornerRadius = 0;
@@ -28,15 +29,18 @@ namespace zl {
         RGBAColor m_deactivatedColor = {100, 100, 100};
 
         bool m_centerText = false;
+        bool m_centerImage = false;
     public:
 
         explicit ButtonStyle(const fVector &size,
                              const RGBAColor &color = {250, 0, 100},
                              const RGBAColor &hoverColor = {0, 250, 0},
                              const fVector &textOffset = {0, 0},
+                             const zl::fVector &imageOffset = {0, 0},
                              int borderWidth = 0,
                              const RGBAColor &borderColor = {100, 100, 100},
                              bool centerText = false,
+                             bool centerImage = false,
                              int cornerRadius = 0,
                              bool isDeactivated = false,
                              const RGBAColor &deactivatedColor = {100, 100, 100});
@@ -46,6 +50,8 @@ namespace zl {
         fVector getSize();
 
         fVector getTextOffset();
+
+        fVector getImageOffset();
 
         int getBorderWidth();
 
@@ -60,6 +66,8 @@ namespace zl {
         RGBAColor &getDeactivatedColor();
 
         bool centerText();
+
+        bool centerImage();
 
 
     };

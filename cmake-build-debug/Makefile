@@ -152,30 +152,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-scenes.obj: scenes.cpp.obj
-.PHONY : scenes.obj
-
-# target to build an object file
-scenes.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.obj
-.PHONY : scenes.cpp.obj
-
-scenes.i: scenes.cpp.i
-.PHONY : scenes.i
-
-# target to preprocess a source file
-scenes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.i
-.PHONY : scenes.cpp.i
-
-scenes.s: scenes.cpp.s
-.PHONY : scenes.s
-
-# target to generate assembly for a file
-scenes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/scenes.cpp.s
-.PHONY : scenes.cpp.s
-
 zerrolite/srcs/Containers/Grid.obj: zerrolite/srcs/Containers/Grid.cpp.obj
 .PHONY : zerrolite/srcs/Containers/Grid.obj
 
@@ -296,6 +272,54 @@ zerrolite/srcs/GUI/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.s
 .PHONY : zerrolite/srcs/GUI/Button.cpp.s
 
+zerrolite/srcs/GUI/CheckBox.obj: zerrolite/srcs/GUI/CheckBox.cpp.obj
+.PHONY : zerrolite/srcs/GUI/CheckBox.obj
+
+# target to build an object file
+zerrolite/srcs/GUI/CheckBox.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.obj
+.PHONY : zerrolite/srcs/GUI/CheckBox.cpp.obj
+
+zerrolite/srcs/GUI/CheckBox.i: zerrolite/srcs/GUI/CheckBox.cpp.i
+.PHONY : zerrolite/srcs/GUI/CheckBox.i
+
+# target to preprocess a source file
+zerrolite/srcs/GUI/CheckBox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.i
+.PHONY : zerrolite/srcs/GUI/CheckBox.cpp.i
+
+zerrolite/srcs/GUI/CheckBox.s: zerrolite/srcs/GUI/CheckBox.cpp.s
+.PHONY : zerrolite/srcs/GUI/CheckBox.s
+
+# target to generate assembly for a file
+zerrolite/srcs/GUI/CheckBox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.s
+.PHONY : zerrolite/srcs/GUI/CheckBox.cpp.s
+
+zerrolite/srcs/GUI/Image.obj: zerrolite/srcs/GUI/Image.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Image.obj
+
+# target to build an object file
+zerrolite/srcs/GUI/Image.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Image.cpp.obj
+.PHONY : zerrolite/srcs/GUI/Image.cpp.obj
+
+zerrolite/srcs/GUI/Image.i: zerrolite/srcs/GUI/Image.cpp.i
+.PHONY : zerrolite/srcs/GUI/Image.i
+
+# target to preprocess a source file
+zerrolite/srcs/GUI/Image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Image.cpp.i
+.PHONY : zerrolite/srcs/GUI/Image.cpp.i
+
+zerrolite/srcs/GUI/Image.s: zerrolite/srcs/GUI/Image.cpp.s
+.PHONY : zerrolite/srcs/GUI/Image.s
+
+# target to generate assembly for a file
+zerrolite/srcs/GUI/Image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Image.cpp.s
+.PHONY : zerrolite/srcs/GUI/Image.cpp.s
+
 zerrolite/srcs/GUI/Text.obj: zerrolite/srcs/GUI/Text.cpp.obj
 .PHONY : zerrolite/srcs/GUI/Text.obj
 
@@ -380,9 +404,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... scenes.obj
-	@echo ... scenes.i
-	@echo ... scenes.s
 	@echo ... zerrolite/srcs/Containers/Grid.obj
 	@echo ... zerrolite/srcs/Containers/Grid.i
 	@echo ... zerrolite/srcs/Containers/Grid.s
@@ -398,6 +419,12 @@ help:
 	@echo ... zerrolite/srcs/GUI/Button.obj
 	@echo ... zerrolite/srcs/GUI/Button.i
 	@echo ... zerrolite/srcs/GUI/Button.s
+	@echo ... zerrolite/srcs/GUI/CheckBox.obj
+	@echo ... zerrolite/srcs/GUI/CheckBox.i
+	@echo ... zerrolite/srcs/GUI/CheckBox.s
+	@echo ... zerrolite/srcs/GUI/Image.obj
+	@echo ... zerrolite/srcs/GUI/Image.i
+	@echo ... zerrolite/srcs/GUI/Image.s
 	@echo ... zerrolite/srcs/GUI/Text.obj
 	@echo ... zerrolite/srcs/GUI/Text.i
 	@echo ... zerrolite/srcs/GUI/Text.s

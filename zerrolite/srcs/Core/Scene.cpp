@@ -65,6 +65,7 @@ void zl::Scene::updateState() {
 }
 
 void zl::Scene::initializeScene() {
+    m_pNewScene = "";
     onInitializeScene();
     onLoadResources();
 

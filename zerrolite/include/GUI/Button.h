@@ -11,6 +11,7 @@
 #include <utility>
 #include <iostream>
 #include "../Styles/ButtonStyle.h"
+#include "./Image.h"
 
 namespace zl {
     class Button : public Entity {
@@ -19,6 +20,7 @@ namespace zl {
 
         fVector m_size;
         fVector m_textOffset;
+        fVector m_imageOffset;
 
         int m_borderWidth = 0;
         int m_cornerRadius = 0;
@@ -43,13 +45,20 @@ namespace zl {
         bool m_centerText = false;
         bool m_isTextSet = false;
 
-        Text m_text;
+        bool m_centerImage = false;
+        bool m_isImageSet = false;
+
+        Text *m_text;
         RGBAColor m_textColor;
         RGBAColor m_textHoverColor;
+
+        Image *m_image;
 
         void init();
 
         void centralizeText();
+
+        void centralizeImage();
 
         void checkClick(sf::Event &event);
 
@@ -64,19 +73,23 @@ namespace zl {
                         const RGBAColor &color = {250, 0, 100},
                         const RGBAColor &hoverColor = {0, 250, 0},
                         Text *text = nullptr,
+                        Image *image = nullptr,
                         const fVector &textOffset = {0, 0},
+                        const fVector &imageOffset = {0, 0},
                         int borderWidth = 0,
                         const RGBAColor &borderColor = {100, 100, 100},
                         bool centerText = false,
+                        bool centerImage = false,
                         int cornerRadius = 0
         );
 
         void initialize() override;
 
-
         void setSize(const fVector &size);
 
         void setTextOffset(const fVector &offset);
+
+        void setImageOffset(const fVector &offset);
 
         void setBorderWidth(int width);
 
@@ -92,12 +105,16 @@ namespace zl {
 
         void setCenteringText(bool center = true);
 
+        void setCenteringImage(bool center = true);
+
         void setText(Text &text);
+
+        void setImage(Image &image);
 
         void setStyle(ButtonStyle &buttonStyle);
 
-        void draw(sf::RenderTarget &rt) override;
 
+        void draw(sf::RenderTarget &rt) override;
 
         void handleSFMLEvent(sf::Event &event) override;
 
@@ -105,7 +122,6 @@ namespace zl {
 
         bool isClicked();
 
-//
         bool isHovered();
 
         void activate();
