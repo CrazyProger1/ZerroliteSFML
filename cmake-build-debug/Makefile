@@ -368,6 +368,30 @@ zerrolite/srcs/Styles/ButtonStyle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.s
 .PHONY : zerrolite/srcs/Styles/ButtonStyle.cpp.s
 
+zerrolite/srcs/Styles/CheckBoxStyle.obj: zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.obj
+
+# target to build an object file
+zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj
+
+zerrolite/srcs/Styles/CheckBoxStyle.i: zerrolite/srcs/Styles/CheckBoxStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.i
+
+# target to preprocess a source file
+zerrolite/srcs/Styles/CheckBoxStyle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.i
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.cpp.i
+
+zerrolite/srcs/Styles/CheckBoxStyle.s: zerrolite/srcs/Styles/CheckBoxStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Styles/CheckBoxStyle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.s
+.PHONY : zerrolite/srcs/Styles/CheckBoxStyle.cpp.s
+
 zerrolite/srcs/Styles/TextStyle.obj: zerrolite/srcs/Styles/TextStyle.cpp.obj
 .PHONY : zerrolite/srcs/Styles/TextStyle.obj
 
@@ -431,6 +455,9 @@ help:
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.obj
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.i
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.s
+	@echo ... zerrolite/srcs/Styles/CheckBoxStyle.obj
+	@echo ... zerrolite/srcs/Styles/CheckBoxStyle.i
+	@echo ... zerrolite/srcs/Styles/CheckBoxStyle.s
 	@echo ... zerrolite/srcs/Styles/TextStyle.obj
 	@echo ... zerrolite/srcs/Styles/TextStyle.i
 	@echo ... zerrolite/srcs/Styles/TextStyle.s

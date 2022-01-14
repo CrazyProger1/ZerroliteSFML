@@ -117,6 +117,9 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/ButtonStyle.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/CheckBoxStyle.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -148,6 +151,9 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/ButtonStyle.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/CheckBoxStyle.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/TextStyle.cpp">

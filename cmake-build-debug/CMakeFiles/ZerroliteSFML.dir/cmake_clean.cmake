@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Image.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.obj"
   "ZerroliteSFML.exe"
   "ZerroliteSFML.exe.manifest"

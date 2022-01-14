@@ -11,5 +11,7 @@
 #include "./include/GUI/Text.h"
 #include "./include/Styles/ButtonStyle.h"
 #include "./include/GUI/Image.h"
+#include "./include/GUI/CheckBox.h"
+#include "./include/Styles/CheckBoxStyle.h"
 
 #endif //ZERROLITESFML_ZERROLITE_H

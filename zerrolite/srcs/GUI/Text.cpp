@@ -119,8 +119,14 @@ void zl::Text::draw(sf::RenderTarget &renderTarget) {
 }
 
 void zl::Text::handleSFMLEvent(sf::Event &event) {
-    checkHover();
+
     checkClick(event);
+
+
+}
+
+void zl::Text::updateState() {
+    checkHover();
 
     if (m_isHovered) {
         m_text.setFillColor(m_textHoverColor);
@@ -129,10 +135,6 @@ void zl::Text::handleSFMLEvent(sf::Event &event) {
         m_text.setFillColor(m_textColor);
         m_underlineRect.setFillColor(m_underlineColor);
     }
-}
-
-void zl::Text::updateState() {
-
 }
 
 
