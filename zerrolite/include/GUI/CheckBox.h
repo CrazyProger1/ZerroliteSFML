@@ -41,6 +41,9 @@ namespace zl {
         bool m_isHovered = false;
         bool m_isClicked = false;
 
+        bool m_justHovered = false; // for optimization
+        bool m_justChecked = false; // for optimization
+
         void init();
 
         void checkHover();

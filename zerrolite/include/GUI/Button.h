@@ -48,11 +48,13 @@ namespace zl {
         bool m_centerImage = false;
         bool m_isImageSet = false;
 
-        Text *m_text;
+        Text *m_pText;
         RGBAColor m_textColor;
         RGBAColor m_textHoverColor;
 
         Image *m_image;
+
+        bool m_justHovered = false; // for optimization
 
         void init();
 

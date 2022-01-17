@@ -23,7 +23,7 @@ zl::Button::Button(const zl::fVector &size,
     m_color = color;
     m_hoverColor = hoverColor;
     if (text != nullptr) {
-        m_text = text;
+        m_pText = text;
         m_isTextSet = true;
         m_textColor = text->getTextColor();
         m_textHoverColor = text->getTextHoverColor();
@@ -100,7 +100,7 @@ void zl::Button::init() {
     if (m_isTextSet) {
         centralizeText();
 
-        m_text->initialize();
+        m_pText->initialize();
 
     }
 
@@ -122,11 +122,11 @@ void zl::Button::centralizeText() {
     fVector pos = getPosition();
 
     if (!m_centerText)
-        m_text->setPosition({pos.x + m_textOffset.x, pos.y + m_textOffset.y});
+        m_pText->setPosition({pos.x + m_textOffset.x, pos.y + m_textOffset.y});
     else {
-        fVector textSize = m_text->getFullSize();
+        fVector textSize = m_pText->getFullSize();
 
-        m_text->setPosition(
+        m_pText->setPosition(
                 {pos.x + m_textOffset.x + m_size.x / 2 - textSize.x / 2,
                  pos.y + m_textOffset.y + m_size.y / 2 - textSize.y / 2});
     }
@@ -186,7 +186,7 @@ void zl::Button::setCornerRadius(int radius) {
 
 
 void zl::Button::setText(zl::Text &text) {
-    m_text = &text;
+    m_pText = &text;
     m_textColor = text.getTextColor();
     m_textHoverColor = text.getTextHoverColor();
     m_isTextSet = true;
@@ -271,7 +271,7 @@ void zl::Button::draw(sf::RenderTarget &rt) {
     }
 
     if (m_isTextSet) {
-        m_text->draw(rt);
+        m_pText->draw(rt);
     }
 
     if (m_isImageSet) {
@@ -292,28 +292,41 @@ void zl::Button::updateState() {
     checkHover();
 
     if (!m_isDeactivated) {
+
         if (m_isHovered) {
-            if (m_isTextSet)
-                m_text->setTextColor(m_textHoverColor);
 
-            m_mainRect.setFillColor(m_hoverColor);
+            if (!m_justHovered) {
+                if (m_isTextSet)
+                    m_pText->setTextColor(m_textHoverColor);
 
-            if (m_cornerRadius > 0) {
-                m_cornerCircle.setFillColor(m_hoverColor);
-                m_sideRect.setFillColor(m_hoverColor);
+                m_mainRect.setFillColor(m_hoverColor);
 
+                if (m_cornerRadius > 0) {
+                    m_cornerCircle.setFillColor(m_hoverColor);
+                    m_sideRect.setFillColor(m_hoverColor);
+
+                }
+
+                m_justHovered = true;
             }
+
 
         } else {
-            if (m_isTextSet)
-                m_text->setTextColor(m_textColor);
+            if (m_justHovered) {
 
-            m_mainRect.setFillColor(m_color);
 
-            if (m_cornerRadius > 0) {
-                m_cornerCircle.setFillColor(m_color);
-                m_sideRect.setFillColor(m_color);
+                if (m_isTextSet)
+                    m_pText->setTextColor(m_textColor);
+
+                m_mainRect.setFillColor(m_color);
+
+                if (m_cornerRadius > 0) {
+                    m_cornerCircle.setFillColor(m_color);
+                    m_sideRect.setFillColor(m_color);
+                }
+                m_justHovered = false;
             }
+
         }
     }
 }

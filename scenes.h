@@ -13,6 +13,8 @@ class About : public zl::Scene {
     zl::CheckBox checkBox2;
     zl::CheckBox checkBox3;
 
+    zl::Button button1;
+
 
     void onInitializeScene() override {
         zl::CheckBoxStyle style1(
@@ -28,6 +30,22 @@ class About : public zl::Scene {
                 {200, 200, 200},
                 {255, 255, 255},
                 false);
+        zl::ButtonStyle buttonStyle(
+                {220, 40},
+                {0, 0, 0},
+                {0, 255, 0},
+                {0, 0},
+                {0, 0},
+                1,
+                {0, 255, 0},
+                true,
+                false,
+                10,
+                false
+        );
+
+        button1.setStyle(buttonStyle);
+        button1.setPosition({40, 200});
 
 
         checkBox1.setPosition({100, 100});
@@ -43,12 +61,14 @@ class About : public zl::Scene {
         attach(&checkBox1);
         attach(&checkBox2);
         attach(&checkBox3);
+        attach(&button1);
     }
 
     void onUpdateState() override {
         std::cout << checkBox1.isChecked() << " " << checkBox2.isChecked() << std::endl;
-        if (checkBox3.isChecked()) {
-            setNewScene("mm");
+        if (button1.isClicked()) {
+            if (checkBox3.isChecked())
+                setNewScene("mm");
         }
     }
 };
@@ -214,7 +234,7 @@ class MainMenu : public zl::Scene {
         zl::ButtonStyle buttonStyle(
                 {220, 40},
                 {0, 0, 0},
-                {0, 0, 0},
+                {0, 255, 0},
                 {0, 0},
                 {0, 0},
                 1,
@@ -289,45 +309,45 @@ class MainMenu : public zl::Scene {
         if (gameName.isClicked()) {
             system("start https://github.com/CrazyProger1/ZerroliteSFML");
         }
-        if (buttonPlaySinglePlayer.isHovered()) {
-            buttonPlaySinglePlayer.setSize({226, 46});
-            buttonPlaySinglePlayer.setPosition({7, 97});
-            textPlaySinglePlayer.setFontSize(21);
-        } else {
-            buttonPlaySinglePlayer.setSize({220, 40});
-            buttonPlaySinglePlayer.setPosition({10, 100});
-            textPlaySinglePlayer.setFontSize(20);
-        }
-
-        if (buttonShop.isHovered()) {
-            buttonShop.setSize({226, 46});
-            buttonShop.setPosition({7, 197});
-            textShop.setFontSize(21);
-        } else {
-            buttonShop.setSize({220, 40});
-            buttonShop.setPosition({10, 200});
-            textShop.setFontSize(20);
-        }
-
-        if (buttonAbout.isHovered()) {
-            buttonAbout.setSize({226, 46});
-            buttonAbout.setPosition({7, 247});
-            textAbout.setFontSize(21);
-        } else {
-            buttonAbout.setSize({220, 40});
-            buttonAbout.setPosition({10, 250});
-            textAbout.setFontSize(20);
-        }
-
-        if (buttonExit.isHovered()) {
-            buttonExit.setSize({226, 46});
-            buttonExit.setPosition({7, 297});
-            textExit.setFontSize(21);
-        } else {
-            buttonExit.setSize({220, 40});
-            buttonExit.setPosition({10, 300});
-            textExit.setFontSize(20);
-        }
+//        if (buttonPlaySinglePlayer.isHovered()) {
+//            buttonPlaySinglePlayer.setSize({226, 46});
+//            buttonPlaySinglePlayer.setPosition({7, 97});
+//            textPlaySinglePlayer.setFontSize(21);
+//        } else {
+//            buttonPlaySinglePlayer.setSize({220, 40});
+//            buttonPlaySinglePlayer.setPosition({10, 100});
+//            textPlaySinglePlayer.setFontSize(20);
+//        }
+//
+//        if (buttonShop.isHovered()) {
+//            buttonShop.setSize({226, 46});
+//            buttonShop.setPosition({7, 197});
+//            textShop.setFontSize(21);
+//        } else {
+//            buttonShop.setSize({220, 40});
+//            buttonShop.setPosition({10, 200});
+//            textShop.setFontSize(20);
+//        }
+//
+//        if (buttonAbout.isHovered()) {
+//            buttonAbout.setSize({226, 46});
+//            buttonAbout.setPosition({7, 247});
+//            textAbout.setFontSize(21);
+//        } else {
+//            buttonAbout.setSize({220, 40});
+//            buttonAbout.setPosition({10, 250});
+//            textAbout.setFontSize(20);
+//        }
+//
+//        if (buttonExit.isHovered()) {
+//            buttonExit.setSize({226, 46});
+//            buttonExit.setPosition({7, 297});
+//            textExit.setFontSize(21);
+//        } else {
+//            buttonExit.setSize({220, 40});
+//            buttonExit.setPosition({10, 300});
+//            textExit.setFontSize(20);
+//        }
 
 
         if (buttonPlaySinglePlayer.isClicked()) {

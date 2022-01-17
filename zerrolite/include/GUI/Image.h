@@ -26,7 +26,6 @@ namespace zl {
 
         explicit Image(const str &path);
 
-
         void initialize() override;
 
         void setSize(const zl::fVector &size);

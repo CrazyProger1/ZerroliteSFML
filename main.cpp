@@ -15,7 +15,7 @@ int main() {
 
     sf::RenderWindow window(sf::VideoMode(640, 480), "Snake");
 
-    window.setVerticalSyncEnabled(true);
+//    window.setVerticalSyncEnabled(true);
 
     game.setMainWindow(&window);
 

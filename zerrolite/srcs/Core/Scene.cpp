@@ -65,9 +65,11 @@ void zl::Scene::updateState() {
 }
 
 void zl::Scene::initializeScene() {
+    m_entitiesContainer.clear();
     m_pNewScene = "";
     onInitializeScene();
     onLoadResources();
+
 
 }
 

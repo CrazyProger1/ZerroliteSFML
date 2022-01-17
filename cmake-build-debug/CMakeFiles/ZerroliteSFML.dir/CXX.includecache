@@ -794,6 +794,14 @@ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 SFML/Graphics.hpp
 -
 
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Button.cpp
+../../include/GUI/Button.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Image.cpp
+../../include/GUI/Image.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Image.h
+
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 ./include/Core/GameCore.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GameCore.h

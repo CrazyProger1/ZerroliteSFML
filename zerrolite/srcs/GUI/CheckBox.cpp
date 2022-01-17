@@ -92,11 +92,18 @@ void zl::CheckBox::updateState() {
     checkHover();
 
     if (m_isHovered && !m_isChecked) {
-        m_mainRect.setFillColor(m_hoverColor);
+        if (!m_justHovered) {
+            m_mainRect.setFillColor(m_hoverColor);
+            m_justHovered = true;
+        }
 
 
     } else if (!m_isHovered && !m_isChecked) {
-        m_mainRect.setFillColor(m_color);
+        if (m_justHovered) {
+            m_mainRect.setFillColor(m_color);
+            m_justHovered = false;
+        }
+
 
     }
 
@@ -105,9 +112,17 @@ void zl::CheckBox::updateState() {
         m_isChecked = !m_isChecked;
 
         if (m_isChecked) {
-            m_mainRect.setFillColor(m_colorWhenChecked);
+            if (!m_justChecked) {
+                m_mainRect.setFillColor(m_colorWhenChecked);
+                m_justChecked = true;
+            }
+
         } else {
-            m_mainRect.setFillColor(m_color);
+            if (m_justChecked) {
+                m_mainRect.setFillColor(m_color);
+                m_justChecked = false;
+            }
+
         }
     }
 

@@ -37,6 +37,7 @@ namespace zl {
         bool m_isClicked = false;
         bool m_isHovered = false;
 
+        bool m_justHovered = false; // for optimization
 
         void init();
 
