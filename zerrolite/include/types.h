@@ -11,6 +11,7 @@
 namespace zl {
     typedef sf::Vector2<float> fVector;
     typedef sf::Vector2<int> iVector;
+    typedef sf::Vector2<unsigned int> uVector;
     typedef sf::Color RGBColor, RGBAColor;
     typedef std::string str;
 

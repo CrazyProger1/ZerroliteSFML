@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ZerroliteSFML.dir/main.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.obj"

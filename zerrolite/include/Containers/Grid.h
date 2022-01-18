@@ -5,9 +5,19 @@
 #ifndef ZERROLITESFML_GRID_H
 #define ZERROLITESFML_GRID_H
 
-namespace zl {
-    class Grid {
+#include "./Container.h"
+#include <iostream>
 
+namespace zl {
+    class Grid : public Container {
+    private:
+        std::vector<Entity *> m_entitiesContainer;
+    public:
+        Grid() = default;
+
+        void addEntity(Entity *entity);
+
+        std::vector<Entity *> &getEntities() override;
     };
 }
 

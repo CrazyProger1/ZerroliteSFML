@@ -17,6 +17,7 @@ namespace zl {
     private:
         Scene *m_pActiveScene = nullptr;
         sf::RenderWindow *m_pMainWindow = nullptr;
+        sf::Vector2u m_resolution;
 
         Scenes m_scenes;
 

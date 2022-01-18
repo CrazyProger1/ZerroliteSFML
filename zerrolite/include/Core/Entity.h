@@ -9,16 +9,12 @@
 #include "../types.h"
 
 namespace zl {
-
-
     class Entity {
     private:
         sf::RenderWindow *m_pParentWindow = nullptr;
 
         fVector m_position;
     public:
-
-
         virtual void initialize();
 
         virtual void draw(sf::RenderTarget &rt);
@@ -27,9 +23,9 @@ namespace zl {
 
         virtual void handleSFMLEvent(sf::Event &event);
 
-        void move(fVector offset);
+        virtual void move(const fVector & offset);
 
-        void setPosition(fVector position);
+        virtual void setPosition(const fVector & position);
 
         void setParentWindow(sf::RenderWindow *window);
 

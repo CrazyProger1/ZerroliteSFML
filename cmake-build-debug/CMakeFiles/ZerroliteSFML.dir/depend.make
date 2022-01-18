@@ -78,8 +78,13 @@ CMakeFiles/ZerroliteSFML.dir/main.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
  ../main.cpp \
  ../scenes.h \
+ ../zerrolite/include/Containers/Container.h \
+ ../zerrolite/include/Containers/Grid.h \
+ ../zerrolite/include/Core/Actor.h \
  ../zerrolite/include/Core/Entity.h \
  ../zerrolite/include/Core/GameCore.h \
+ ../zerrolite/include/Core/NPC.h \
+ ../zerrolite/include/Core/Player.h \
  ../zerrolite/include/Core/Scene.h \
  ../zerrolite/include/GUI/Button.h \
  ../zerrolite/include/GUI/CheckBox.h \
@@ -90,9 +95,244 @@ CMakeFiles/ZerroliteSFML.dir/main.cpp.obj: \
  ../zerrolite/include/Styles/TextStyle.h \
  ../zerrolite/include/types.h \
  ../zerrolite/zerrolite.h
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.obj: \
+ ../libs/SFML-2.5.1/include/SFML/Config.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Color.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Font.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Image.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shader.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Texture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transform.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/View.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Clock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Err.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/FileInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/InputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Lock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Mutex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/NonCopyable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Sleep.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Time.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.inl \
+ ../libs/SFML-2.5.1/include/SFML/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Clipboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Context.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Cursor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Event.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/GlResource.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Joystick.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Keyboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Mouse.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Sensor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Touch.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/VideoMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Containers/Container.h \
+ ../zerrolite/include/Core/Entity.h \
+ ../zerrolite/include/types.h \
+ ../zerrolite/srcs/Containers/Container.cpp
 CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.obj: \
+ ../libs/SFML-2.5.1/include/SFML/Config.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Color.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Font.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Image.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shader.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Texture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transform.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/View.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Clock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Err.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/FileInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/InputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Lock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Mutex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/NonCopyable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Sleep.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Time.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.inl \
+ ../libs/SFML-2.5.1/include/SFML/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Clipboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Context.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Cursor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Event.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/GlResource.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Joystick.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Keyboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Mouse.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Sensor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Touch.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/VideoMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Containers/Container.h \
  ../zerrolite/include/Containers/Grid.h \
+ ../zerrolite/include/Core/Entity.h \
+ ../zerrolite/include/types.h \
  ../zerrolite/srcs/Containers/Grid.cpp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj: \
+ ../libs/SFML-2.5.1/include/SFML/Config.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Color.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Font.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Image.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shader.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Texture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transform.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/View.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Clock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Err.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/FileInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/InputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Lock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Mutex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/NonCopyable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Sleep.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Time.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.inl \
+ ../libs/SFML-2.5.1/include/SFML/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Clipboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Context.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Cursor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Event.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/GlResource.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Joystick.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Keyboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Mouse.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Sensor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Touch.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/VideoMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Core/Actor.h \
+ ../zerrolite/include/Core/Entity.h \
+ ../zerrolite/include/types.h \
+ ../zerrolite/srcs/Core/Actor.cpp
 CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Config.hpp \
  ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
@@ -246,11 +486,172 @@ CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Containers/Container.h \
  ../zerrolite/include/Core/Entity.h \
  ../zerrolite/include/Core/GameCore.h \
  ../zerrolite/include/Core/Scene.h \
  ../zerrolite/include/types.h \
  ../zerrolite/srcs/Core/GameCore.cpp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj: \
+ ../libs/SFML-2.5.1/include/SFML/Config.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Color.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Font.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Image.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shader.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Texture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transform.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/View.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Clock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Err.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/FileInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/InputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Lock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Mutex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/NonCopyable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Sleep.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Time.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.inl \
+ ../libs/SFML-2.5.1/include/SFML/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Clipboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Context.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Cursor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Event.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/GlResource.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Joystick.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Keyboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Mouse.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Sensor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Touch.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/VideoMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Core/Actor.h \
+ ../zerrolite/include/Core/Entity.h \
+ ../zerrolite/include/Core/NPC.h \
+ ../zerrolite/include/types.h \
+ ../zerrolite/srcs/Core/NPC.cpp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.obj: \
+ ../libs/SFML-2.5.1/include/SFML/Config.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/BlendMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/CircleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Color.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/ConvexShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Drawable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Font.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glsl.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Glyph.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Image.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/PrimitiveType.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Rect.inl \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RectangleShape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderStates.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTarget.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderTexture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/RenderWindow.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shader.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Shape.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Sprite.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Text.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Texture.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transform.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Transformable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/Vertex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexArray.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/VertexBuffer.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Graphics/View.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Clock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Err.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/FileInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/InputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Lock.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/MemoryInputStream.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Mutex.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/NonCopyable.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Sleep.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/String.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Thread.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocal.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/ThreadLocalPtr.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Time.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Utf.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector2.inl \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.hpp \
+ ../libs/SFML-2.5.1/include/SFML/System/Vector3.inl \
+ ../libs/SFML-2.5.1/include/SFML/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Clipboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Context.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/ContextSettings.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Cursor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Event.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Export.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/GlResource.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Joystick.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Keyboard.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Mouse.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Sensor.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Touch.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/VideoMode.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
+ ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Core/Actor.h \
+ ../zerrolite/include/Core/Entity.h \
+ ../zerrolite/include/Core/Player.h \
+ ../zerrolite/include/types.h \
+ ../zerrolite/srcs/Core/Player.cpp
 CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Config.hpp \
  ../libs/SFML-2.5.1/include/SFML/Graphics.hpp \
@@ -326,6 +727,7 @@ CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../zerrolite/include/Containers/Container.h \
  ../zerrolite/include/Core/Entity.h \
  ../zerrolite/include/Core/Scene.h \
  ../zerrolite/include/types.h \

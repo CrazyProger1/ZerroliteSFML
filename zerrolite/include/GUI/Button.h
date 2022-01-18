@@ -115,7 +115,6 @@ namespace zl {
 
         void setStyle(ButtonStyle &buttonStyle);
 
-
         void draw(sf::RenderTarget &rt) override;
 
         void handleSFMLEvent(sf::Event &event) override;

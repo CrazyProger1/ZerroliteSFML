@@ -35,6 +35,15 @@ void zl::Scene::attach(Entity *entity) {
     m_entitiesContainer.emplace_back(entity);
 }
 
+void zl::Scene::attach(zl::Container *container) {
+    for (auto &entity: container->getEntities()) {
+        if (entity->getParentWindow() == nullptr)
+            entity->setParentWindow(m_pParentWindow);
+
+        m_entitiesContainer.emplace_back(entity);
+    }
+}
+
 void zl::Scene::draw(sf::RenderTarget &rt) {
 
     m_pParentWindow->clear();
@@ -42,6 +51,7 @@ void zl::Scene::draw(sf::RenderTarget &rt) {
     for (auto &entity: m_entitiesContainer) {
         entity->draw(rt);
     }
+
     m_pParentWindow->display();
 }
 
@@ -80,3 +90,9 @@ zl::str &zl::Scene::getNewScene() {
 void zl::Scene::setNewScene(const zl::str &sceneName) {
     m_pNewScene = sceneName;
 }
+
+sf::RenderWindow *zl::Scene::getParentWindow() {
+    return m_pParentWindow;
+}
+
+

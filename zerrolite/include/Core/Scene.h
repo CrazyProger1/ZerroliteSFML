@@ -8,7 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "./Entity.h"
-
+#include "../Containers/Container.h"
 
 namespace zl {
     class Scene {
@@ -32,6 +32,8 @@ namespace zl {
 
         void attach(Entity *entity);
 
+        void attach(Container *container);
+
         void draw(sf::RenderTarget &rt);
 
         void initializeScene();
@@ -43,6 +45,8 @@ namespace zl {
         void setParentWindow(sf::RenderWindow *window);
 
         void setNewScene(const str &sceneName);
+
+        sf::RenderWindow *getParentWindow();
 
         str &getNewScene();
     };

@@ -33,6 +33,9 @@ zl::Text::Text(const zl::str &text,
 }
 
 void zl::Text::setText(const zl::str &text) {
+    if (m_textString == text)
+        return;
+
     m_textString = text;
     init();
 }

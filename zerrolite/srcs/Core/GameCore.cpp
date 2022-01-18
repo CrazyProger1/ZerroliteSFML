@@ -13,6 +13,7 @@ std::chrono::high_resolution_clock::time_point end;
 
 zl::GameCore::GameCore(sf::RenderWindow *mainWindow) {
     m_pMainWindow = mainWindow;
+    m_resolution = m_pMainWindow->getSize();
 }
 
 zl::GameCore::GameCore() = default;
@@ -36,7 +37,7 @@ void zl::GameCore::tick() {
     end = std::chrono::high_resolution_clock::now();
 
     int fps = (float) 1e9 / (float) std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
-    std::cout << fps << std::endl;
+//    std::cout << fps << std::endl;
 }
 
 void zl::GameCore::run() {
@@ -48,6 +49,7 @@ void zl::GameCore::run() {
 
 void zl::GameCore::setMainWindow(sf::RenderWindow *window) {
     m_pMainWindow = window;
+    m_resolution = m_pMainWindow->getSize();
 }
 
 void zl::GameCore::handleSFMLEvents() {

@@ -9,9 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/C++/Projects/ZerroliteSFML/main.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/main.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Containers/Container.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Containers/Grid.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Actor.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Entity.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GameCore.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/NPC.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Player.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Scene.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Button.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Button.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/CheckBox.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.obj"

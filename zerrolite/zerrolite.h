@@ -13,5 +13,8 @@
 #include "./include/GUI/Image.h"
 #include "./include/GUI/CheckBox.h"
 #include "./include/Styles/CheckBoxStyle.h"
+#include "./include/Containers/Grid.h"
+#include "./include/Core/Player.h"
+#include "./include/Core/NPC.h"
 
 #endif //ZERROLITESFML_ZERROLITE_H

@@ -16,12 +16,13 @@ void zl::Entity::handleSFMLEvent(sf::Event &event) {
 
 }
 
-void zl::Entity::move(zl::fVector offset) {
+void zl::Entity::move(const fVector &offset) {
     m_position.x += offset.x;
     m_position.y += offset.y;
+    initialize();
 }
 
-void zl::Entity::setPosition(zl::fVector position) {
+void zl::Entity::setPosition(const fVector &position) {
     m_position = position;
     initialize();
 }

@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+zerrolite/srcs/Containers/Container.obj: zerrolite/srcs/Containers/Container.cpp.obj
+.PHONY : zerrolite/srcs/Containers/Container.obj
+
+# target to build an object file
+zerrolite/srcs/Containers/Container.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.obj
+.PHONY : zerrolite/srcs/Containers/Container.cpp.obj
+
+zerrolite/srcs/Containers/Container.i: zerrolite/srcs/Containers/Container.cpp.i
+.PHONY : zerrolite/srcs/Containers/Container.i
+
+# target to preprocess a source file
+zerrolite/srcs/Containers/Container.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.i
+.PHONY : zerrolite/srcs/Containers/Container.cpp.i
+
+zerrolite/srcs/Containers/Container.s: zerrolite/srcs/Containers/Container.cpp.s
+.PHONY : zerrolite/srcs/Containers/Container.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Containers/Container.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Container.cpp.s
+.PHONY : zerrolite/srcs/Containers/Container.cpp.s
+
 zerrolite/srcs/Containers/Grid.obj: zerrolite/srcs/Containers/Grid.cpp.obj
 .PHONY : zerrolite/srcs/Containers/Grid.obj
 
@@ -175,6 +199,30 @@ zerrolite/srcs/Containers/Grid.s: zerrolite/srcs/Containers/Grid.cpp.s
 zerrolite/srcs/Containers/Grid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Containers/Grid.cpp.s
 .PHONY : zerrolite/srcs/Containers/Grid.cpp.s
+
+zerrolite/srcs/Core/Actor.obj: zerrolite/srcs/Core/Actor.cpp.obj
+.PHONY : zerrolite/srcs/Core/Actor.obj
+
+# target to build an object file
+zerrolite/srcs/Core/Actor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj
+.PHONY : zerrolite/srcs/Core/Actor.cpp.obj
+
+zerrolite/srcs/Core/Actor.i: zerrolite/srcs/Core/Actor.cpp.i
+.PHONY : zerrolite/srcs/Core/Actor.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/Actor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.i
+.PHONY : zerrolite/srcs/Core/Actor.cpp.i
+
+zerrolite/srcs/Core/Actor.s: zerrolite/srcs/Core/Actor.cpp.s
+.PHONY : zerrolite/srcs/Core/Actor.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/Actor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.s
+.PHONY : zerrolite/srcs/Core/Actor.cpp.s
 
 zerrolite/srcs/Core/Entity.obj: zerrolite/srcs/Core/Entity.cpp.obj
 .PHONY : zerrolite/srcs/Core/Entity.obj
@@ -223,6 +271,54 @@ zerrolite/srcs/Core/GameCore.s: zerrolite/srcs/Core/GameCore.cpp.s
 zerrolite/srcs/Core/GameCore.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.s
 .PHONY : zerrolite/srcs/Core/GameCore.cpp.s
+
+zerrolite/srcs/Core/NPC.obj: zerrolite/srcs/Core/NPC.cpp.obj
+.PHONY : zerrolite/srcs/Core/NPC.obj
+
+# target to build an object file
+zerrolite/srcs/Core/NPC.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj
+.PHONY : zerrolite/srcs/Core/NPC.cpp.obj
+
+zerrolite/srcs/Core/NPC.i: zerrolite/srcs/Core/NPC.cpp.i
+.PHONY : zerrolite/srcs/Core/NPC.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/NPC.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.i
+.PHONY : zerrolite/srcs/Core/NPC.cpp.i
+
+zerrolite/srcs/Core/NPC.s: zerrolite/srcs/Core/NPC.cpp.s
+.PHONY : zerrolite/srcs/Core/NPC.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/NPC.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.s
+.PHONY : zerrolite/srcs/Core/NPC.cpp.s
+
+zerrolite/srcs/Core/Player.obj: zerrolite/srcs/Core/Player.cpp.obj
+.PHONY : zerrolite/srcs/Core/Player.obj
+
+# target to build an object file
+zerrolite/srcs/Core/Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.obj
+.PHONY : zerrolite/srcs/Core/Player.cpp.obj
+
+zerrolite/srcs/Core/Player.i: zerrolite/srcs/Core/Player.cpp.i
+.PHONY : zerrolite/srcs/Core/Player.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.i
+.PHONY : zerrolite/srcs/Core/Player.cpp.i
+
+zerrolite/srcs/Core/Player.s: zerrolite/srcs/Core/Player.cpp.s
+.PHONY : zerrolite/srcs/Core/Player.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Player.cpp.s
+.PHONY : zerrolite/srcs/Core/Player.cpp.s
 
 zerrolite/srcs/Core/Scene.obj: zerrolite/srcs/Core/Scene.cpp.obj
 .PHONY : zerrolite/srcs/Core/Scene.obj
@@ -428,15 +524,27 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... zerrolite/srcs/Containers/Container.obj
+	@echo ... zerrolite/srcs/Containers/Container.i
+	@echo ... zerrolite/srcs/Containers/Container.s
 	@echo ... zerrolite/srcs/Containers/Grid.obj
 	@echo ... zerrolite/srcs/Containers/Grid.i
 	@echo ... zerrolite/srcs/Containers/Grid.s
+	@echo ... zerrolite/srcs/Core/Actor.obj
+	@echo ... zerrolite/srcs/Core/Actor.i
+	@echo ... zerrolite/srcs/Core/Actor.s
 	@echo ... zerrolite/srcs/Core/Entity.obj
 	@echo ... zerrolite/srcs/Core/Entity.i
 	@echo ... zerrolite/srcs/Core/Entity.s
 	@echo ... zerrolite/srcs/Core/GameCore.obj
 	@echo ... zerrolite/srcs/Core/GameCore.i
 	@echo ... zerrolite/srcs/Core/GameCore.s
+	@echo ... zerrolite/srcs/Core/NPC.obj
+	@echo ... zerrolite/srcs/Core/NPC.i
+	@echo ... zerrolite/srcs/Core/NPC.s
+	@echo ... zerrolite/srcs/Core/Player.obj
+	@echo ... zerrolite/srcs/Core/Player.i
+	@echo ... zerrolite/srcs/Core/Player.s
 	@echo ... zerrolite/srcs/Core/Scene.obj
 	@echo ... zerrolite/srcs/Core/Scene.i
 	@echo ... zerrolite/srcs/Core/Scene.s
