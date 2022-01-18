@@ -9,13 +9,13 @@ void zl::Actor::move(const fVector &offset) {
 //    if (offset.x == 0 && offset.y == 0) return;
     m_position.x += offset.x;
     m_position.y += offset.y;
-    m_sprite->setPosition(m_position);
+    m_pSprite->setPosition(m_position);
 }
 
 void zl::Actor::setPosition(const fVector &position) {
     if (position == m_position)return;
     m_position = position;
-    m_sprite->setPosition(position);
+    m_pSprite->setPosition(position);
 }
 
 void zl::Actor::initialize() {
@@ -23,23 +23,31 @@ void zl::Actor::initialize() {
 }
 
 void zl::Actor::setSprite(sf::Sprite *sprite) {
-    m_sprite = sprite;
-    uVector spriteSize = m_sprite->getTexture()->getSize();
-    m_sprite->setOrigin(spriteSize.x / 2, spriteSize.y / 2);
+    m_pSprite = sprite;
+
+
+    if (m_activeAppearanceId == -1) {
+        std::cerr << "Appearance does not set" << std::endl;
+        throw std::exception();
+    }
+    m_pSprite->setTexture(m_appearances[(int) m_activeAppearanceId]);
+
+    m_size = m_pSprite->getTexture()->getSize();
+    m_pSprite->setOrigin(m_size.x / 2, m_size.y / 2);
 }
 
 void zl::Actor::draw(sf::RenderTarget &rt) {
-    rt.draw(*m_sprite);
+    rt.draw(*m_pSprite);
 }
 
 void zl::Actor::rotate(float angle) {
     m_angle += angle;
-    m_sprite->rotate(angle);
+    m_pSprite->rotate(angle);
 }
 
 void zl::Actor::setRotation(float angle) {
     m_angle = angle;
-    m_sprite->setRotation(angle);
+    m_pSprite->setRotation(angle);
 
 }
 
@@ -51,3 +59,15 @@ void zl::Actor::turnToMouseCursor() {
     setRotation(std::atan2(hDist, wDist) * 180 / 3.14159265);
 
 }
+
+void zl::Actor::addAppearance(unsigned int appearanceId, sf::Texture &texture) {
+    m_appearances[(int) appearanceId] = texture;
+    m_activeAppearanceId = (int) appearanceId;
+}
+
+void zl::Actor::setAppearance(unsigned int appearanceId) {
+    m_activeAppearanceId = (int) appearanceId;
+    m_pSprite->setTexture(m_appearances[(int) appearanceId]);
+}
+
+

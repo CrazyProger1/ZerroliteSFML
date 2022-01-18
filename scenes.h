@@ -11,18 +11,20 @@
 class GameScene : public zl::Scene {
     zl::Player player;
     sf::Sprite sprite;
-    sf::Texture texture;
 
-    std::map<std::string, sf::Texture> playerTextures;
 
     void onLoadResources() override {
+        sf::Texture texture;
         texture.loadFromFile("../resources/sprites/player/handgun/move/survivor-move_handgun_0.png");
+        player.addAppearance(1, texture);
+        texture.loadFromFile("../resources/sprites/player/flashlight/move/survivor-move_flashlight_0.png");
+        player.addAppearance(2, texture);
+
     }
 
     void onInitializeScene() override {
-        sprite.setTexture(texture);
         player.setSprite(&sprite);
-
+        player.setAppearance(1);
         player.setPosition({100, 100});
 
 

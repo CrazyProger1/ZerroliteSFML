@@ -826,12 +826,6 @@ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 SFML/Graphics.hpp
 -
 
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Player.cpp
-iostream
--
-../../include/Core/Player.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Player.h
-
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 ./include/Core/GameCore.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GameCore.h

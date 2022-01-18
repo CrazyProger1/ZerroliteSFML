@@ -103,7 +103,7 @@ protected:
 ///     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 ///     {
 ///         // You can draw other high-level objects
-///         target.draw(m_sprite, states);
+///         target.draw(m_pSprite, states);
 ///
 ///         // ... or use the low-level API
 ///         states.texture = &m_texture;
@@ -115,7 +115,7 @@ protected:
 ///         glEnd();
 ///     }
 ///
-///     sf::Sprite m_sprite;
+///     sf::Sprite m_pSprite;
 ///     sf::Texture m_texture;
 ///     sf::VertexArray m_vertices;
 /// };
