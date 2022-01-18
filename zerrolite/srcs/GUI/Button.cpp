@@ -115,6 +115,7 @@ void zl::Button::init() {
 }
 
 void zl::Button::initialize() {
+    setType("button");
     init();
 }
 

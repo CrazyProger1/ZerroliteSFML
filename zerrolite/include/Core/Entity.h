@@ -14,6 +14,9 @@ namespace zl {
         sf::RenderWindow *m_pParentWindow = nullptr;
 
         fVector m_position;
+
+        str m_type = "entity";
+
     public:
         virtual void initialize();
 
@@ -23,16 +26,19 @@ namespace zl {
 
         virtual void handleSFMLEvent(sf::Event &event);
 
-        virtual void move(const fVector & offset);
+        virtual void move(const fVector &offset);
 
-        virtual void setPosition(const fVector & position);
+        virtual void setPosition(const fVector &position);
 
         void setParentWindow(sf::RenderWindow *window);
+
+        void setType(const str &type);
 
         sf::RenderWindow *getParentWindow();
 
         fVector &getPosition();
 
+        str &getType();
 
     };
 }

@@ -6,14 +6,32 @@
 #define ZERROLITESFML_SCENES_H
 
 #include "zerrolite/zerrolite.h"
+#include <map>
 
 class GameScene : public zl::Scene {
     zl::Player player;
+    sf::Sprite sprite;
+    sf::Texture texture;
+
+    std::map<std::string, sf::Texture> playerTextures;
+
+    void onLoadResources() override {
+        texture.loadFromFile("../resources/sprites/player/handgun/move/survivor-move_handgun_0.png");
+    }
 
     void onInitializeScene() override {
+        sprite.setTexture(texture);
+        player.setSprite(&sprite);
+
         player.setPosition({100, 100});
 
+
         attach(&player);
+    }
+
+
+    void onUpdateState() override {
+        player.turnToMouseCursor();
     }
 
 };

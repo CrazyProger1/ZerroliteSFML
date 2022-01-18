@@ -32,6 +32,7 @@ void zl::Scene::attach(Entity *entity) {
     if (entity->getParentWindow() == nullptr)
         entity->setParentWindow(m_pParentWindow);
 
+    entity->initialize();
     m_entitiesContainer.emplace_back(entity);
 }
 
@@ -40,6 +41,7 @@ void zl::Scene::attach(zl::Container *container) {
         if (entity->getParentWindow() == nullptr)
             entity->setParentWindow(m_pParentWindow);
 
+        entity->initialize();
         m_entitiesContainer.emplace_back(entity);
     }
 }
@@ -77,8 +79,8 @@ void zl::Scene::updateState() {
 void zl::Scene::initializeScene() {
     m_entitiesContainer.clear();
     m_pNewScene = "";
-    onInitializeScene();
     onLoadResources();
+    onInitializeScene();
 
 
 }

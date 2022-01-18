@@ -71,6 +71,7 @@ void zl::CheckBox::init() {
 }
 
 void zl::CheckBox::initialize() {
+    setType("checkbox");
     init();
 }
 

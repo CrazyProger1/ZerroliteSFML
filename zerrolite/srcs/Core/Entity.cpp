@@ -42,3 +42,11 @@ zl::fVector &zl::Entity::getPosition() {
 void zl::Entity::initialize() {
 
 }
+
+void zl::Entity::setType(const zl::str &type) {
+    m_type = type;
+}
+
+zl::str &zl::Entity::getType() {
+    return m_type;
+}

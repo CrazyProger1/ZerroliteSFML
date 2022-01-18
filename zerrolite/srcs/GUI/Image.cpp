@@ -14,6 +14,7 @@ zl::Image::Image(const zl::str &path) {
 }
 
 void zl::Image::initialize() {
+    setType("image");
     init();
 }
 

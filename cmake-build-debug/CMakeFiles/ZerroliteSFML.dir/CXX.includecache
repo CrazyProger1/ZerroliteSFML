@@ -685,6 +685,8 @@ D:/Programming/C++/Projects/ZerroliteSFML/scenes.h
 D:/Programming/C++/Projects/ZerroliteSFML/scenes.h
 zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+map
+-
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Container.h
 SFML/Graphics.hpp
@@ -703,6 +705,10 @@ iostream
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Actor.h
 ./Entity.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
+iostream
+-
+cmath
+-
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
 SFML/Graphics.hpp
@@ -819,6 +825,12 @@ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 SFML/Graphics.hpp
 -
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Player.cpp
+iostream
+-
+../../include/Core/Player.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Player.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 ./include/Core/GameCore.h

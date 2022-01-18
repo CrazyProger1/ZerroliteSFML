@@ -211,6 +211,7 @@ bool zl::Text::isClicked() {
 }
 
 void zl::Text::initialize() {
+    setType("text");
     init();
 }
 

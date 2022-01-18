@@ -9,6 +9,10 @@
 
 namespace zl {
     class Player : public Actor {
+    private:
+    public:
+        void initialize() override;
+
 
     };
 }

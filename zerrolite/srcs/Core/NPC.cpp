@@ -3,3 +3,7 @@
 //
 
 #include "../../include/Core/NPC.h"
+
+void zl::NPC::initialize() {
+    setType("npc");
+}
