@@ -50,3 +50,7 @@ void zl::Entity::setType(const zl::str &type) {
 zl::str &zl::Entity::getType() {
     return m_type;
 }
+
+void zl::Entity::onAttach() {
+
+}

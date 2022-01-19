@@ -8,35 +8,90 @@
 #include "zerrolite/zerrolite.h"
 #include <map>
 
-class GameScene : public zl::Scene {
-    zl::Player player;
+class Player : public zl::Player {
+    int selectedWeapon = 0;
     sf::Sprite sprite;
 
+public:
+
+    void selectNextWeapon() {
+        selectedWeapon++;
+        if (selectedWeapon == 4) selectedWeapon = 0;
+        setAppearance(selectedWeapon);
+    }
 
     void onLoadResources() override {
         sf::Texture texture;
+        texture.loadFromFile("../resources/sprites/player/knife/move/survivor-move_knife_0.png");
+        addAppearance(0, texture);
         texture.loadFromFile("../resources/sprites/player/handgun/move/survivor-move_handgun_0.png");
-        player.addAppearance(1, texture);
-        texture.loadFromFile("../resources/sprites/player/flashlight/move/survivor-move_flashlight_0.png");
-        player.addAppearance(2, texture);
+        addAppearance(1, texture);
+        texture.loadFromFile("../resources/sprites/player/rifle/move/survivor-move_rifle_0.png");
+        addAppearance(2, texture);
+        texture.loadFromFile("../resources/sprites/player/shotgun/move/survivor-move_shotgun_0.png");
+        addAppearance(3, texture);
+    }
+
+    void onInitializeActor() override {
+
+        setSprite(&sprite);
+        setAppearance(selectedWeapon);
+        setPosition({100, 100});
+    }
+
+
+};
+
+class GameScene : public zl::Scene {
+    Player player;
+
+
+    void onLoadResources() override {
 
     }
 
     void onInitializeScene() override {
-        player.setSprite(&sprite);
-        player.setAppearance(1);
-        player.setPosition({100, 100});
-
 
         attach(&player);
+    }
+
+
+    void onSFMLEvent(sf::Event &event) override {
+        if (event.type == sf::Event::KeyPressed) {
+            switch (event.key.code) {
+                case sf::Keyboard::Q:
+                    player.selectNextWeapon();
+                    break;
+                case sf::Keyboard::W:
+
+                    break;
+
+                case sf::Keyboard::S:
+
+                    break;
+
+                case sf::Keyboard::A:
+
+                    break;
+
+                case sf::Keyboard::D:
+
+                    break;
+
+                default:
+                    break;
+            }
+
+
+        }
     }
 
 
     void onUpdateState() override {
         player.turnToMouseCursor();
     }
-
 };
+
 
 class MenuScene : public zl::Scene {
     zl::Button btnPlay;

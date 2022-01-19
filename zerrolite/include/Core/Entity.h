@@ -18,6 +18,8 @@ namespace zl {
         str m_type = "entity";
 
     public:
+        virtual void onAttach();
+
         virtual void initialize();
 
         virtual void draw(sf::RenderTarget &rt);

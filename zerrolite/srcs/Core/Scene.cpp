@@ -33,6 +33,8 @@ void zl::Scene::attach(Entity *entity) {
         entity->setParentWindow(m_pParentWindow);
 
     entity->initialize();
+    entity->onAttach();
+
     m_entitiesContainer.emplace_back(entity);
 }
 

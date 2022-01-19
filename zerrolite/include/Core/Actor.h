@@ -28,9 +28,28 @@ namespace zl {
     public:
         Actor() = default;
 
+        virtual void onInitializeActor();
+
+        virtual void onLoadResources();
+
+//
+        virtual void onDraw(sf::RenderTarget &rt);
+
+        virtual void onUpdateState();
+
+        virtual void onDestroy();
+
+        virtual void onSFMLEvent(sf::Event &event);
+
+        void onAttach() override;
+
         void move(const fVector &offset) override;
 
         void draw(sf::RenderTarget &rt) override;
+
+        void handleSFMLEvent(sf::Event &event) override;
+
+        void updateState() override;
 
         void rotate(float angle);
 
@@ -43,6 +62,19 @@ namespace zl {
         void setAppearance(unsigned int appearanceId);
 
         void addAppearance(unsigned int appearanceId, sf::Texture &texture);
+
+//        virtual void moveForward();
+//
+//        virtual void moveBack();
+//
+//        virtual void moveRight();
+//
+//        virtual void moveLeft();
+//
+//        void setSpeed();
+
+
+
 
         void turnToMouseCursor();
 

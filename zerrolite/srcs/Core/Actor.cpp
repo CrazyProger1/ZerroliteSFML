@@ -37,6 +37,7 @@ void zl::Actor::setSprite(sf::Sprite *sprite) {
 }
 
 void zl::Actor::draw(sf::RenderTarget &rt) {
+    onDraw(rt);
     rt.draw(*m_pSprite);
 }
 
@@ -68,6 +69,43 @@ void zl::Actor::addAppearance(unsigned int appearanceId, sf::Texture &texture) {
 void zl::Actor::setAppearance(unsigned int appearanceId) {
     m_activeAppearanceId = (int) appearanceId;
     m_pSprite->setTexture(m_appearances[(int) appearanceId]);
+}
+
+void zl::Actor::onInitializeActor() {
+
+}
+
+void zl::Actor::onLoadResources() {
+
+}
+
+void zl::Actor::onDraw(sf::RenderTarget &rt) {
+
+}
+
+void zl::Actor::onUpdateState() {
+
+}
+
+void zl::Actor::onDestroy() {
+
+}
+
+void zl::Actor::onSFMLEvent(sf::Event &event) {
+
+}
+
+void zl::Actor::onAttach() {
+    onLoadResources();
+    onInitializeActor();
+}
+
+void zl::Actor::handleSFMLEvent(sf::Event &event) {
+    onSFMLEvent(event);
+}
+
+void zl::Actor::updateState() {
+    onUpdateState();
 }
 
 
