@@ -14,13 +14,13 @@
 namespace zl {
     class CheckBox : public Entity {
     private:
-        fVector m_size;
-        fVector m_checkOffset = {0, 0};
+        sf::Vector2f m_size;
+        sf::Vector2f m_checkOffset = {0, 0};
 
-        int m_checkScale = 1;
-        int m_checkAngle = 90;
-        float m_checkAngleRatio = 1;
-        fVector m_checkHornsLenCoef = {1, 1};
+        int m_iCheckScale = 1;
+        int m_iCheckAngle = 90;
+        float m_fltCheckAngleRatio = 1;
+        sf::Vector2f m_checkHornsLenCoef = {1, 1};
 
         RGBAColor m_color = {100, 100, 100};
         RGBAColor m_hoverColor = {100, 100, 200};
@@ -33,28 +33,32 @@ namespace zl {
         sf::RectangleShape m_checkPart1;
         sf::RectangleShape m_checkPart2;
 
-        int m_borderWidth = 0;
-        int m_cornerRadius = 0;
+        int m_iBorderWidth = 0;
+//        int m_iCornerRadius = 0;
 
 
-        bool m_isChecked = false;
-        bool m_isHovered = false;
-        bool m_isClicked = false;
+        bool m_bIsChecked = false;
+        bool m_bIsHovered = false;
+        bool m_bIsClicked = false;
 
-        bool m_justHovered = false; // for optimization
-        bool m_justChecked = false; // for optimization
-
-        void init();
+        bool m_bJustHovered = false; // for optimization
+        bool m_bJustChecked = false; // for optimization
 
         void checkHover();
+        /////////////////////////////
+        /// This method check if cursor is hovered above checkbox.
+        /////////////////////////////
 
         void checkClick(sf::Event &event);
+        /////////////////////////////
+        /// This method check if checkbox was clicked.
+        /////////////////////////////
 
     public:
         CheckBox();
 
         explicit CheckBox(
-                const fVector &size,
+                const sf::Vector2f &size,
                 int checkScale = 1,
                 const RGBAColor &color = {100, 255, 0},
                 const RGBAColor &checkColor = {100, 255, 0},
@@ -65,7 +69,8 @@ namespace zl {
 
         void initialize() override;
 
-        void setSize(const fVector &size);
+
+        void setSize(const sf::Vector2f &size);
 
         void setCheckScale(int scale);
 
@@ -79,7 +84,7 @@ namespace zl {
 
         void setHoverColor(const RGBAColor &color);
 
-        void setCheckHornsLengthCoefficient(const fVector &coef);
+        void setCheckHornsLengthCoefficient(const sf::Vector2f &coef);
 
         void setBorderWidth(int width);
 
@@ -87,9 +92,17 @@ namespace zl {
 
         void setChecked(bool checked = false);
 
-        void setCheckOffset(const fVector &offset);
+        void setCheckOffset(const sf::Vector2f &offset);
 
         void setStyle(CheckBoxStyle &style);
+
+
+        bool isClicked();
+
+        bool isHovered() const;
+
+        bool isChecked() const;
+
 
         void draw(sf::RenderTarget &rt) override;
 
@@ -97,11 +110,6 @@ namespace zl {
 
         void handleSFMLEvent(sf::Event &event) override;
 
-        bool isClicked();
-
-        bool isHovered();
-
-        bool isChecked();
 
     };
 }

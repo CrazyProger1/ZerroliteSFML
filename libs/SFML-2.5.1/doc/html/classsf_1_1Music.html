@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aae3451cad5c16ee6a6e124e62ed61361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the positions of the of the sound's looping sequence.  <a href="#aae3451cad5c16ee6a6e124e62ed61361">More...</a><br /></td></tr>
 <tr class="separator:aae3451cad5c16ee6a6e124e62ed61361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b339f0a957dfad045f3f28083a015e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e">setLoopPoints</a> (<a class="el" href="structsf_1_1Music_1_1Span.html">TimeSpan</a> timePoints)</td></tr>
-<tr class="memdesc:ae7b339f0a957dfad045f3f28083a015e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the beginning and end of the sound's looping sequence using <a class="el" href="classsf_1_1Time.html" title="Represents a time value. ">sf::Time</a>.  <a href="#ae7b339f0a957dfad045f3f28083a015e">More...</a><br /></td></tr>
+<tr class="memdesc:ae7b339f0a957dfad045f3f28083a015e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the beginning and g_tEnd of the sound's looping sequence using <a class="el" href="classsf_1_1Time.html" title="Represents a time value. ">sf::Time</a>.  <a href="#ae7b339f0a957dfad045f3f28083a015e">More...</a><br /></td></tr>
 <tr class="separator:ae7b339f0a957dfad045f3f28083a015e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdc08b69cab5f243d9324940a85a1144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144">play</a> ()</td></tr>
 <tr class="memdesc:afdc08b69cab5f243d9324940a85a1144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start or resume playing the audio stream.  <a href="#afdc08b69cab5f243d9324940a85a1144">More...</a><br /></td></tr>
@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae288f3c72edbad9cc7ee938ce5b907c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current playing position of the stream.  <a href="#ae288f3c72edbad9cc7ee938ce5b907c1">More...</a><br /></td></tr>
 <tr class="separator:ae288f3c72edbad9cc7ee938ce5b907c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43fade018ffba7e4f847a9f00b353f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d">setLoop</a> (bool loop)</td></tr>
-<tr class="memdesc:a43fade018ffba7e4f847a9f00b353f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the stream should loop after reaching the end.  <a href="#a43fade018ffba7e4f847a9f00b353f3d">More...</a><br /></td></tr>
+<tr class="memdesc:a43fade018ffba7e4f847a9f00b353f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the stream should loop after reaching the g_tEnd.  <a href="#a43fade018ffba7e4f847a9f00b353f3d">More...</a><br /></td></tr>
 <tr class="separator:a43fade018ffba7e4f847a9f00b353f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d263f9bbaefec4b019bd05fda59b25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundStream.html#a49d263f9bbaefec4b019bd05fda59b25">getLoop</a> () const</td></tr>
 <tr class="memdesc:a49d263f9bbaefec4b019bd05fda59b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether or not the stream is in loop mode.  <a href="#a49d263f9bbaefec4b019bd05fda59b25">More...</a><br /></td></tr>
@@ -426,7 +426,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Tell whether or not the stream is in loop mode. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if the stream is looping, false otherwise</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. ">setLoop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the g_tEnd. ">setLoop</a> </dd></dl>
 
 </div>
 </div>
@@ -447,8 +447,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the positions of the of the sound's looping sequence. </p>
 <dl class="section return"><dt>Returns</dt><dd>Loop <a class="el" href="classsf_1_1Time.html" title="Represents a time value. ">Time</a> position class.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Since <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and end of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a> performs some adjustments on the provided values and rounds them to internal samples, a call to <a class="el" href="classsf_1_1Music.html#aae3451cad5c16ee6a6e124e62ed61361" title="Get the positions of the of the sound&#39;s looping sequence. ">getLoopPoints()</a> is not guaranteed to return the same times passed into a previous call to <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and end of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a>. However, it is guaranteed to return times that will map to the valid internal samples of this <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">Music</a> if they are later passed to <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and end of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and end of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Since <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and g_tEnd of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a> performs some adjustments on the provided values and rounds them to internal samples, a call to <a class="el" href="classsf_1_1Music.html#aae3451cad5c16ee6a6e124e62ed61361" title="Get the positions of the of the sound&#39;s looping sequence. ">getLoopPoints()</a> is not guaranteed to return the same times passed into a previous call to <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and g_tEnd of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a>. However, it is guaranteed to return times that will map to the valid internal samples of this <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">Music</a> if they are later passed to <a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and g_tEnd of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints()</a>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Music.html#ae7b339f0a957dfad045f3f28083a015e" title="Sets the beginning and g_tEnd of the sound&#39;s looping sequence using sf::Time. ">setLoopPoints</a> </dd></dl>
 
 </div>
 </div>
@@ -793,7 +793,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Change the current playing position in the stream source to the loop offset. </p>
-<p>This is called by the underlying <a class="el" href="classsf_1_1SoundStream.html" title="Abstract base class for streamed audio sources. ">SoundStream</a> whenever it needs us to reset the seek position for a loop. We then determine whether we are looping on a loop point or the end-of-file, perform the seek, and return the new position.</p>
+<p>This is called by the underlying <a class="el" href="classsf_1_1SoundStream.html" title="Abstract base class for streamed audio sources. ">SoundStream</a> whenever it needs us to reset the seek position for a loop. We then determine whether we are looping on a loop point or the g_tEnd-of-file, perform the seek, and return the new position.</p>
 <dl class="section return"><dt>Returns</dt><dd>The seek position after looping (or -1 if there's no loop) </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classsf_1_1SoundStream.html#a3f717d18846f261fc375d71d6c7e41da">sf::SoundStream</a>.</p>
@@ -853,7 +853,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a music from an audio file. </p>
-<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<p>This function doesn't g_tStart playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the file must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -893,7 +893,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a music from an audio file in memory. </p>
-<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<p>This function doesn't g_tStart playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the <em>data</em> buffer must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed. That is, you can't deallocate the buffer right after calling this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -924,7 +924,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a music from an audio file in a custom stream. </p>
-<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<p>This function doesn't g_tStart playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the <em>stream</em> must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1059,8 +1059,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set whether or not the stream should loop after reaching the end. </p>
-<p>If set, the stream will restart from beginning after reaching the end and so on, until it is stopped or setLoop(false) is called. The default looping state for streams is false.</p>
+<p>Set whether or not the stream should loop after reaching the g_tEnd. </p>
+<p>If set, the stream will restart from beginning after reaching the g_tEnd and so on, until it is stopped or setLoop(false) is called. The default looping state for streams is false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loop</td><td>True to play in loop, false to play once</td></tr>
@@ -1087,8 +1087,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the beginning and end of the sound's looping sequence using <a class="el" href="classsf_1_1Time.html" title="Represents a time value. ">sf::Time</a>. </p>
-<p>Loop points allow one to specify a pair of positions such that, when the music is enabled for looping, it will seamlessly seek to the beginning whenever it encounters the end. Valid ranges for timePoints.offset and timePoints.length are [0, Dur) and (0, Dur-offset] respectively, where Dur is the value returned by <a class="el" href="classsf_1_1Music.html#a288ef6f552a136b0e56952dcada3d672" title="Get the total duration of the music. ">getDuration()</a>. Note that the EOF "loop point" from the end to the beginning of the stream is still honored, in case the caller seeks to a point after the end of the loop range. This function can be safely called at any point after a stream is opened, and will be applied to a playing sound without affecting the current playing offset.</p>
+<p>Sets the beginning and g_tEnd of the sound's looping sequence using <a class="el" href="classsf_1_1Time.html" title="Represents a time value. ">sf::Time</a>. </p>
+<p>Loop points allow one to specify a pair of positions such that, when the music is enabled for looping, it will seamlessly seek to the beginning whenever it encounters the g_tEnd. Valid ranges for timePoints.offset and timePoints.length are [0, Dur) and (0, Dur-offset] respectively, where Dur is the value returned by <a class="el" href="classsf_1_1Music.html#a288ef6f552a136b0e56952dcada3d672" title="Get the total duration of the music. ">getDuration()</a>. Note that the EOF "loop point" from the g_tEnd to the beginning of the stream is still honored, in case the caller seeks to a point after the g_tEnd of the loop range. This function can be safely called at any point after a stream is opened, and will be applied to a playing sound without affecting the current playing offset.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Setting the loop points while the stream's status is Paused will set its status to Stopped. The playing offset will be unaffected.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1125,7 +1125,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the minimum distance of the sound. </p>
-<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will start to fade out according to its attenuation factor. A value of 0 ("inside the head
+<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will g_tStart to fade out according to its attenuation factor. A value of 0 ("inside the head
 of the listener") is an invalid value and is forbidden. The default value of the minimum distance is 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -575,7 +575,7 @@ public:
     /// \brief Get the maximum texture size allowed
     ///
     /// This maximum size is defined by the graphics driver.
-    /// You can expect a value of 512 pixels for low-end graphics
+    /// You can expect a value of 512 pixels for low-g_tEnd graphics
     /// card, and up to 8192 pixels or more for newer hardware.
     ///
     /// \return Maximum size allowed for textures, in pixels

@@ -12,12 +12,60 @@
 
 namespace zl {
     class Scene {
+        /////////////////////////////
+        /// Heritable class, which is responsible for drawing and updating entities.
+        /////////////////////////////
+
     private:
         sf::RenderWindow *m_pParentWindow = nullptr;
-        str m_pNewScene;
+
+        str m_sNewScene;
 
         std::vector<Entity *> m_entitiesContainer;
+
+        sf::Vector2u m_resolution;
+
     public:
+        void attach(Entity *entity);
+        /////////////////////////////
+        /// This method attaches entities to screen and updates it.
+        /////////////////////////////
+
+        void attach(Container *container);
+        /////////////////////////////
+        /// This method attaches entities from container to screen and updates it.
+        /////////////////////////////
+
+
+        void draw(sf::RenderTarget &rt);
+        /////////////////////////////
+        /// This method draws all entities. Also it fill and display window.
+        /////////////////////////////
+
+        void initializeScene();
+
+        void updateState();
+        /////////////////////////////
+        /// This method updates all entities.
+        /////////////////////////////
+
+        void handleSFMLEvent(sf::Event &event);
+
+
+        void setParentWindow(sf::RenderWindow *window);
+
+        void setNewScene(const str &sceneName);
+
+
+        sf::RenderWindow *getParentWindow();
+
+        str &getNewScene();
+
+        sf::Vector2u &getWindowResolution();
+
+
+        /////////////////////////////
+        /// This virtual methods are called by game core on certain events.
         virtual void onInitializeScene();
 
         virtual void onLoadResources();
@@ -29,26 +77,7 @@ namespace zl {
         virtual void onDestroy();
 
         virtual void onSFMLEvent(sf::Event &event);
-
-        void attach(Entity *entity);
-
-        void attach(Container *container);
-
-        void draw(sf::RenderTarget &rt);
-
-        void initializeScene();
-
-        void updateState();
-
-        void handleSFMLEvent(sf::Event &event);
-
-        void setParentWindow(sf::RenderWindow *window);
-
-        void setNewScene(const str &sceneName);
-
-        sf::RenderWindow *getParentWindow();
-
-        str &getNewScene();
+        /////////////////////////////
     };
 }
 

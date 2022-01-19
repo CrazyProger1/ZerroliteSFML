@@ -9,6 +9,9 @@
 
 namespace zl {
     class NPC : public Actor {
+        /////////////////////////////
+        ///
+        /////////////////////////////
     private:
     public:
         void initialize() override;

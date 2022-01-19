@@ -200,7 +200,7 @@ public:
     ///
     /// This function updates the target texture with what
     /// has been drawn so far. Like for windows, calling this
-    /// function is mandatory at the end of rendering. Not calling
+    /// function is mandatory at the g_tEnd of rendering. Not calling
     /// it may leave the texture in an undefined state.
     ///
     ////////////////////////////////////////////////////////////
@@ -292,7 +292,7 @@ private:
 ///    // We're done drawing to the texture
 ///    texture.display();
 ///
-///    // Now we start rendering to the window, clear it first
+///    // Now we g_tStart rendering to the window, clear it first
 ///    window.clear();
 ///
 ///    // Draw the texture

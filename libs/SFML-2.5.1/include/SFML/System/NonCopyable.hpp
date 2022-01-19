@@ -107,7 +107,7 @@ private:
 ///
 /// The type of inheritance (public or private) doesn't matter,
 /// the copy constructor and assignment operator are declared private
-/// in sf::NonCopyable so they will end up being inaccessible in both
+/// in sf::NonCopyable so they will g_tEnd up being inaccessible in both
 /// cases. Thus you can use a shorter syntax for inheriting from it
 /// (see below).
 ///

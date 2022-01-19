@@ -10,12 +10,19 @@
 
 namespace zl {
     class Grid : public Container {
+        /////////////////////////////
+        /// Grid is a very comfortable container which apply...
+        /////////////////////////////
+
     private:
         std::vector<Entity *> m_entitiesContainer;
+
     public:
         Grid() = default;
 
+
         void addEntity(Entity *entity);
+
 
         std::vector<Entity *> &getEntities() override;
     };

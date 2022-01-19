@@ -233,7 +233,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Change the current read position to the given sample offset. </p>
-<p>The sample offset takes the channels into account. If you have a time offset instead, you can easily find the corresponding sample offset with the following formula: <code>timeInSeconds * sampleRate * channelCount</code> If the given offset exceeds to total number of samples, this function must jump to the end of the file.</p>
+<p>The sample offset takes the channels into account. If you have a time offset instead, you can easily find the corresponding sample offset with the following formula: <code>timeInSeconds * sampleRate * channelCount</code> If the given offset exceeds to total number of samples, this function must jump to the g_tEnd of the file.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sampleOffset</td><td>Index of the sample to jump to, relative to the beginning </td></tr>

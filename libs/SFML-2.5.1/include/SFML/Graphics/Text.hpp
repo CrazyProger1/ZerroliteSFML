@@ -374,7 +374,7 @@ public:
     /// from its index in the string. The returned position is
     /// in global coordinates (translation, rotation, scale and
     /// origin are applied).
-    /// If \a index is out of range, the position of the end of
+    /// If \a index is out of range, the position of the g_tEnd of
     /// the string is returned.
     ///
     /// \param index Index of the character

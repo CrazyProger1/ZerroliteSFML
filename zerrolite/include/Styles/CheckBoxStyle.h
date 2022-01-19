@@ -11,13 +11,13 @@
 namespace zl {
     struct CheckBoxStyle {
     private:
-        fVector m_size;
-        fVector m_checkOffset = {0, 0};
-        fVector m_checkHornsLenCoef = {1, 1};
+        sf::Vector2f m_size;
+        sf::Vector2f m_checkOffset = {0, 0};
+        sf::Vector2f m_checkHornsLenCoef = {1, 1};
 
-        int m_checkScale = 1;
-        int m_checkAngle = 90;
-        float m_checkAngleRatio = 1;
+        int m_iCheckScale = 1;
+        int m_iCheckAngle = 90;
+        float m_iCheckAngleRatio = 1;
 
 
         RGBAColor m_color = {100, 100, 100};
@@ -26,37 +26,36 @@ namespace zl {
         RGBAColor m_borderColor = {20, 0, 255};
         RGBAColor m_colorWhenChecked = {100, 255, 100};
 
-        int m_borderWidth = 0;
+        int m_iBorderWidth = 0;
 
-        bool m_isChecked = false;
+        bool m_bIsChecked = false;
 
-        //int m_cornerRadius = 0;
+        //int m_iCornerRadius = 0;
     public:
-        explicit CheckBoxStyle(const fVector &size,
-                               const fVector &checkOffset = {0, 0},
-                               int checkScale = 1,
-                               int checkAngle = 90,
-                               const fVector &checkHornsLengthCoefficient = {0, 0},
-                               int borderWidth = 0,
-                               const RGBAColor &color = {100, 100, 100},
-                               const RGBAColor &hoverColor = {100, 100, 100},
-                               const RGBAColor &checkColor = {255, 0, 0},
-                               const RGBAColor &colorWhenChecked = {100, 255, 100},
-                               const RGBAColor &borderColor = {100, 255, 100},
-                               bool checked = false
-
-
+        explicit CheckBoxStyle(
+                const sf::Vector2f &size,
+                const sf::Vector2f &checkOffset = {0, 0},
+                int checkScale = 1,
+                int checkAngle = 90,
+                const sf::Vector2f &checkHornsLengthCoefficient = {0, 0},
+                int borderWidth = 0,
+                const RGBAColor &color = {100, 100, 100},
+                const RGBAColor &hoverColor = {100, 100, 100},
+                const RGBAColor &checkColor = {255, 0, 0},
+                const RGBAColor &colorWhenChecked = {100, 255, 100},
+                const RGBAColor &borderColor = {100, 255, 100},
+                bool checked = false
         );
 
-        fVector getSize();
+        sf::Vector2f &getSize();
 
-        fVector getCheckOffset();
+        sf::Vector2f &getCheckOffset();
 
-        fVector getCheckHornsLengthCoefficient();
+        sf::Vector2f &getCheckHornsLengthCoefficient();
 
-        int getCheckScale();
+        [[nodiscard]] int getCheckScale() const;
 
-        int getCheckAngle();
+        [[nodiscard]] int getCheckAngle() const;
 
         RGBAColor &getColor();
 
@@ -68,9 +67,10 @@ namespace zl {
 
         RGBAColor &getColorWhenChecked();
 
-        int getBorderWidth();
+        [[nodiscard]] int getBorderWidth() const;
 
-        bool isChecked();
+
+        [[nodiscard]] bool isChecked() const;
 
     };
 }

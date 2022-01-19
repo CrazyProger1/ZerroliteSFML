@@ -9,23 +9,14 @@ void zl::Player::initialize() {
     setType("player");
 }
 
-void zl::Player::onSFMLEvent(sf::Event &event) {
+void zl::Player::onSFMLEvent(sf::Event &event) {}
 
-}
+void zl::Player::onUpdateState() {}
 
-void zl::Player::onUpdateState() {
+void zl::Player::onLoadResources() {}
 
-}
+void zl::Player::onDraw(sf::RenderTarget &rt) {}
 
-void zl::Player::onLoadResources() {
-
-}
-
-void zl::Player::onDraw(sf::RenderTarget &rt) {
-}
-
-void zl::Player::onDestroy() {
-}
 
 void zl::Player::onInitializeActor() {
 

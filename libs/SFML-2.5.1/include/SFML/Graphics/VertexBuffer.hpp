@@ -366,7 +366,7 @@ private:
 ///
 /// Using sf::VertexBuffer, the user also has the ability to only modify
 /// a portion of the buffer in graphics memory. This way, a large buffer
-/// can be allocated at the start of the application and only the
+/// can be allocated at the g_tStart of the application and only the
 /// applicable portions of it need to be updated during the course of
 /// the application. This allows the user to take full control of data
 /// transfers between system and graphics memory if they need to.

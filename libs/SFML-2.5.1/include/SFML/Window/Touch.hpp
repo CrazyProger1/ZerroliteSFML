@@ -113,7 +113,7 @@ public:
 /// Touches are identified by an index (the "finger"), so that in
 /// multi-touch events, individual touches can be tracked correctly.
 /// As long as a finger touches the screen, it will keep the same index
-/// even if other fingers start or stop touching the screen in the
+/// even if other fingers g_tStart or stop touching the screen in the
 /// meantime. As a consequence, active touch indices may not always be
 /// sequential (i.e. touch number 0 may be released while touch number 1
 /// is still down).

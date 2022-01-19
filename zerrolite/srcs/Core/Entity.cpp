@@ -4,53 +4,68 @@
 
 #include "../../include/Core/Entity.h"
 
-void zl::Entity::draw(sf::RenderTarget &rt) {
 
+zl::Entity::Entity(const sf::Vector2f &position) {
+    m_position = position;
 }
 
-void zl::Entity::updateState() {
+zl::Entity::Entity() = default;
 
-}
 
-void zl::Entity::handleSFMLEvent(sf::Event &event) {
-
-}
-
-void zl::Entity::move(const fVector &offset) {
-    m_position.x += offset.x;
-    m_position.y += offset.y;
+void zl::Entity::setPosition(const sf::Vector2f &position) {
+    m_position = position;
     initialize();
 }
 
-void zl::Entity::setPosition(const fVector &position) {
-    m_position = position;
+void zl::Entity::setPosition(float x, float y) {
+    m_position.x = x;
+    m_position.y = y;
     initialize();
 }
 
 void zl::Entity::setParentWindow(sf::RenderWindow *window) {
     m_pParentWindow = window;
+    initialize();
+}
+
+void zl::Entity::setType(const zl::str &type) {
+    m_sType = type;
+}
+
+zl::str &zl::Entity::getType() {
+    return m_sType;
 }
 
 sf::RenderWindow *zl::Entity::getParentWindow() {
     return m_pParentWindow;
 }
 
-zl::fVector &zl::Entity::getPosition() {
+sf::Vector2f &zl::Entity::getPosition() {
     return m_position;
 }
 
-void zl::Entity::initialize() {
+void zl::Entity::onAttach() {}
 
+void zl::Entity::initialize() {}
+
+void zl::Entity::draw(sf::RenderTarget &rt) {}
+
+void zl::Entity::updateState() {}
+
+void zl::Entity::handleSFMLEvent(sf::Event &event) {}
+
+void zl::Entity::move(const sf::Vector2f &offset) {
+    m_position.x += offset.x;
+    m_position.y += offset.y;
+    initialize();
 }
 
-void zl::Entity::setType(const zl::str &type) {
-    m_type = type;
+void zl::Entity::move(float offsetX, float offsetY) {
+    m_position.x += offsetX;
+    m_position.y += offsetY;
+    initialize();
 }
 
-zl::str &zl::Entity::getType() {
-    return m_type;
-}
 
-void zl::Entity::onAttach() {
 
-}
+

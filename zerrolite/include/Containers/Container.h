@@ -11,20 +11,32 @@
 
 namespace zl {
     class Container {
+        /////////////////////////////
+        /// Containers is used for alignment of entities.
+        /////////////////////////////
+
     private:
-        fVector m_position;
+
+        sf::Vector2f m_position;
 
 
     public:
         virtual void initialize();
 
-        void move(fVector offset);
 
-        void setPosition(fVector position);
+        void setPosition(const sf::Vector2f &position);
 
-        fVector &getPosition();
+        void setPosition(float x, float y);
+
+
+        sf::Vector2f &getPosition();
 
         virtual std::vector<Entity *> &getEntities() = 0;
+
+
+        void move(const sf::Vector2f &offset);
+
+        void move(float offsetX, float offsetY);
 
 
     };

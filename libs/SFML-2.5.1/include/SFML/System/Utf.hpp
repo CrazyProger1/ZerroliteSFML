@@ -56,7 +56,7 @@ public:
     /// code (called the codepoint) in the Unicode standard.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Codepoint of the decoded UTF-8 character
     /// \param replacement Replacement character to use in case the UTF-8 sequence is invalid
     ///
@@ -76,7 +76,7 @@ public:
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to UTF-8 (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename Out>
@@ -89,7 +89,7 @@ public:
     /// a single character may use more than 1 storage element.
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -102,10 +102,10 @@ public:
     ///
     /// This function is necessary for multi-elements encodings, as
     /// a single character may use more than 1 storage element, thus the
-    /// total size can be different from (begin - end).
+    /// total size can be different from (begin - g_tEnd).
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -120,11 +120,11 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     /// \param locale Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -134,10 +134,10 @@ public:
     /// \brief Convert a wide characters range to UTF-8
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -147,10 +147,10 @@ public:
     /// \brief Convert a latin-1 (ISO-5589-1) characters range to UTF-8
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -163,12 +163,12 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to ANSI (use 0 to skip them)
     /// \param locale      Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -178,11 +178,11 @@ public:
     /// \brief Convert an UTF-8 characters range to wide characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -192,11 +192,11 @@ public:
     /// \brief Convert an UTF-8 characters range to latin-1 (ISO-5589-1) characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -211,10 +211,10 @@ public:
     /// generic code to be written on top of it.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -224,10 +224,10 @@ public:
     /// \brief Convert a UTF-8 characters range to UTF-16
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -237,10 +237,10 @@ public:
     /// \brief Convert a UTF-8 characters range to UTF-32
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -263,7 +263,7 @@ public:
     /// code (called the codepoint) in the Unicode standard.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Codepoint of the decoded UTF-16 character
     /// \param replacement Replacement character to use in case the UTF-8 sequence is invalid
     ///
@@ -283,7 +283,7 @@ public:
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to UTF-16 (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename Out>
@@ -296,7 +296,7 @@ public:
     /// a single character may use more than 1 storage element.
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -309,10 +309,10 @@ public:
     ///
     /// This function is necessary for multi-elements encodings, as
     /// a single character may use more than 1 storage element, thus the
-    /// total size can be different from (begin - end).
+    /// total size can be different from (begin - g_tEnd).
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -327,11 +327,11 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     /// \param locale Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -341,10 +341,10 @@ public:
     /// \brief Convert a wide characters range to UTF-16
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -354,10 +354,10 @@ public:
     /// \brief Convert a latin-1 (ISO-5589-1) characters range to UTF-16
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -370,12 +370,12 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to ANSI (use 0 to skip them)
     /// \param locale      Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -385,11 +385,11 @@ public:
     /// \brief Convert an UTF-16 characters range to wide characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -399,11 +399,11 @@ public:
     /// \brief Convert an UTF-16 characters range to latin-1 (ISO-5589-1) characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -413,10 +413,10 @@ public:
     /// \brief Convert a UTF-16 characters range to UTF-8
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -431,10 +431,10 @@ public:
     /// generic code to be written on top of it.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -444,10 +444,10 @@ public:
     /// \brief Convert a UTF-16 characters range to UTF-32
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -471,7 +471,7 @@ public:
     /// For UTF-32, the character value is the same as the codepoint.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Codepoint of the decoded UTF-32 character
     /// \param replacement Replacement character to use in case the UTF-8 sequence is invalid
     ///
@@ -492,7 +492,7 @@ public:
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to UTF-32 (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename Out>
@@ -505,7 +505,7 @@ public:
     /// every character in a single storage element.
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -520,7 +520,7 @@ public:
     /// every character in a single storage element.
     ///
     /// \param begin Iterator pointing to the beginning of the input sequence
-    /// \param end   Iterator pointing to the end of the input sequence
+    /// \param end   Iterator pointing to the g_tEnd of the input sequence
     ///
     /// \return Iterator pointing to one past the last read element of the input sequence
     ///
@@ -535,11 +535,11 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     /// \param locale Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -549,10 +549,10 @@ public:
     /// \brief Convert a wide characters range to UTF-32
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -562,10 +562,10 @@ public:
     /// \brief Convert a latin-1 (ISO-5589-1) characters range to UTF-32
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -578,12 +578,12 @@ public:
     /// pass a custom one in the \a locale parameter.
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to ANSI (use 0 to skip them)
     /// \param locale      Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -593,11 +593,11 @@ public:
     /// \brief Convert an UTF-32 characters range to wide characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -607,11 +607,11 @@ public:
     /// \brief Convert an UTF-16 characters range to latin-1 (ISO-5589-1) characters
     ///
     /// \param begin       Iterator pointing to the beginning of the input sequence
-    /// \param end         Iterator pointing to the end of the input sequence
+    /// \param end         Iterator pointing to the g_tEnd of the input sequence
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement for characters not convertible to wide (use 0 to skip them)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -621,10 +621,10 @@ public:
     /// \brief Convert a UTF-32 characters range to UTF-8
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -634,10 +634,10 @@ public:
     /// \brief Convert a UTF-32 characters range to UTF-16
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -652,10 +652,10 @@ public:
     /// generic code to be written on top of it.
     ///
     /// \param begin  Iterator pointing to the beginning of the input sequence
-    /// \param end    Iterator pointing to the end of the input sequence
+    /// \param end    Iterator pointing to the g_tEnd of the input sequence
     /// \param output Iterator pointing to the beginning of the output sequence
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename In, typename Out>
@@ -704,7 +704,7 @@ public:
     /// \param replacement Replacement if the input character is not convertible to ANSI (use 0 to skip it)
     /// \param locale      Locale to use for conversion
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename Out>
@@ -721,7 +721,7 @@ public:
     /// \param output      Iterator pointing to the beginning of the output sequence
     /// \param replacement Replacement if the input character is not convertible to wide (use 0 to skip it)
     ///
-    /// \return Iterator to the end of the output sequence which has been written
+    /// \return Iterator to the g_tEnd of the output sequence which has been written
     ///
     ////////////////////////////////////////////////////////////
     template <typename Out>

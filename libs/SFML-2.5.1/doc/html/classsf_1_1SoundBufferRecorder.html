@@ -74,7 +74,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3a8d7a612cb885ed2f58bb86aa24acb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsf_1_1SoundBuffer.html">SoundBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundBufferRecorder.html#aa3a8d7a612cb885ed2f58bb86aa24acb">getBuffer</a> () const</td></tr>
 <tr class="memdesc:aa3a8d7a612cb885ed2f58bb86aa24acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sound buffer containing the captured audio data.  <a href="#aa3a8d7a612cb885ed2f58bb86aa24acb">More...</a><br /></td></tr>
 <tr class="separator:aa3a8d7a612cb885ed2f58bb86aa24acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715f0fd2f228c83d79aaedca562ae51f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f">start</a> (unsigned int sampleRate=44100)</td></tr>
+<tr class="memitem:a715f0fd2f228c83d79aaedca562ae51f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f">g_tStart</a> (unsigned int sampleRate=44100)</td></tr>
 <tr class="memdesc:a715f0fd2f228c83d79aaedca562ae51f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the capture.  <a href="#a715f0fd2f228c83d79aaedca562ae51f">More...</a><br /></td></tr>
 <tr class="separator:a715f0fd2f228c83d79aaedca562ae51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d9c8346aa9aa409cfed4a1101159c4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c">stop</a> ()</td></tr>
@@ -126,9 +126,9 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specialized <a class="el" href="classsf_1_1SoundRecorder.html" title="Abstract base class for capturing sound data. ">SoundRecorder</a> which stores the captured audio data into a sound buffer. </p>
 <p><a class="el" href="classsf_1_1SoundBufferRecorder.html" title="Specialized SoundRecorder which stores the captured audio data into a sound buffer. ">sf::SoundBufferRecorder</a> allows to access a recorded sound through a <a class="el" href="classsf_1_1SoundBuffer.html" title="Storage for audio samples defining a sound. ">sf::SoundBuffer</a>, so that it can be played, saved to a file, etc.</p>
-<p>It has the same simple interface as its base class (<a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f" title="Start the capture. ">start()</a>, <a class="el" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c" title="Stop the capture. ">stop()</a>) and adds a function to retrieve the recorded sound buffer (<a class="el" href="classsf_1_1SoundBufferRecorder.html#aa3a8d7a612cb885ed2f58bb86aa24acb" title="Get the sound buffer containing the captured audio data. ">getBuffer()</a>).</p>
+<p>It has the same simple interface as its base class (<a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f" title="Start the capture. ">g_tStart()</a>, <a class="el" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c" title="Stop the capture. ">stop()</a>) and adds a function to retrieve the recorded sound buffer (<a class="el" href="classsf_1_1SoundBufferRecorder.html#aa3a8d7a612cb885ed2f58bb86aa24acb" title="Get the sound buffer containing the captured audio data. ">getBuffer()</a>).</p>
 <p>As usual, don't forget to call the <a class="el" href="classsf_1_1SoundRecorder.html#aab2bd0fee9e48d6cfd449b1cb078ce5a" title="Check if the system supports audio capture. ">isAvailable()</a> function before using this class (see <a class="el" href="classsf_1_1SoundRecorder.html" title="Abstract base class for capturing sound data. ">sf::SoundRecorder</a> for more details about this).</p>
-<p>Usage example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="classsf_1_1SoundRecorder.html#aab2bd0fee9e48d6cfd449b1cb078ce5a">sf::SoundBufferRecorder::isAvailable</a>())</div><div class="line">{</div><div class="line">    <span class="comment">// Record some audio data</span></div><div class="line">    <a class="code" href="classsf_1_1SoundBufferRecorder.html">sf::SoundBufferRecorder</a> recorder;</div><div class="line">    recorder.<a class="code" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f">start</a>();</div><div class="line">    ...</div><div class="line">    recorder.<a class="code" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c">stop</a>();</div><div class="line"></div><div class="line">    <span class="comment">// Get the buffer containing the captured audio data</span></div><div class="line">    <span class="keyword">const</span> <a class="code" href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a>&amp; buffer = recorder.<a class="code" href="classsf_1_1SoundBufferRecorder.html#aa3a8d7a612cb885ed2f58bb86aa24acb">getBuffer</a>();</div><div class="line"></div><div class="line">    <span class="comment">// Save it to a file (for example...)</span></div><div class="line">    buffer.<a class="code" href="classsf_1_1SoundBuffer.html#aade64260c6375580a085314a30be007e">saveToFile</a>(<span class="stringliteral">&quot;my_record.ogg&quot;</span>);</div><div class="line">}</div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundRecorder.html" title="Abstract base class for capturing sound data. ">sf::SoundRecorder</a> </dd></dl>
+<p>Usage example: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="classsf_1_1SoundRecorder.html#aab2bd0fee9e48d6cfd449b1cb078ce5a">sf::SoundBufferRecorder::isAvailable</a>())</div><div class="line">{</div><div class="line">    <span class="comment">// Record some audio data</span></div><div class="line">    <a class="code" href="classsf_1_1SoundBufferRecorder.html">sf::SoundBufferRecorder</a> recorder;</div><div class="line">    recorder.<a class="code" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f">g_tStart</a>();</div><div class="line">    ...</div><div class="line">    recorder.<a class="code" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c">stop</a>();</div><div class="line"></div><div class="line">    <span class="comment">// Get the buffer containing the captured audio data</span></div><div class="line">    <span class="keyword">const</span> <a class="code" href="classsf_1_1SoundBuffer.html">sf::SoundBuffer</a>&amp; buffer = recorder.<a class="code" href="classsf_1_1SoundBufferRecorder.html#aa3a8d7a612cb885ed2f58bb86aa24acb">getBuffer</a>();</div><div class="line"></div><div class="line">    <span class="comment">// Save it to a file (for example...)</span></div><div class="line">    buffer.<a class="code" href="classsf_1_1SoundBuffer.html#aade64260c6375580a085314a30be007e">saveToFile</a>(<span class="stringliteral">&quot;my_record.ogg&quot;</span>);</div><div class="line">}</div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundRecorder.html" title="Abstract base class for capturing sound data. ">sf::SoundRecorder</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="SoundBufferRecorder_8hpp_source.html#l00044">44</a> of file <a class="el" href="SoundBufferRecorder_8hpp_source.html">SoundBufferRecorder.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -419,7 +419,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Start capturing audio data. </p>
-<dl class="section return"><dt>Returns</dt><dd>True to start the capture, or false to abort it </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True to g_tStart the capture, or false to abort it </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classsf_1_1SoundRecorder.html#a7af418fb036201d3f85745bef78ce77f">sf::SoundRecorder</a>.</p>
 
@@ -565,7 +565,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a715f0fd2f228c83d79aaedca562ae51f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a715f0fd2f228c83d79aaedca562ae51f">&#9670;&nbsp;</a></span>start()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a715f0fd2f228c83d79aaedca562ae51f">&#9670;&nbsp;</a></span>g_tStart()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +574,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool sf::SoundRecorder::start </td>
+          <td class="memname">bool sf::SoundRecorder::g_tStart </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>sampleRate</em> = <code>44100</code></td><td>)</td>
@@ -596,7 +596,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True, if start of capture was successful</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if g_tStart of capture was successful</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundRecorder.html#a8d9c8346aa9aa409cfed4a1101159c4c" title="Stop the capture. ">stop</a>, <a class="el" href="classsf_1_1SoundRecorder.html#a26198c5c11efcd61f426f326fe314afe" title="Get a list of the names of all available audio capture devices. ">getAvailableDevices</a> </dd></dl>
 
 </div>
@@ -625,7 +625,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stop the capture. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f" title="Start the capture. ">start</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundRecorder.html#a715f0fd2f228c83d79aaedca562ae51f" title="Start the capture. ">g_tStart</a> </dd></dl>
 
 </div>
 </div>

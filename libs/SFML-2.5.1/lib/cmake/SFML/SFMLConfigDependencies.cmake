@@ -20,7 +20,7 @@ if(SFML_STATIC_LIBRARIES)
         endif()
     endif()
 
-    # start with an empty list
+    # g_tStart with an empty list
     set(FIND_SFML_DEPENDENCIES_NOTFOUND)
 
     # macro that searches for a 3rd-party library

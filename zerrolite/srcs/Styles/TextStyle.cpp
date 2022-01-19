@@ -7,35 +7,35 @@
 zl::TextStyle::TextStyle(const zl::str &fontFilepath, int textSFMLStyle, int fontSize, int underlineOffset,
                          int underlineWidth, const zl::RGBAColor &textColor, const zl::RGBAColor &underlineColor,
                          const zl::RGBAColor &textHoverColor, const zl::RGBAColor &underlineHoverColor) {
-    m_fontFilepath = fontFilepath;
-    m_textSFMLStyle = textSFMLStyle;
-    m_fontSize = fontSize;
-    m_underlineOffset = underlineOffset;
-    m_underlineWidth = underlineWidth;
+    m_sFontFilepath = fontFilepath;
+    m_uTextSFMLStyle = textSFMLStyle;
+    m_iFontSize = fontSize;
+    m_iUnderlineOffset = underlineOffset;
+    m_iUnderlineWidth = underlineWidth;
     m_textColor = textColor;
     m_underlineColor = underlineColor;
     m_textHoverColor = textHoverColor;
     m_underlineHoverColor = underlineHoverColor;
 }
 
-zl::str zl::TextStyle::getFontFilepath() {
-    return m_fontFilepath;
+zl::str &zl::TextStyle::getFontFilepath() {
+    return m_sFontFilepath;
 }
 
-unsigned int zl::TextStyle::getTextSFMLStyle() {
-    return m_textSFMLStyle;
+unsigned int zl::TextStyle::getTextSFMLStyle() const {
+    return m_uTextSFMLStyle;
 }
 
-int zl::TextStyle::getFontSize() {
-    return m_fontSize;
+int zl::TextStyle::getFontSize() const {
+    return m_iFontSize;
 }
 
-int zl::TextStyle::getUnderlineOffset() {
-    return m_underlineOffset;
+int zl::TextStyle::getUnderlineOffset() const {
+    return m_iUnderlineOffset;
 }
 
-int zl::TextStyle::getUnderlineWidth() {
-    return m_underlineWidth;
+int zl::TextStyle::getUnderlineWidth() const {
+    return m_iUnderlineWidth;
 }
 
 zl::RGBAColor &zl::TextStyle::getTextColor() {

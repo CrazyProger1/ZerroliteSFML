@@ -16,14 +16,14 @@
 namespace zl {
     class Button : public Entity {
     private:
-        bool m_isDeactivated = false;
+        bool m_bIsDeactivated = false;
 
-        fVector m_size;
-        fVector m_textOffset;
-        fVector m_imageOffset;
+        sf::Vector2f m_size;
+        sf::Vector2f m_textOffset;
+        sf::Vector2f m_imageOffset;
 
-        int m_borderWidth = 0;
-        int m_cornerRadius = 0;
+        int m_iBorderWidth = 0;
+        int m_iCornerRadius = 0;
 
         sf::RectangleShape m_mainRect;
         sf::RectangleShape m_sideRect;
@@ -33,51 +33,54 @@ namespace zl {
         sf::RectangleShape m_sideBorderRect;
         sf::CircleShape m_cornerBorderCircle;
 
-
         RGBAColor m_color = {50, 200, 0};
         RGBAColor m_hoverColor = {255, 0, 0};
         RGBAColor m_borderColor = {0, 0, 150};
         RGBAColor m_deactivatedColor = {100, 100, 100};
 
-        bool m_isClicked = false;
-        bool m_isHovered = false;
+        bool m_bIsClicked = false;
+        bool m_bIsHovered = false;
 
-        bool m_centerText = false;
-        bool m_isTextSet = false;
+        bool m_bCenterText = false;
+        bool m_bIsTextSet = false;
 
-        bool m_centerImage = false;
-        bool m_isImageSet = false;
+        bool m_bCenterImage = false;
+        bool m_bIsImageSet = false;
 
         Text *m_pText;
         RGBAColor m_textColor;
         RGBAColor m_textHoverColor;
 
-        Image *m_image;
+        Image *m_pImage;
 
-        bool m_justHovered = false; // for optimization
-
-        void init();
+        bool m_bJustHovered = false; // for optimization
 
         void centralizeText();
 
         void centralizeImage();
 
         void checkClick(sf::Event &event);
+        /////////////////////////////
+        /// This method check if button was clicked.
+        /////////////////////////////
 
         void checkHover();
+        /////////////////////////////
+        /// This method check if cursor is hovered above button.
+        /////////////////////////////
 
         void drawBorder(sf::RenderTarget &rt);
 
     public:
         Button();
 
-        explicit Button(const fVector &size,
+        explicit Button(const sf::Vector2f &size,
                         const RGBAColor &color = {250, 0, 100},
                         const RGBAColor &hoverColor = {0, 250, 0},
                         Text *text = nullptr,
                         Image *image = nullptr,
-                        const fVector &textOffset = {0, 0},
-                        const fVector &imageOffset = {0, 0},
+                        const sf::Vector2f &textOffset = {0, 0},
+                        const sf::Vector2f &imageOffset = {0, 0},
                         int borderWidth = 0,
                         const RGBAColor &borderColor = {100, 100, 100},
                         bool centerText = false,
@@ -87,11 +90,14 @@ namespace zl {
 
         void initialize() override;
 
-        void setSize(const fVector &size);
 
-        void setTextOffset(const fVector &offset);
+        void setSize(const sf::Vector2f &size);
 
-        void setImageOffset(const fVector &offset);
+        void setSize(float w, float h);
+
+        void setTextOffset(const sf::Vector2f &offset);
+
+        void setImageOffset(const sf::Vector2f &offset);
 
         void setBorderWidth(int width);
 
@@ -115,19 +121,22 @@ namespace zl {
 
         void setStyle(ButtonStyle &buttonStyle);
 
+
+        bool isClicked();
+
+        bool isHovered() const;
+
+
+        void activate();
+
+        void deactivate();
+
+
         void draw(sf::RenderTarget &rt) override;
 
         void handleSFMLEvent(sf::Event &event) override;
 
         void updateState() override;
-
-        bool isClicked();
-
-        bool isHovered();
-
-        void activate();
-
-        void deactivate();
 
 
     };

@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8b395e9713d0efa48a18628c8ec1972e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the source buffer containing the audio data to play.  <a href="#a8b395e9713d0efa48a18628c8ec1972e">More...</a><br /></td></tr>
 <tr class="separator:a8b395e9713d0efa48a18628c8ec1972e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af23ab4f78f975bbabac031102321612b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Sound.html#af23ab4f78f975bbabac031102321612b">setLoop</a> (bool loop)</td></tr>
-<tr class="memdesc:af23ab4f78f975bbabac031102321612b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the sound should loop after reaching the end.  <a href="#af23ab4f78f975bbabac031102321612b">More...</a><br /></td></tr>
+<tr class="memdesc:af23ab4f78f975bbabac031102321612b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the sound should loop after reaching the g_tEnd.  <a href="#af23ab4f78f975bbabac031102321612b">More...</a><br /></td></tr>
 <tr class="separator:af23ab4f78f975bbabac031102321612b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab905677846558042022dd6ab15cddff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Sound.html#ab905677846558042022dd6ab15cddff0">setPlayingOffset</a> (<a class="el" href="classsf_1_1Time.html">Time</a> timeOffset)</td></tr>
 <tr class="memdesc:ab905677846558042022dd6ab15cddff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current playing position of the sound.  <a href="#ab905677846558042022dd6ab15cddff0">More...</a><br /></td></tr>
@@ -385,7 +385,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Tell whether or not the sound is in loop mode. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if the sound is looping, false otherwise</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Sound.html#af23ab4f78f975bbabac031102321612b" title="Set whether or not the sound should loop after reaching the end. ">setLoop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Sound.html#af23ab4f78f975bbabac031102321612b" title="Set whether or not the sound should loop after reaching the g_tEnd. ">setLoop</a> </dd></dl>
 
 </div>
 </div>
@@ -774,8 +774,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set whether or not the sound should loop after reaching the end. </p>
-<p>If set, the sound will restart from beginning after reaching the end and so on, until it is stopped or setLoop(false) is called. The default looping state for sound is false.</p>
+<p>Set whether or not the sound should loop after reaching the g_tEnd. </p>
+<p>If set, the sound will restart from beginning after reaching the g_tEnd and so on, until it is stopped or setLoop(false) is called. The default looping state for sound is false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loop</td><td>True to play in loop, false to play once</td></tr>
@@ -811,7 +811,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the minimum distance of the sound. </p>
-<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will start to fade out according to its attenuation factor. A value of 0 ("inside the head
+<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will g_tStart to fade out according to its attenuation factor. A value of 0 ("inside the head
 of the listener") is an invalid value and is forbidden. The default value of the minimum distance is 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

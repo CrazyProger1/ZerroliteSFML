@@ -9,9 +9,15 @@
 
 namespace zl {
     class Player : public Actor {
+        /////////////////////////////
+        /// Just a wrapper for actor.
+        /////////////////////////////
+
     private:
+
     public:
         void initialize() override;
+
 
         void onSFMLEvent(sf::Event &event) override;
 
@@ -22,8 +28,6 @@ namespace zl {
         void onInitializeActor() override;
 
         void onDraw(sf::RenderTarget &rt) override;
-
-        void onDestroy() override;
 
 
     };

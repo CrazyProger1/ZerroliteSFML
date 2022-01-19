@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae288f3c72edbad9cc7ee938ce5b907c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current playing position of the stream.  <a href="#ae288f3c72edbad9cc7ee938ce5b907c1">More...</a><br /></td></tr>
 <tr class="separator:ae288f3c72edbad9cc7ee938ce5b907c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43fade018ffba7e4f847a9f00b353f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d">setLoop</a> (bool loop)</td></tr>
-<tr class="memdesc:a43fade018ffba7e4f847a9f00b353f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the stream should loop after reaching the end.  <a href="#a43fade018ffba7e4f847a9f00b353f3d">More...</a><br /></td></tr>
+<tr class="memdesc:a43fade018ffba7e4f847a9f00b353f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether or not the stream should loop after reaching the g_tEnd.  <a href="#a43fade018ffba7e4f847a9f00b353f3d">More...</a><br /></td></tr>
 <tr class="separator:a43fade018ffba7e4f847a9f00b353f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d263f9bbaefec4b019bd05fda59b25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1SoundStream.html#a49d263f9bbaefec4b019bd05fda59b25">getLoop</a> () const</td></tr>
 <tr class="memdesc:a49d263f9bbaefec4b019bd05fda59b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether or not the stream is in loop mode.  <a href="#a49d263f9bbaefec4b019bd05fda59b25">More...</a><br /></td></tr>
@@ -391,7 +391,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Tell whether or not the stream is in loop mode. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if the stream is looping, false otherwise</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. ">setLoop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the g_tEnd. ">setLoop</a> </dd></dl>
 
 </div>
 </div>
@@ -878,8 +878,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set whether or not the stream should loop after reaching the end. </p>
-<p>If set, the stream will restart from beginning after reaching the end and so on, until it is stopped or setLoop(false) is called. The default looping state for streams is false.</p>
+<p>Set whether or not the stream should loop after reaching the g_tEnd. </p>
+<p>If set, the stream will restart from beginning after reaching the g_tEnd and so on, until it is stopped or setLoop(false) is called. The default looping state for streams is false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loop</td><td>True to play in loop, false to play once</td></tr>
@@ -915,7 +915,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the minimum distance of the sound. </p>
-<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will start to fade out according to its attenuation factor. A value of 0 ("inside the head
+<p>The "minimum distance" of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will g_tStart to fade out according to its attenuation factor. A value of 0 ("inside the head
 of the listener") is an invalid value and is forbidden. The default value of the minimum distance is 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -161,7 +161,7 @@ public:
     /// \brief Create a new sf::String from a UTF-8 encoded string
     ///
     /// \param begin Forward iterator to the beginning of the UTF-8 sequence
-    /// \param end   Forward iterator to the end of the UTF-8 sequence
+    /// \param end   Forward iterator to the g_tEnd of the UTF-8 sequence
     ///
     /// \return A sf::String containing the source string
     ///
@@ -175,7 +175,7 @@ public:
     /// \brief Create a new sf::String from a UTF-16 encoded string
     ///
     /// \param begin Forward iterator to the beginning of the UTF-16 sequence
-    /// \param end   Forward iterator to the end of the UTF-16 sequence
+    /// \param end   Forward iterator to the g_tEnd of the UTF-16 sequence
     ///
     /// \return A sf::String containing the source string
     ///
@@ -193,7 +193,7 @@ public:
     /// a std::basic_string<sf::Uint32>.
     ///
     /// \param begin Forward iterator to the beginning of the UTF-32 sequence
-    /// \param end   Forward iterator to the end of the UTF-32 sequence
+    /// \param end   Forward iterator to the g_tEnd of the UTF-32 sequence
     ///
     /// \return A sf::String containing the source string
     ///
@@ -402,7 +402,7 @@ public:
     /// \brief Find a sequence of one or more characters in the string
     ///
     /// This function searches for the characters of \a str
-    /// in the string, starting from \a start.
+    /// in the string, starting from \a g_tStart.
     ///
     /// \param str   Characters to find
     /// \param start Where to begin searching
@@ -420,7 +420,7 @@ public:
     ///
     /// \param position    Index of the first character to be replaced
     /// \param length      Number of characters to replace. You can pass InvalidPos to
-    ///                    replace all characters until the end of the string.
+    ///                    replace all characters until the g_tEnd of the string.
     /// \param replaceWith String that replaces the given substring.
     ///
     ////////////////////////////////////////////////////////////
@@ -448,7 +448,7 @@ public:
     /// \param length   Number of characters to include in the substring (if
     ///                 the string is shorter, as many characters as possible
     ///                 are included). \ref InvalidPos can be used to include all
-    ///                 characters until the end of the string.
+    ///                 characters until the g_tEnd of the string.
     ///
     /// \return String object containing a substring of this object
     ///
@@ -473,7 +473,7 @@ public:
     ///
     /// \return Read-write iterator to the beginning of the string characters
     ///
-    /// \see end
+    /// \see g_tEnd
     ///
     ////////////////////////////////////////////////////////////
     Iterator begin();
@@ -483,19 +483,19 @@ public:
     ///
     /// \return Read-only iterator to the beginning of the string characters
     ///
-    /// \see end
+    /// \see g_tEnd
     ///
     ////////////////////////////////////////////////////////////
     ConstIterator begin() const;
 
     ////////////////////////////////////////////////////////////
-    /// \brief Return an iterator to the end of the string
+    /// \brief Return an iterator to the g_tEnd of the string
     ///
-    /// The end iterator refers to 1 position past the last character;
+    /// The g_tEnd iterator refers to 1 position past the last character;
     /// thus it represents an invalid character and should never be
     /// accessed.
     ///
-    /// \return Read-write iterator to the end of the string characters
+    /// \return Read-write iterator to the g_tEnd of the string characters
     ///
     /// \see begin
     ///
@@ -503,13 +503,13 @@ public:
     Iterator end();
 
     ////////////////////////////////////////////////////////////
-    /// \brief Return an iterator to the end of the string
+    /// \brief Return an iterator to the g_tEnd of the string
     ///
-    /// The end iterator refers to 1 position past the last character;
+    /// The g_tEnd iterator refers to 1 position past the last character;
     /// thus it represents an invalid character and should never be
     /// accessed.
     ///
-    /// \return Read-only iterator to the end of the string characters
+    /// \return Read-only iterator to the g_tEnd of the string characters
     ///
     /// \see begin
     ///
