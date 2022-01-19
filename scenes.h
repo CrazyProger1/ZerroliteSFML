@@ -12,6 +12,10 @@ class Player : public zl::Player {
     int selectedWeapon = 0;
     sf::Sprite sprite;
 
+    float speed = 8;
+
+    std::vector<int> pressedButtons;
+
 public:
 
     void selectNextWeapon() {
@@ -33,10 +37,42 @@ public:
     }
 
     void onInitializeActor() override {
-
         setSprite(&sprite);
         setAppearance(selectedWeapon);
         setPosition({100, 100});
+        setSpeed(speed);
+    }
+
+    void onUpdateState() override {
+        turnToMouseCursor();
+
+        for (auto keyCode: pressedButtons) {
+            if (keyCode == sf::Keyboard::W) {
+                moveForward();
+                break;
+            } else if (keyCode == sf::Keyboard::S) {
+                moveBack();
+                break;
+            }
+        }
+    }
+
+
+    void onSFMLEvent(sf::Event &event) override {
+        if (event.type == sf::Event::KeyPressed) {
+            pressedButtons.emplace_back(event.key.code);
+            switch (event.key.code) {
+                case sf::Keyboard::Q:
+                    selectNextWeapon();
+                default:
+                    break;
+
+
+            }
+        } else if (event.type == sf::Event::KeyReleased) {
+            pressedButtons.erase(std::remove(pressedButtons.begin(), pressedButtons.end(), event.key.code),
+                                 pressedButtons.end());
+        }
     }
 
 
@@ -45,51 +81,11 @@ public:
 class GameScene : public zl::Scene {
     Player player;
 
-
-    void onLoadResources() override {
-
-    }
-
     void onInitializeScene() override {
-
         attach(&player);
     }
 
 
-    void onSFMLEvent(sf::Event &event) override {
-        if (event.type == sf::Event::KeyPressed) {
-            switch (event.key.code) {
-                case sf::Keyboard::Q:
-                    player.selectNextWeapon();
-                    break;
-                case sf::Keyboard::W:
-
-                    break;
-
-                case sf::Keyboard::S:
-
-                    break;
-
-                case sf::Keyboard::A:
-
-                    break;
-
-                case sf::Keyboard::D:
-
-                    break;
-
-                default:
-                    break;
-            }
-
-
-        }
-    }
-
-
-    void onUpdateState() override {
-        player.turnToMouseCursor();
-    }
 };
 
 

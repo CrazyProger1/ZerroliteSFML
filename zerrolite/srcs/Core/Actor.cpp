@@ -5,6 +5,8 @@
 
 #include "../../include/Core/Actor.h"
 
+#include <cmath>
+
 void zl::Actor::move(const fVector &offset) {
 //    if (offset.x == 0 && offset.y == 0) return;
     m_position.x += offset.x;
@@ -105,7 +107,38 @@ void zl::Actor::handleSFMLEvent(sf::Event &event) {
 }
 
 void zl::Actor::updateState() {
+    calculateSpeed();
     onUpdateState();
 }
+
+void zl::Actor::moveForward() {
+
+    move(m_speedVector);
+}
+
+void zl::Actor::moveBack() {
+    move({-m_speedVector.x, -m_speedVector.y});
+}
+
+void zl::Actor::moveRight() {
+
+}
+
+void zl::Actor::moveLeft() {
+
+}
+
+void zl::Actor::calculateSpeed() {
+    m_speedVector.x = (float) m_speed * (float) std::cos(m_angle * (3.14159265 / 180));
+    m_speedVector.y = (float) m_speed * (float) std::sin(m_angle * (3.14159265 / 180));
+}
+
+void zl::Actor::setSpeed(float speed) {
+    m_speed = speed;
+}
+
+
+
+
 
 

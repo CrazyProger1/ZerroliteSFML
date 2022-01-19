@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cmath>
 
+
 namespace zl {
     class Actor : public Entity {
     private:
@@ -16,7 +17,9 @@ namespace zl {
         uVector m_size;
 
         float m_angle = 0;
+        float m_speed = 0;
 
+        zl::fVector m_speedVector;
 
         sf::Sprite *m_pSprite{};
 
@@ -61,24 +64,24 @@ namespace zl {
 
         void setAppearance(unsigned int appearanceId);
 
+        void setSpeed(float speed);
+
         void addAppearance(unsigned int appearanceId, sf::Texture &texture);
 
-//        virtual void moveForward();
-//
-//        virtual void moveBack();
-//
-//        virtual void moveRight();
-//
-//        virtual void moveLeft();
-//
-//        void setSpeed();
+        virtual void moveForward();
 
+        virtual void moveBack();
 
+        virtual void moveRight();
 
+        virtual void moveLeft();
+
+        void calculateSpeed();
 
         void turnToMouseCursor();
 
         void initialize() override;
+
     };
 
 }
