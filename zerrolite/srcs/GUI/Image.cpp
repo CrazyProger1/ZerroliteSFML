@@ -6,7 +6,7 @@
 
 zl::Image::Image() = default;
 
-zl::Image::Image(const zl::str &path) {
+zl::Image::Image(const zl::TStr &path) {
     m_sImagePath = path;
 }
 
@@ -40,7 +40,7 @@ void zl::Image::setSize(float w, float h) {
 }
 
 
-void zl::Image::setImageFilepath(const zl::str &path) {
+void zl::Image::setImageFilepath(const zl::TStr &path) {
     m_sImagePath = path;
     initialize();
 }

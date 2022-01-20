@@ -389,7 +389,7 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Insert one or more characters into the string
     ///
-    /// This function inserts the characters of \a str
+    /// This function inserts the characters of \a TStr
     /// into the string, starting from \a position.
     ///
     /// \param position Position of insertion
@@ -401,13 +401,13 @@ public:
     ////////////////////////////////////////////////////////////
     /// \brief Find a sequence of one or more characters in the string
     ///
-    /// This function searches for the characters of \a str
+    /// This function searches for the characters of \a TStr
     /// in the string, starting from \a g_tStart.
     ///
     /// \param str   Characters to find
     /// \param start Where to begin searching
     ///
-    /// \return Position of \a str in the string, or String::InvalidPos if not found
+    /// \return Position of \a TStr in the string, or String::InvalidPos if not found
     ///
     ////////////////////////////////////////////////////////////
     std::size_t find(const String& str, std::size_t start = 0) const;

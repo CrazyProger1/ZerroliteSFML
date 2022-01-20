@@ -13,7 +13,7 @@
 
 namespace zl {
     struct TextStyle {
-        str m_sFontFilepath = "../resources/fonts/arial.ttf";
+        TStr m_sFontFilepath = "../resources/fonts/arial.ttf";
         unsigned int m_uTextSFMLStyle = 0;
         int m_iFontSize = 20;
         int m_iUnderlineOffset = 5;
@@ -25,7 +25,7 @@ namespace zl {
         RGBAColor m_underlineHoverColor = {100, 200, 0};
 
         explicit TextStyle(
-                const str &fontFilepath = "../resources/fonts/arial.ttf",
+                const TStr &fontFilepath = "../resources/fonts/arial.ttf",
                 int textSFMLStyle = 0,
                 int fontSize = 20,
                 int underlineOffset = 5,
@@ -36,7 +36,7 @@ namespace zl {
                 const RGBAColor &underlineHoverColor = {100, 200, 0}
         );
 
-        str &getFontFilepath();
+        TStr &getFontFilepath();
 
         [[nodiscard]] unsigned int getTextSFMLStyle() const;
 

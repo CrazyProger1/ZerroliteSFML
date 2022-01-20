@@ -53,14 +53,14 @@ void zl::GameCore::setMainWindow(sf::RenderWindow *window) {
     m_resolution = m_pMainWindow->getSize();
 }
 
-void zl::GameCore::setActiveScene(const zl::str &name) {
+void zl::GameCore::setActiveScene(const zl::TStr &name) {
     m_pActiveScene = m_scenes[name];
     m_pActiveScene->setParentWindow(m_pMainWindow);
     m_pActiveScene->initializeScene();
 
 }
 
-void zl::GameCore::addScene(const zl::str &name, zl::Scene *scene) {
+void zl::GameCore::addScene(const zl::TStr &name, zl::Scene *scene) {
     m_scenes[name] = scene;
 }
 

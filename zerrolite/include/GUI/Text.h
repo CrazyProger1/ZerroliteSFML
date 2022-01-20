@@ -18,8 +18,8 @@ namespace zl {
         /// Very customizable text with big number of opportunities.
         /////////////////////////////
     private:
-        str m_sText;
-        str m_sFontFilepath = "../resources/fonts/arial.ttf";
+        TStr m_sText;
+        TStr m_sFontFilepath = "../resources/fonts/arial.ttf";
         unsigned int m_uTextSFMLStyle = 0;
         int m_iFontSize = 20;
         int m_iUnderlineOffset = 5;
@@ -58,8 +58,8 @@ namespace zl {
         Text();
 
         explicit Text(
-                const str &text,
-                const str &fontFilepath = "../resources/fonts/arial.ttf",
+                const TStr &text,
+                const TStr &fontFilepath = "../resources/fonts/arial.ttf",
                 int fontSize = 20,
                 unsigned int textSFMLStyle = 0,
                 int underlineOffset = 0,
@@ -73,9 +73,9 @@ namespace zl {
         void initialize() override;
 
 
-        void setText(const str &text);
+        void setText(const TStr &text);
 
-        void setFont(const str &filepath);
+        void setFont(const TStr &filepath);
 
         void setFontSize(int size);
 
@@ -96,7 +96,7 @@ namespace zl {
         void setStyle(TextStyle &style);
 
 
-        str &getText();
+        TStr &getText();
 
         sf::Vector2f getSize();
 

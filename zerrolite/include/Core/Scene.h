@@ -19,7 +19,7 @@ namespace zl {
     private:
         sf::RenderWindow *m_pParentWindow = nullptr;
 
-        str m_sNewScene;
+        TStr m_sNewScene;
 
         std::vector<Entity *> m_entitiesContainer;
 
@@ -54,12 +54,12 @@ namespace zl {
 
         void setParentWindow(sf::RenderWindow *window);
 
-        void setNewScene(const str &sceneName);
+        void setNewScene(const TStr &sceneName);
 
 
         sf::RenderWindow *getParentWindow();
 
-        str &getNewScene();
+        TStr &getNewScene();
 
         sf::Vector2u &getWindowResolution();
 

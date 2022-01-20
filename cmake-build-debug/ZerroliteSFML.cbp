@@ -84,10 +84,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/main.cpp">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/scenes.h">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/ZSB/zsb.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/main.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Container.h">
@@ -105,10 +123,10 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GameCore.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/NPC.h">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/MainActor.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Player.h">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/NPC.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Scene.h">
@@ -135,6 +153,9 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/ConfigManager.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -153,10 +174,10 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GameCore.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/NPC.cpp">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/MainActor.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
-		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Player.cpp">
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/NPC.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Scene.cpp">
@@ -181,6 +202,9 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/TextStyle.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Tools/ConfigManager.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h">

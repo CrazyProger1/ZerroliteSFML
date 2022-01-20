@@ -13,7 +13,7 @@
 namespace zl {
     class Image : public Entity {
     private:
-        str m_sImagePath;
+        TStr m_sImagePath;
         sf::Vector2f m_size;
 
         sf::Texture m_texture;
@@ -22,7 +22,7 @@ namespace zl {
     public:
         Image();
 
-        explicit Image(const str &path);
+        explicit Image(const TStr &path);
 
 
         void initialize() override;
@@ -36,7 +36,7 @@ namespace zl {
 
         void setScale(float factorX, float factorY);
 
-        void setImageFilepath(const str &path);
+        void setImageFilepath(const TStr &path);
 
 
         sf::Vector2f getSize();

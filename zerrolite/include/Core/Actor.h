@@ -88,7 +88,7 @@ namespace zl {
 
 
         /////////////////////////////
-        /// Player or NPC moving methods
+        /// MainActor or NPC moving methods
         virtual void moveForward();
 
         virtual void moveBack();

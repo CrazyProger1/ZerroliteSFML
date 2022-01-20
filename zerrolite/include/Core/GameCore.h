@@ -14,7 +14,7 @@
 
 
 namespace zl {
-    typedef std::map<str, Scene *> TScenes;
+    typedef std::map<TStr, Scene *> TScenes;
 
     class GameCore {
         /////////////////////////////
@@ -49,11 +49,11 @@ namespace zl {
         explicit GameCore(sf::RenderWindow *mainWindow);
 
 
-        void setActiveScene(const str &name);
+        void setActiveScene(const TStr &name);
 
         void setMainWindow(sf::RenderWindow *window);
 
-        void addScene(const str &name, Scene *scene);
+        void addScene(const TStr &name, Scene *scene);
 
 
         Scene *getActiveScene();

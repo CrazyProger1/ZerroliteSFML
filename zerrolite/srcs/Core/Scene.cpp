@@ -63,11 +63,11 @@ void zl::Scene::setParentWindow(sf::RenderWindow *window) {
     m_pParentWindow = window;
 }
 
-void zl::Scene::setNewScene(const zl::str &sceneName) {
+void zl::Scene::setNewScene(const zl::TStr &sceneName) {
     m_sNewScene = sceneName;
 }
 
-zl::str &zl::Scene::getNewScene() {
+zl::TStr &zl::Scene::getNewScene() {
     return m_sNewScene;
 }
 

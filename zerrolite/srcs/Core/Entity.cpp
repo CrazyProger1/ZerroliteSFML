@@ -28,11 +28,11 @@ void zl::Entity::setParentWindow(sf::RenderWindow *window) {
     initialize();
 }
 
-void zl::Entity::setType(const zl::str &type) {
+void zl::Entity::setType(const zl::TStr &type) {
     m_sType = type;
 }
 
-zl::str &zl::Entity::getType() {
+zl::TStr &zl::Entity::getType() {
     return m_sType;
 }
 

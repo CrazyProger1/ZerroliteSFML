@@ -9,8 +9,8 @@ zl::Text::Text() = default;
 
 
 zl::Text::Text(
-        const zl::str &text,
-        const zl::str &fontFilepath,
+        const zl::TStr &text,
+        const zl::TStr &fontFilepath,
         int fontSize,
         unsigned int textSFMLStyle,
         int underlineOffset,
@@ -87,7 +87,7 @@ void zl::Text::initialize() {
     }
 }
 
-void zl::Text::setText(const zl::str &text) {
+void zl::Text::setText(const zl::TStr &text) {
     if (m_sText == text)
         return;
 
@@ -95,7 +95,7 @@ void zl::Text::setText(const zl::str &text) {
     initialize();
 }
 
-void zl::Text::setFont(const zl::str &filepath) {
+void zl::Text::setFont(const zl::TStr &filepath) {
     m_sFontFilepath = filepath;
     initialize();
 }
@@ -168,7 +168,7 @@ sf::Vector2f zl::Text::getFullSize() {
 }
 
 
-zl::str &zl::Text::getText() {
+zl::TStr &zl::Text::getText() {
     return m_sText;
 }
 

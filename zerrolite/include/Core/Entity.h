@@ -18,7 +18,7 @@ namespace zl {
 
         sf::Vector2f m_position;
 
-        str m_sType = "entity";
+        TStr m_sType = "entity";
 
     public:
         Entity();
@@ -28,7 +28,7 @@ namespace zl {
 
         void setParentWindow(sf::RenderWindow *window);
 
-        void setType(const str &type);
+        void setType(const TStr &type);
 
         virtual void setPosition(const sf::Vector2f &position);
 
@@ -39,7 +39,7 @@ namespace zl {
 
         sf::Vector2f &getPosition();
 
-        str &getType();
+        TStr &getType();
 
 
         virtual void onAttach();

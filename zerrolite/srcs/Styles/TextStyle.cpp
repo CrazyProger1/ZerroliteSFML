@@ -4,7 +4,7 @@
 
 #include "../../include/Styles/TextStyle.h"
 
-zl::TextStyle::TextStyle(const zl::str &fontFilepath, int textSFMLStyle, int fontSize, int underlineOffset,
+zl::TextStyle::TextStyle(const zl::TStr &fontFilepath, int textSFMLStyle, int fontSize, int underlineOffset,
                          int underlineWidth, const zl::RGBAColor &textColor, const zl::RGBAColor &underlineColor,
                          const zl::RGBAColor &textHoverColor, const zl::RGBAColor &underlineHoverColor) {
     m_sFontFilepath = fontFilepath;
@@ -18,7 +18,7 @@ zl::TextStyle::TextStyle(const zl::str &fontFilepath, int textSFMLStyle, int fon
     m_underlineHoverColor = underlineHoverColor;
 }
 
-zl::str &zl::TextStyle::getFontFilepath() {
+zl::TStr &zl::TextStyle::getFontFilepath() {
     return m_sFontFilepath;
 }
 
