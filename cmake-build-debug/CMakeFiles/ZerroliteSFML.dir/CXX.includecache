@@ -684,6 +684,10 @@ D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.cpp
+Scenes.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
+
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
@@ -851,8 +855,34 @@ fstream
 -
 ./nlohmann/json.hpp
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/nlohmann/json.hpp
+./FileManager.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/FileManager.h
 ../types.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/FileManager.h
+SFML/Graphics.hpp
+-
+iostream
+-
+fstream
+-
+./nlohmann/json.hpp
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/nlohmann/json.hpp
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/LanguageManager.h
+SFML/Graphics.hpp
+-
+iostream
+-
+fstream
+-
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
+./FileManager.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/FileManager.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/nlohmann/json.hpp
 algorithm
@@ -1239,4 +1269,8 @@ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/MainActor.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/NPC.h
 ./include/Tools/ConfigManager.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/ConfigManager.h
+./include/Tools/LanguageManager.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/LanguageManager.h
+./include/Tools/FileManager.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Tools/FileManager.h
 

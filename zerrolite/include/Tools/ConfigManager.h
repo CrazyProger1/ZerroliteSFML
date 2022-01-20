@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include "./nlohmann/json.hpp"
+#include "./FileManager.h"
 #include "../types.h"
 
 namespace zl {
@@ -26,8 +27,6 @@ namespace zl {
     };
 
     class ConfigManager {
-    private:
-        static TStr readFile(const zl::TStr &filepath);
 
     public:
         static WindowConfig loadWindowConfig(const TStr &configFilepath);

@@ -127,6 +127,9 @@ namespace zl {
         bool isHovered() const;
 
 
+        sf::Vector2f &getSize();
+
+
         void activate();
 
         void deactivate();

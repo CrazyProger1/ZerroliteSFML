@@ -23,8 +23,7 @@ zl::WindowConfig::WindowConfig(const sf::Vector2i &size, const zl::TStr &title, 
 
 
 zl::WindowConfig zl::ConfigManager::loadWindowConfig(const zl::TStr &configFilepath) {
-    TStr sBuffer = readFile(configFilepath);
-    nlohmann::json jsonBuffer = nlohmann::json::parse(sBuffer);
+    nlohmann::json jsonBuffer = FileManager::loadJson(configFilepath);
 
     WindowConfig windowConfig;
 
@@ -36,19 +35,4 @@ zl::WindowConfig zl::ConfigManager::loadWindowConfig(const zl::TStr &configFilep
     return windowConfig;
 }
 
-zl::TStr zl::ConfigManager::readFile(const zl::TStr &filepath) {
-    TStr sOut, sBuffer;
-    std::ifstream file(filepath);
 
-    if (!file.is_open()) {
-        std::cerr << "Unable to open file <" << filepath << std::endl << ">";
-        throw std::exception();
-    }
-
-    while (std::getline(file, sBuffer)) {
-        sOut += sBuffer;
-    }
-    file.close();
-
-    return sOut;
-}

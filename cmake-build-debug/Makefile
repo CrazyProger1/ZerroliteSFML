@@ -608,6 +608,54 @@ zerrolite/srcs/Tools/ConfigManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/ConfigManager.cpp.s
 .PHONY : zerrolite/srcs/Tools/ConfigManager.cpp.s
 
+zerrolite/srcs/Tools/FileManager.obj: zerrolite/srcs/Tools/FileManager.cpp.obj
+.PHONY : zerrolite/srcs/Tools/FileManager.obj
+
+# target to build an object file
+zerrolite/srcs/Tools/FileManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/FileManager.cpp.obj
+.PHONY : zerrolite/srcs/Tools/FileManager.cpp.obj
+
+zerrolite/srcs/Tools/FileManager.i: zerrolite/srcs/Tools/FileManager.cpp.i
+.PHONY : zerrolite/srcs/Tools/FileManager.i
+
+# target to preprocess a source file
+zerrolite/srcs/Tools/FileManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/FileManager.cpp.i
+.PHONY : zerrolite/srcs/Tools/FileManager.cpp.i
+
+zerrolite/srcs/Tools/FileManager.s: zerrolite/srcs/Tools/FileManager.cpp.s
+.PHONY : zerrolite/srcs/Tools/FileManager.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Tools/FileManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/FileManager.cpp.s
+.PHONY : zerrolite/srcs/Tools/FileManager.cpp.s
+
+zerrolite/srcs/Tools/LanguageManager.obj: zerrolite/srcs/Tools/LanguageManager.cpp.obj
+.PHONY : zerrolite/srcs/Tools/LanguageManager.obj
+
+# target to build an object file
+zerrolite/srcs/Tools/LanguageManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/LanguageManager.cpp.obj
+.PHONY : zerrolite/srcs/Tools/LanguageManager.cpp.obj
+
+zerrolite/srcs/Tools/LanguageManager.i: zerrolite/srcs/Tools/LanguageManager.cpp.i
+.PHONY : zerrolite/srcs/Tools/LanguageManager.i
+
+# target to preprocess a source file
+zerrolite/srcs/Tools/LanguageManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/LanguageManager.cpp.i
+.PHONY : zerrolite/srcs/Tools/LanguageManager.cpp.i
+
+zerrolite/srcs/Tools/LanguageManager.s: zerrolite/srcs/Tools/LanguageManager.cpp.s
+.PHONY : zerrolite/srcs/Tools/LanguageManager.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Tools/LanguageManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/LanguageManager.cpp.s
+.PHONY : zerrolite/srcs/Tools/LanguageManager.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -677,6 +725,12 @@ help:
 	@echo ... zerrolite/srcs/Tools/ConfigManager.obj
 	@echo ... zerrolite/srcs/Tools/ConfigManager.i
 	@echo ... zerrolite/srcs/Tools/ConfigManager.s
+	@echo ... zerrolite/srcs/Tools/FileManager.obj
+	@echo ... zerrolite/srcs/Tools/FileManager.i
+	@echo ... zerrolite/srcs/Tools/FileManager.s
+	@echo ... zerrolite/srcs/Tools/LanguageManager.obj
+	@echo ... zerrolite/srcs/Tools/LanguageManager.i
+	@echo ... zerrolite/srcs/Tools/LanguageManager.s
 .PHONY : help
 
 

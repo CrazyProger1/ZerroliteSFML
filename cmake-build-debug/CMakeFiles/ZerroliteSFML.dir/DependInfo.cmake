@@ -28,6 +28,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/CheckBoxStyle.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/TextStyle.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Tools/ConfigManager.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/ConfigManager.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Tools/FileManager.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/FileManager.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Tools/LanguageManager.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/LanguageManager.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

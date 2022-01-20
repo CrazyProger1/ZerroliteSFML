@@ -71,7 +71,8 @@ void zl::Text::initialize() {
 
 
     m_text.setFont(m_font);
-    m_text.setString(m_sText);
+//    m_text.setString(m_sText);
+    m_text.setString(sf::String::fromUtf8(m_sText.begin(), m_sText.end()));
     m_text.setCharacterSize(m_iFontSize);
     m_text.setFillColor(m_textColor);
     m_text.setPosition(pos);

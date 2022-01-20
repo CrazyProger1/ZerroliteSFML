@@ -17,5 +17,7 @@
 #include "./include/Core/MainActor.h"
 #include "./include/Core/NPC.h"
 #include "./include/Tools/ConfigManager.h"
+#include "./include/Tools/LanguageManager.h"
+#include "./include/Tools/FileManager.h"
 
 #endif //ZERROLITESFML_ZERROLITE_H

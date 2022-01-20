@@ -309,6 +309,11 @@ bool zl::Button::isClicked() {
     return buff;
 }
 
+sf::Vector2f &zl::Button::getSize() {
+    return m_size;
+}
+
+
 void zl::Button::activate() {
     m_bIsDeactivated = false;
     initialize();
@@ -400,6 +405,7 @@ void zl::Button::updateState() {
         }
     }
 }
+
 
 
 

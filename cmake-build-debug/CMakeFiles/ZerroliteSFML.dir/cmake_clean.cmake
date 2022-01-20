@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/ConfigManager.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/FileManager.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Tools/LanguageManager.cpp.obj"
   "ZerroliteSFML.exe"
   "ZerroliteSFML.exe.manifest"
   "ZerroliteSFML.pdb"
