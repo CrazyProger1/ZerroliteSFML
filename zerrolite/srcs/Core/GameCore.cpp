@@ -3,7 +3,6 @@
 //
 
 #include "../../include/Core/GameCore.h"
-#include <chrono>
 
 
 std::chrono::high_resolution_clock::time_point g_tStart;
@@ -18,6 +17,7 @@ zl::GameCore::GameCore(sf::RenderWindow *mainWindow) {
 }
 
 void zl::GameCore::tick() {
+
     g_tStart = std::chrono::high_resolution_clock::now();
 
     handleSFMLEvents();
@@ -83,6 +83,8 @@ int zl::GameCore::getFps() const {
 }
 
 void zl::GameCore::run() {
+
+
     if (m_pMainWindow == nullptr) {
         std::cerr << "Window did not set" << std::endl;
         throw std::exception();
@@ -100,6 +102,10 @@ void zl::GameCore::run() {
 
 void zl::GameCore::terminate() {
     m_pMainWindow->close();
+}
+
+zl::GlobalDataStorage *zl::GameCore::getGlobalStorage() {
+    return GlobalDataStorage::getInstance();
 }
 
 

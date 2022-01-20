@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Actor.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Entity.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GameCore.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GlobalDataStorage.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GlobalDataStorage.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/MainActor.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/MainActor.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/NPC.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Scene.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj"

@@ -7,7 +7,6 @@
 
 #include "../zerrolite/zerrolite.h"
 
-const zl::TStr g_sLang = "ru";
 
 class MainMenuScene : public zl::Scene {
     zl::Button m_btnPlay;
@@ -16,7 +15,11 @@ class MainMenuScene : public zl::Scene {
     zl::LanguageManager m_languageManager;
 
     void onInitializeScene() override {
-        m_languageManager.loadChapter("../resources/languages/" + g_sLang + ".lang", "MainMenu");
+
+
+        m_languageManager.loadChapter(
+                "../resources/languages/" + zl::Scene::getGlobalStorage()->getStringValue("lang") + ".lang",
+                "MainMenu");
 
         zl::ButtonStyle buttonStyle(
                 {220, 40},

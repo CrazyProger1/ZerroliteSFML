@@ -7,11 +7,12 @@
 
 #include <SFML/Graphics.hpp>
 #include <map>
+#include <chrono>
 #include <iostream>
 #include <thread>
 #include <functional>
 #include "./Scene.h"
-
+#include "./GlobalDataStorage.h"
 
 namespace zl {
     typedef std::map<TStr, Scene *> TScenes;
@@ -31,7 +32,6 @@ namespace zl {
         TScenes m_scenes;
 
         int m_iFps = 0;
-
 
         void tick();
         /////////////////////////////
@@ -71,6 +71,9 @@ namespace zl {
         /////////////////////////////
 
         void terminate();
+
+
+        static GlobalDataStorage *getGlobalStorage();
     };
 
 }

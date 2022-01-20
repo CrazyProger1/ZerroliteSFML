@@ -5,6 +5,8 @@
 int main() {
     Game game;
 
+    Game::getGlobalStorage()->setValue("lang", "ru");
+
     auto windowConfig = zl::ConfigManager::loadWindowConfig("../resources/config/window.json");
 
     auto iWindowStyle = sf::Style::Default;
@@ -20,7 +22,6 @@ int main() {
     game.addScene("MainMenu", new MainMenuScene);
     game.addScene("GameSelection", new GameSelectionScene);
     game.setActiveScene("MainMenu");
-
 
     game.run();
 }

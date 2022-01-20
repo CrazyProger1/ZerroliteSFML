@@ -344,6 +344,30 @@ zerrolite/srcs/Core/GameCore.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.s
 .PHONY : zerrolite/srcs/Core/GameCore.cpp.s
 
+zerrolite/srcs/Core/GlobalDataStorage.obj: zerrolite/srcs/Core/GlobalDataStorage.cpp.obj
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.obj
+
+# target to build an object file
+zerrolite/srcs/Core/GlobalDataStorage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GlobalDataStorage.cpp.obj
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.cpp.obj
+
+zerrolite/srcs/Core/GlobalDataStorage.i: zerrolite/srcs/Core/GlobalDataStorage.cpp.i
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/GlobalDataStorage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GlobalDataStorage.cpp.i
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.cpp.i
+
+zerrolite/srcs/Core/GlobalDataStorage.s: zerrolite/srcs/Core/GlobalDataStorage.cpp.s
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/GlobalDataStorage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GlobalDataStorage.cpp.s
+.PHONY : zerrolite/srcs/Core/GlobalDataStorage.cpp.s
+
 zerrolite/srcs/Core/MainActor.obj: zerrolite/srcs/Core/MainActor.cpp.obj
 .PHONY : zerrolite/srcs/Core/MainActor.obj
 
@@ -692,6 +716,9 @@ help:
 	@echo ... zerrolite/srcs/Core/GameCore.obj
 	@echo ... zerrolite/srcs/Core/GameCore.i
 	@echo ... zerrolite/srcs/Core/GameCore.s
+	@echo ... zerrolite/srcs/Core/GlobalDataStorage.obj
+	@echo ... zerrolite/srcs/Core/GlobalDataStorage.i
+	@echo ... zerrolite/srcs/Core/GlobalDataStorage.s
 	@echo ... zerrolite/srcs/Core/MainActor.obj
 	@echo ... zerrolite/srcs/Core/MainActor.i
 	@echo ... zerrolite/srcs/Core/MainActor.s

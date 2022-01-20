@@ -9,6 +9,7 @@
 #include <vector>
 #include "./Entity.h"
 #include "../Containers/Container.h"
+#include "./GlobalDataStorage.h"
 
 namespace zl {
     class Scene {
@@ -63,6 +64,8 @@ namespace zl {
 
         sf::Vector2u &getWindowResolution();
 
+
+        static GlobalDataStorage *getGlobalStorage();
 
         /////////////////////////////
         /// This virtual methods are called by game core on certain events.

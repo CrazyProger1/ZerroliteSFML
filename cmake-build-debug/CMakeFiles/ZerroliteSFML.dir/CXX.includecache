@@ -684,10 +684,6 @@ D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.cpp
-Scenes.h
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
-
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
@@ -739,6 +735,8 @@ SFML/Graphics.hpp
 -
 map
 -
+chrono
+-
 iostream
 -
 thread
@@ -747,6 +745,16 @@ functional
 -
 ./Scene.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Scene.h
+./GlobalDataStorage.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GlobalDataStorage.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GlobalDataStorage.h
+iostream
+-
+map
+-
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/MainActor.h
 ./Actor.h
@@ -765,6 +773,8 @@ vector
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
 ../Containers/Container.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Container.h
+./GlobalDataStorage.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GlobalDataStorage.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/GUI/Button.h
 ../Core/Entity.h

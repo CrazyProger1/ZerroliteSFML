@@ -80,6 +80,10 @@ sf::Vector2u &zl::Scene::getWindowResolution() {
     return m_resolution;
 }
 
+zl::GlobalDataStorage *zl::Scene::getGlobalStorage() {
+    return GlobalDataStorage::getInstance();
+}
+
 
 void zl::Scene::onInitializeScene() {}
 
@@ -92,4 +96,5 @@ void zl::Scene::onUpdateState() {}
 void zl::Scene::onDestroy() {}
 
 void zl::Scene::onSFMLEvent(sf::Event &event) {}
+
 

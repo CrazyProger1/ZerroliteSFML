@@ -123,6 +123,9 @@
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GameCore.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/GlobalDataStorage.h">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/MainActor.h">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
@@ -178,6 +181,9 @@
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GameCore.cpp">
+			<Option target="ZerroliteSFML"/>
+		</Unit>
+		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/GlobalDataStorage.cpp">
 			<Option target="ZerroliteSFML"/>
 		</Unit>
 		<Unit filename="D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/MainActor.cpp">

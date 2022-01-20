@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Entity.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GameCore.cpp.obj"
+  "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/GlobalDataStorage.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/MainActor.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/NPC.cpp.obj"
   "CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Scene.cpp.obj"
