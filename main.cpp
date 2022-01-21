@@ -20,7 +20,7 @@ int main() {
 
     game.setMainWindow(&window);
     game.addScene("MainMenu", new MainMenuScene);
-    game.addScene("GameSelection", new GameSelectionScene);
+    game.addScene("OfflineGame", new OfflineGameScene);
     game.setActiveScene("MainMenu");
 
     game.run();

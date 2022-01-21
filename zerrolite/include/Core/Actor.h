@@ -20,7 +20,6 @@ namespace zl {
     private:
         sf::Vector2f m_position;
         sf::Vector2u m_size;
-        sf::Vector2f m_speedVector;
 
         float m_fltAngle = 0;
         float m_fltSpeed = 0;
@@ -31,8 +30,15 @@ namespace zl {
 
         std::map<int, sf::Texture> m_appearances;
 
+        std::map<int, sf::Vector2f> m_originOffsets;
 
-        void calculateSpeed();
+        bool m_bOriginShowed = false;
+
+        sf::CircleShape m_originCircle;
+
+
+
+        static sf::Vector2f calculateSpeed(float angle, float speed);
         /////////////////////////////
         /// This method calculate speed vector depending on angle.
         /////////////////////////////
@@ -42,6 +48,7 @@ namespace zl {
 
         explicit Actor(const sf::Vector2f &position);
 
+        void initialize() override;
 
         void setPosition(const sf::Vector2f &position) override;
 
@@ -56,7 +63,10 @@ namespace zl {
         void setSpeed(float speed);
 
 
-        void addAppearance(unsigned int appearanceId, sf::Texture &texture);
+        void addAppearance(unsigned int appearanceId, sf::Texture &texture, const sf::Vector2f &originOffset = {0, 0});
+
+
+        sf::Vector2f &getPosition() override;
 
 
         void draw(sf::RenderTarget &rt) override;
@@ -79,6 +89,11 @@ namespace zl {
         /////////////////////////////
 
 
+        void showOrigin();
+
+        void hideOrigin();
+
+
         void turnToMouseCursor();
         /////////////////////////////
         /// This methods apply player or NPC to turn to cursor.
@@ -89,13 +104,13 @@ namespace zl {
 
         /////////////////////////////
         /// MainActor or NPC moving methods
-        virtual void moveForward();
+        virtual void moveForward(float speedFactor);
 
-        virtual void moveBack();
+        virtual void moveBack(float speedFactor);
 
-        virtual void moveRight();
+        virtual void moveRight(float speedFactor);
 
-        virtual void moveLeft();
+        virtual void moveLeft(float speedFactor);
         /////////////////////////////
 
 

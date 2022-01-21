@@ -19,7 +19,7 @@ namespace zl {
 
         std::map<TStr, int> m_intVars;
 
-        static GlobalDataStorage *p_instance;
+        static GlobalDataStorage *m_pInstance;
 
         GlobalDataStorage() {}
 
@@ -29,9 +29,10 @@ namespace zl {
 
     public:
         static GlobalDataStorage *getInstance() {
-            if (!p_instance)
-                p_instance = new GlobalDataStorage();
-            return p_instance;
+            if (!m_pInstance)
+                m_pInstance = new GlobalDataStorage();
+
+            return m_pInstance;
         }
 
         void setValue(const TStr &name, const TStr &value);

@@ -1,5 +1,10 @@
 {
   "MainMenu": {
-    "buttonPlay": "Играть"
+    "NewGame": "Новая игра",
+    "LoadGame": "Загрузить игру",
+    "PlayOnline": "Играть онлайн",
+    "Settings": "Настройки",
+    "About": "Об игре",
+    "Exit": "Выход"
   }
 }

@@ -4,7 +4,7 @@
 
 #include "../../include/Core/GlobalDataStorage.h"
 
-zl::GlobalDataStorage *zl::GlobalDataStorage::p_instance = nullptr;
+zl::GlobalDataStorage *zl::GlobalDataStorage::m_pInstance = nullptr;
 
 void zl::GlobalDataStorage::setValue(const zl::TStr &name, const zl::TStr &value) {
     m_stringVars[name] = value;

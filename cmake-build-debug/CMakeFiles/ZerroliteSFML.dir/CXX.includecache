@@ -676,31 +676,13 @@ SFML/Config.hpp
 
 ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h
-../zerrolite/zerrolite.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.cpp
+Player.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
-
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
-../zerrolite/zerrolite.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
-
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/zsb.h
-./Scenes.h
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
-./Player.h
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
-./Game.h
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h
-
-D:/Programming/C++/Projects/ZerroliteSFML/main.cpp
-zerrolite/zerrolite.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
-ZSB/zsb.h
-D:/Programming/C++/Projects/ZerroliteSFML/ZSB/zsb.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Container.h
 SFML/Graphics.hpp

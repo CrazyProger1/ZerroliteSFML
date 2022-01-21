@@ -6,72 +6,45 @@
 #define ZERROLITESFML_SCENES_H
 
 #include "../zerrolite/zerrolite.h"
-
+#include "./Player.h"
 
 class MainMenuScene : public zl::Scene {
-    zl::Button m_btnPlay;
-    zl::Text m_txtPlay;
+    zl::Button m_btnNewGame;
+    zl::Text m_txtNewGame;
+
+    zl::Button m_btnLoadGame;
+    zl::Text m_txtLoadGame;
+
+    zl::Button m_btnPlayOnline;
+    zl::Text m_txtPlayOnline;
+
+    zl::Button m_btnSettings;
+    zl::Text m_txtSettings;
+
+    zl::Button m_btnAbout;
+    zl::Text m_txtAbout;
+
+    zl::Button m_btnExit;
+    zl::Text m_txtExit;
+
+
+    zl::Image m_imgBackground;
 
     zl::LanguageManager m_languageManager;
 
-    void onInitializeScene() override {
+    void onInitializeScene() override;
 
-
-        m_languageManager.loadChapter(
-                "../resources/languages/" + zl::Scene::getGlobalStorage()->getStringValue("lang") + ".lang",
-                "MainMenu");
-
-        zl::ButtonStyle buttonStyle(
-                {220, 40},
-                {0, 0, 0},
-                {0, 255, 0},
-                {0, 0},
-                {0, 0},
-                1,
-                {0, 255, 0},
-                true,
-                false,
-                10,
-                false
-        );
-
-        zl::TextStyle textStyle(
-                "../resources/fonts/consola.ttf",
-                0,
-                20,
-                5,
-                0,
-                {0, 255, 0},
-                {0, 0, 0},
-                {0, 0, 0}
-        );
-
-        sf::Vector2u resolution = getWindowResolution();
-
-        m_btnPlay.setStyle(buttonStyle);
-        m_txtPlay.setStyle(textStyle);
-
-
-        sf::Vector2f buttonsSize = m_btnPlay.getSize();
-
-        m_txtPlay.setText(m_languageManager.getTranslatedString("buttonPlay"));
-        m_btnPlay.setText(m_txtPlay);
-
-        m_btnPlay.setPosition((float) resolution.x / 2 - buttonsSize.x / 2, 100);
-
-        attach(&m_btnPlay);
-
-    }
-
-    void onUpdateState() override {
-        if (m_btnPlay.isClicked())
-            setNewScene("GameSelection");
-    }
+    void onUpdateState() override;
 };
 
-class GameSelectionScene : public zl::Scene {
+class OfflineGameScene : public zl::Scene {
+    Player m_player;
+
+
+    void onInitializeScene() override;
 
 };
 
 
 #endif //ZERROLITESFML_SCENES_H
+

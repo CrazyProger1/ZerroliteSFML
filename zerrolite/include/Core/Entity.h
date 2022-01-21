@@ -37,7 +37,7 @@ namespace zl {
 
         sf::RenderWindow *getParentWindow();
 
-        sf::Vector2f &getPosition();
+        virtual sf::Vector2f &getPosition();
 
         TStr &getType();
 

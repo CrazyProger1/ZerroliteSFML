@@ -1,5 +1,10 @@
 {
   "MainMenu": {
-    "buttonPlay": "Play"
+    "NewGame": "New game",
+    "LoadGame": "Load game",
+    "PlayOnline": "Play online",
+    "Settings": "Settings",
+    "About": "About",
+    "Exit": "Exit"
   }
 }

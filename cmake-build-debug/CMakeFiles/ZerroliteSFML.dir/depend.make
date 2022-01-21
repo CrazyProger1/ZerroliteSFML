@@ -274,6 +274,7 @@ CMakeFiles/ZerroliteSFML.dir/ZSB/Scenes.cpp.obj: \
  ../libs/SFML-2.5.1/include/SFML/Window/Window.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp \
  ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp \
+ ../ZSB/Player.h \
  ../ZSB/Scenes.cpp \
  ../ZSB/Scenes.h \
  ../zerrolite/include/Containers/Container.h \
