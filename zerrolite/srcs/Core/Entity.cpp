@@ -32,6 +32,8 @@ void zl::Entity::setType(const zl::TStr &type) {
     m_sType = type;
 }
 
+void zl::Entity::setSceneClock(sf::Clock *clock) {}
+
 zl::TStr &zl::Entity::getType() {
     return m_sType;
 }
@@ -65,6 +67,8 @@ void zl::Entity::move(float offsetX, float offsetY) {
     m_position.y += offsetY;
     initialize();
 }
+
+
 
 
 

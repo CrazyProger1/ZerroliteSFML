@@ -26,6 +26,8 @@ namespace zl {
 
         sf::Vector2u m_resolution;
 
+        sf::Clock m_clock;
+
     public:
         void attach(Entity *entity);
         /////////////////////////////
@@ -64,8 +66,9 @@ namespace zl {
 
         sf::Vector2u &getWindowResolution();
 
-
         static GlobalDataStorage *getGlobalStorage();
+
+        sf::Clock &getClock();
 
         /////////////////////////////
         /// This virtual methods are called by game core on certain events.

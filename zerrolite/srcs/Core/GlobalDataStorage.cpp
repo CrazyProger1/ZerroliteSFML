@@ -22,5 +22,9 @@ int zl::GlobalDataStorage::getIntValue(const zl::TStr &name) {
     return m_intVars[name];
 }
 
+sf::Clock &zl::GlobalDataStorage::getGlobalClock() {
+    return m_globalClock;
+}
+
 
 

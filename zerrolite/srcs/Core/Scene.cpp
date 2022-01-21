@@ -9,8 +9,10 @@ void zl::Scene::attach(Entity *entity) {
     if (entity->getParentWindow() == nullptr)
         entity->setParentWindow(m_pParentWindow);
 
+    entity->setSceneClock(&m_clock);
     entity->initialize();
     entity->onAttach();
+
 
     m_entitiesContainer.emplace_back(entity);
 }
@@ -20,8 +22,10 @@ void zl::Scene::attach(zl::Container *container) {
         if (entity->getParentWindow() == nullptr)
             entity->setParentWindow(m_pParentWindow);
 
+        entity->setSceneClock(&m_clock);
         entity->initialize();
         entity->onAttach();
+
         m_entitiesContainer.emplace_back(entity);
     }
 }
@@ -52,6 +56,7 @@ void zl::Scene::updateState() {
 }
 
 void zl::Scene::initializeScene() {
+    m_clock.restart();
     m_entitiesContainer.clear();
     m_sNewScene = "";
     onLoadResources();
@@ -84,6 +89,9 @@ zl::GlobalDataStorage *zl::Scene::getGlobalStorage() {
     return GlobalDataStorage::getInstance();
 }
 
+sf::Clock &zl::Scene::getClock() {
+    return m_clock;
+}
 
 void zl::Scene::onInitializeScene() {}
 
@@ -96,5 +104,7 @@ void zl::Scene::onUpdateState() {}
 void zl::Scene::onDestroy() {}
 
 void zl::Scene::onSFMLEvent(sf::Event &event) {}
+
+
 
 

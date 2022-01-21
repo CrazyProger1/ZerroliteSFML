@@ -296,6 +296,30 @@ zerrolite/srcs/Core/Actor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Actor.cpp.s
 .PHONY : zerrolite/srcs/Core/Actor.cpp.s
 
+zerrolite/srcs/Core/Animation.obj: zerrolite/srcs/Core/Animation.cpp.obj
+.PHONY : zerrolite/srcs/Core/Animation.obj
+
+# target to build an object file
+zerrolite/srcs/Core/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Animation.cpp.obj
+.PHONY : zerrolite/srcs/Core/Animation.cpp.obj
+
+zerrolite/srcs/Core/Animation.i: zerrolite/srcs/Core/Animation.cpp.i
+.PHONY : zerrolite/srcs/Core/Animation.i
+
+# target to preprocess a source file
+zerrolite/srcs/Core/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Animation.cpp.i
+.PHONY : zerrolite/srcs/Core/Animation.cpp.i
+
+zerrolite/srcs/Core/Animation.s: zerrolite/srcs/Core/Animation.cpp.s
+.PHONY : zerrolite/srcs/Core/Animation.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Core/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Core/Animation.cpp.s
+.PHONY : zerrolite/srcs/Core/Animation.cpp.s
+
 zerrolite/srcs/Core/Entity.obj: zerrolite/srcs/Core/Entity.cpp.obj
 .PHONY : zerrolite/srcs/Core/Entity.obj
 
@@ -710,6 +734,9 @@ help:
 	@echo ... zerrolite/srcs/Core/Actor.obj
 	@echo ... zerrolite/srcs/Core/Actor.i
 	@echo ... zerrolite/srcs/Core/Actor.s
+	@echo ... zerrolite/srcs/Core/Animation.obj
+	@echo ... zerrolite/srcs/Core/Animation.i
+	@echo ... zerrolite/srcs/Core/Animation.s
 	@echo ... zerrolite/srcs/Core/Entity.obj
 	@echo ... zerrolite/srcs/Core/Entity.i
 	@echo ... zerrolite/srcs/Core/Entity.s

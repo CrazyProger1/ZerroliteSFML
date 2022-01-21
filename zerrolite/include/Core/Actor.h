@@ -5,10 +5,10 @@
 #ifndef ZERROLITESFML_ACTOR_H
 #define ZERROLITESFML_ACTOR_H
 
-#include "./Entity.h"
 #include <iostream>
 #include <cmath>
-
+#include "./Animation.h"
+#include "./Entity.h"
 
 namespace zl {
     class Actor : public Entity {
@@ -26,16 +26,24 @@ namespace zl {
 
         sf::Sprite *m_pSprite{};
 
-        int m_iActiveAppearanceId = 0;
-
-        std::map<int, sf::Texture> m_appearances;
-
-        std::map<int, sf::Vector2f> m_originOffsets;
-
-        bool m_bOriginShowed = false;
-
         sf::CircleShape m_originCircle;
 
+        sf::Clock *m_sceneClock{};
+
+
+        TStr m_sActiveAppearance;
+
+        TStr m_sActiveAnimation;
+
+
+        std::map<TStr, sf::Texture> m_appearances;
+
+        std::map<TStr, sf::Vector2f> m_originOffsets;
+
+        std::map<TStr, Animation> m_animations;
+
+
+        bool m_bOriginShowed = false;
 
 
         static sf::Vector2f calculateSpeed(float angle, float speed);
@@ -58,15 +66,21 @@ namespace zl {
 
         void setRotation(float angle);
 
-        void setAppearance(unsigned int appearanceId);
+        void setAppearance(const TStr &appearance);
 
         void setSpeed(float speed);
 
+        void setSceneClock(sf::Clock *clock) override;
 
-        void addAppearance(unsigned int appearanceId, sf::Texture &texture, const sf::Vector2f &originOffset = {0, 0});
+
+        void addAppearance(const TStr &name, sf::Texture &texture, const sf::Vector2f &originOffset = {0, 0});
+
+        void addAnimation(const TStr &name, Animation &animation);
 
 
         sf::Vector2f &getPosition() override;
+
+        sf::Clock &getSceneClock();
 
 
         void draw(sf::RenderTarget &rt) override;
@@ -92,6 +106,9 @@ namespace zl {
         void showOrigin();
 
         void hideOrigin();
+
+
+        void showAnimation(const TStr &name);
 
 
         void turnToMouseCursor();

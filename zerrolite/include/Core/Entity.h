@@ -34,6 +34,8 @@ namespace zl {
 
         virtual void setPosition(float x, float y);
 
+        virtual void setSceneClock(sf::Clock *clock);
+
 
         sf::RenderWindow *getParentWindow();
 

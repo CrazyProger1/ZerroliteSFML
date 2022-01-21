@@ -19,6 +19,8 @@ namespace zl {
 
         std::map<TStr, int> m_intVars;
 
+        sf::Clock m_globalClock;
+
         static GlobalDataStorage *m_pInstance;
 
         GlobalDataStorage() {}
@@ -43,6 +45,9 @@ namespace zl {
         TStr &getStringValue(const TStr &name);
 
         int getIntValue(const TStr &name);
+
+
+        sf::Clock &getGlobalClock();
 
     };
 }

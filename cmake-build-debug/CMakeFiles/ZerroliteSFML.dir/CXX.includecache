@@ -681,6 +681,8 @@ Player.h
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
+experimental/filesystem
+-
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 
@@ -699,12 +701,20 @@ iostream
 -
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Actor.h
-./Entity.h
-D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
 iostream
 -
 cmath
 -
+./Animation.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Animation.h
+./Entity.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Animation.h
+vector
+-
+../types.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Entity.h
 SFML/Graphics.hpp

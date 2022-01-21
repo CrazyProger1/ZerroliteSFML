@@ -14,6 +14,7 @@ zl::Actor::Actor(const sf::Vector2f &position) : Entity(position) {
 void zl::Actor::initialize() {
     m_originCircle.setRadius(2.0f);
     m_originCircle.setFillColor(sf::Color(255, 0, 0));
+    m_originCircle.setOrigin(2, 2);
 }
 
 
@@ -34,19 +35,19 @@ void zl::Actor::setSprite(sf::Sprite *sprite) {
     m_pSprite = sprite;
 
 
-    if (m_iActiveAppearanceId < 0) {
+    if (m_sActiveAppearance.empty()) {
         std::cerr << "Appearance did not set" << std::endl;
         throw std::exception();
     }
 
-    m_pSprite->setTexture(m_appearances[(int) m_iActiveAppearanceId]);
+    m_pSprite->setTexture(m_appearances[m_sActiveAppearance]);
 
     m_size = m_pSprite->getTexture()->getSize();
 
     sf::Vector2f originOffset;
 
     try {
-        originOffset = m_originOffsets.at(m_iActiveAppearanceId);
+        originOffset = m_originOffsets.at(m_sActiveAppearance);
     } catch (std::out_of_range &) {
 
     }
@@ -63,17 +64,17 @@ void zl::Actor::setSpeed(float speed) {
     m_fltSpeed = speed;
 }
 
-void zl::Actor::setAppearance(unsigned int appearanceId) {
+void zl::Actor::setAppearance(const TStr &appearance) {
 
-    m_iActiveAppearanceId = (int) appearanceId;
+    m_sActiveAppearance = appearance;
 
-    sf::Texture &texture = m_appearances[m_iActiveAppearanceId];
+    sf::Texture &texture = m_appearances.at(m_sActiveAppearance);
 
     sf::Vector2f originOffset;
 
 
     try {
-        originOffset = m_originOffsets.at((int) appearanceId);
+        originOffset = m_originOffsets.at(m_sActiveAppearance);
     } catch (std::out_of_range &) {
 
     }
@@ -84,17 +85,31 @@ void zl::Actor::setAppearance(unsigned int appearanceId) {
     }
 }
 
-void zl::Actor::addAppearance(unsigned int appearanceId, sf::Texture &texture, const sf::Vector2f &originOffset) {
-    m_appearances[(int) appearanceId] = texture;
+void zl::Actor::setSceneClock(sf::Clock *clock) {
+    m_sceneClock = clock;
+}
+
+
+void zl::Actor::addAppearance(const TStr &name, sf::Texture &texture, const sf::Vector2f &originOffset) {
+    m_appearances[name] = texture;
 
     if (originOffset.x != 0 || originOffset.y != 0)
-        m_originOffsets[(int) appearanceId] = originOffset;
+        m_originOffsets[name] = originOffset;
 
-    m_iActiveAppearanceId = (int) appearanceId;
+    m_sActiveAppearance = name;
 }
+
+void zl::Actor::addAnimation(const zl::TStr &name, zl::Animation &animation) {
+    m_animations[name] = animation;
+}
+
 
 sf::Vector2f &zl::Actor::getPosition() {
     return m_position;
+}
+
+sf::Clock &zl::Actor::getSceneClock() {
+    return *m_sceneClock;
 }
 
 
@@ -107,8 +122,10 @@ sf::Vector2f zl::Actor::calculateSpeed(float angle, float speed) {
 
 void zl::Actor::draw(sf::RenderTarget &rt) {
     rt.draw(*m_pSprite);
+
     if (m_bOriginShowed)
         rt.draw(m_originCircle);
+
     onDraw(rt);
 }
 
@@ -120,6 +137,19 @@ void zl::Actor::updateState() {
 //    calculateSpeed();
     if (m_bOriginShowed)
         m_originCircle.setPosition(getPosition());
+
+    if (!m_sActiveAnimation.empty()) {
+        Animation &animation = m_animations.at(m_sActiveAnimation);
+        if (animation.already()) {
+            TStr sNextAnimation = animation.next();
+            if (sNextAnimation == "end") {
+                animation.reset();
+                m_sActiveAnimation = "";
+            } else {
+                setAppearance(sNextAnimation);
+            }
+        }
+    }
 
 
     onUpdateState();
@@ -149,6 +179,10 @@ void zl::Actor::showOrigin() {
 
 void zl::Actor::hideOrigin() {
     m_bOriginShowed = false;
+}
+
+void zl::Actor::showAnimation(const TStr &name) {
+    m_sActiveAnimation = name;
 }
 
 
@@ -196,6 +230,14 @@ void zl::Actor::onDraw(sf::RenderTarget &rt) {}
 void zl::Actor::onUpdateState() {}
 
 void zl::Actor::onSFMLEvent(sf::Event &event) {}
+
+
+
+
+
+
+
+
 
 
 
