@@ -83,6 +83,9 @@ namespace zl {
         sf::Clock &getSceneClock();
 
 
+        bool isAnyAnimationActive();
+
+
         void draw(sf::RenderTarget &rt) override;
 
         void handleSFMLEvent(sf::Event &event) override;

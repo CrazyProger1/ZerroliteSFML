@@ -560,6 +560,30 @@ zerrolite/srcs/GUI/Text.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.s
 .PHONY : zerrolite/srcs/GUI/Text.cpp.s
 
+zerrolite/srcs/Shapes/ArcShape.obj: zerrolite/srcs/Shapes/ArcShape.cpp.obj
+.PHONY : zerrolite/srcs/Shapes/ArcShape.obj
+
+# target to build an object file
+zerrolite/srcs/Shapes/ArcShape.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Shapes/ArcShape.cpp.obj
+.PHONY : zerrolite/srcs/Shapes/ArcShape.cpp.obj
+
+zerrolite/srcs/Shapes/ArcShape.i: zerrolite/srcs/Shapes/ArcShape.cpp.i
+.PHONY : zerrolite/srcs/Shapes/ArcShape.i
+
+# target to preprocess a source file
+zerrolite/srcs/Shapes/ArcShape.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Shapes/ArcShape.cpp.i
+.PHONY : zerrolite/srcs/Shapes/ArcShape.cpp.i
+
+zerrolite/srcs/Shapes/ArcShape.s: zerrolite/srcs/Shapes/ArcShape.cpp.s
+.PHONY : zerrolite/srcs/Shapes/ArcShape.s
+
+# target to generate assembly for a file
+zerrolite/srcs/Shapes/ArcShape.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ZerroliteSFML.dir\build.make CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Shapes/ArcShape.cpp.s
+.PHONY : zerrolite/srcs/Shapes/ArcShape.cpp.s
+
 zerrolite/srcs/Styles/ButtonStyle.obj: zerrolite/srcs/Styles/ButtonStyle.cpp.obj
 .PHONY : zerrolite/srcs/Styles/ButtonStyle.obj
 
@@ -767,6 +791,9 @@ help:
 	@echo ... zerrolite/srcs/GUI/Text.obj
 	@echo ... zerrolite/srcs/GUI/Text.i
 	@echo ... zerrolite/srcs/GUI/Text.s
+	@echo ... zerrolite/srcs/Shapes/ArcShape.obj
+	@echo ... zerrolite/srcs/Shapes/ArcShape.i
+	@echo ... zerrolite/srcs/Shapes/ArcShape.s
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.obj
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.i
 	@echo ... zerrolite/srcs/Styles/ButtonStyle.s

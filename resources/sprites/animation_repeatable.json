@@ -1,0 +1,37 @@
+{
+  "player": {
+    "flashlight": {
+      "idle": true,
+      "meleeattack": false,
+      "move": true
+    },
+    "handgun": {
+      "idle": true,
+      "meleeattack": false,
+      "move": true,
+      "reload": false,
+      "shoot": false
+    },
+    "knife": {
+      "idle": true,
+      "meleeattack": false,
+      "move": true,
+      "reload": false,
+      "shoot": false
+    },
+    "rifle": {
+      "idle": true,
+      "meleeattack": false,
+      "move": true,
+      "reload": false,
+      "shoot": false
+    },
+    "shotgun": {
+      "idle": true,
+      "meleeattack": false,
+      "move": true,
+      "reload": false,
+      "shoot": false
+    }
+  }
+}

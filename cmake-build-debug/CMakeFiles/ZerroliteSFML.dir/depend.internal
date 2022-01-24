@@ -1525,6 +1525,9 @@ CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj
  D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Styles/TextStyle.h
  D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
  D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Text.cpp
+CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Shapes/ArcShape.cpp.obj
+ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Shapes/ArcShape.h
+ D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Shapes/ArcShape.cpp
 CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.obj
  ../libs/SFML-2.5.1/include/SFML/Config.hpp
  ../libs/SFML-2.5.1/include/SFML/Graphics.hpp

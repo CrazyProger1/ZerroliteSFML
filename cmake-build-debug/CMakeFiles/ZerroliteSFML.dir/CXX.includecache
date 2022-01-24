@@ -676,6 +676,14 @@ SFML/Config.hpp
 
 ../libs/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.cpp
+Game.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h
+../zerrolite/zerrolite.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.cpp
 Player.h
 D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
@@ -685,6 +693,30 @@ experimental/filesystem
 -
 ../zerrolite/zerrolite.h
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.cpp
+Scenes.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
+../zerrolite/zerrolite.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+./Player.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/zsb.h
+./Scenes.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Scenes.h
+./Player.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Player.h
+./Game.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/Game.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/main.cpp
+zerrolite/zerrolite.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
+ZSB/zsb.h
+D:/Programming/C++/Projects/ZerroliteSFML/ZSB/zsb.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Containers/Container.h
 SFML/Graphics.hpp
@@ -1245,6 +1277,20 @@ string_view
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/types.h
 SFML/Graphics.hpp
 -
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/Actor.cpp
+../../include/Core/Actor.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/Actor.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/MainActor.cpp
+iostream
+-
+../../include/Core/MainActor.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/MainActor.h
+
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Core/NPC.cpp
+../../include/Core/NPC.h
+D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/include/Core/NPC.h
 
 D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/zerrolite.h
 ./include/Core/GameCore.h

@@ -16,7 +16,7 @@ namespace zl {
         int m_iActiveAppearance = 0;
         int m_iDuration = 0;
         int m_iDelay = 0;
-        int m_iNumberOfFrames;
+        int m_iNumberOfFrames = 0;
         sf::Clock m_clock;
 
         bool m_bRepeat = false;

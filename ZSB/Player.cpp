@@ -4,99 +4,68 @@
 
 #include "Player.h"
 
+namespace fs = std::experimental::filesystem;
 
 void Player::onLoadResources() {
     sf::Texture texture;
 
     auto offsets = zl::FileManager::loadJson("../resources/sprites/offsets.json")["player"];
+    auto animationDurations = zl::FileManager::loadJson("../resources/sprites/animation_durations.json")["player"];
+    auto animationRepeatableProperty = zl::FileManager::loadJson(
+            "../resources/sprites/animation_repeatable.json")["player"];
+    for (auto &sWeapon: m_weapons) { // horrible loading, will be recoded!
+        for (auto &sState: m_states) {
 
-    for (auto &file: std::experimental::filesystem::recursive_directory_iterator("../resources/sprites/player/")) {
 
+            int iMaxState = 0;
 
-        if (std::experimental::filesystem::is_regular_file(file)) {
+            for (; iMaxState < 1000; ++iMaxState) {
+                if (!fs::exists(
+                        "../resources/sprites/player/" + sWeapon + "/" + sState + "/" + std::to_string(iMaxState) +
+                        ".png")) {
+                    iMaxState--;
+                    break;
 
-            zl::TStr sFilepath = file.path().string();
-            sFilepath = sFilepath.substr(28, sFilepath.size() - 28);
-            sFilepath.replace(sFilepath.find(".png"), 4, "");
+                }
+            }
+            if (fs::exists("../resources/sprites/player/" + sWeapon + "/" + sState)) {
+                zl::Animation animation;
+                animation.setDuration(animationDurations[sWeapon][sState]);
+                animation.setRepeatable(animationRepeatableProperty[sWeapon][sState]);
 
-            texture.loadFromFile(file.path().string());
+                for (int i = 0; i <= iMaxState; ++i) {
 
-            zl::TStr sWeaponName = sFilepath.substr(0, sFilepath.find('\\'));
+                    zl::TStr sAppearanceName, sFilepath;
 
-            addAppearance(sFilepath, texture, {offsets[sWeaponName][0], offsets[sWeaponName][1]});
+                    sAppearanceName += sWeapon;
+                    sAppearanceName += "-";
+                    sAppearanceName += sState;
+                    sAppearanceName += "-";
+                    sAppearanceName += std::to_string(i);
 
-            std::cout << "Loaded: " << sFilepath << std::endl;
+                    sFilepath =
+                            "../resources/sprites/player/" + sWeapon + "/" + sState + "/" + std::to_string(i) + ".png";
+                    texture.loadFromFile(sFilepath);
+                    addAppearance(sAppearanceName, texture,
+                                  {offsets[sWeapon][0], offsets[sWeapon][1]});
+                    animation.addAppearance(sAppearanceName);
+
+                    std::cout << "Loaded: " << sFilepath << std::endl;
+                }
+                addAnimation(sWeapon + "-" + sState, animation);
+            }
         }
     }
 }
 
 void Player::onInitializeActor() {
-    setAppearance(m_sSelectedWeapon + "\\" + m_sAction + "\\" + std::to_string(m_iAnimationState));
 
     setSprite(&m_sprite);
     setSpeed(m_fltSpeed);
     setPosition(200, 200);
 
-    zl::Animation animation;
 
-
-    animation.setDuration(1500);
-
-
-    animation.addAppearance("shotgun\\reload\\0");
-    animation.addAppearance("shotgun\\reload\\1");
-    animation.addAppearance("shotgun\\reload\\2");
-    animation.addAppearance("shotgun\\reload\\3");
-    animation.addAppearance("shotgun\\reload\\4");
-    animation.addAppearance("shotgun\\reload\\5");
-    animation.addAppearance("shotgun\\reload\\6");
-    animation.addAppearance("shotgun\\reload\\7");
-    animation.addAppearance("shotgun\\reload\\8");
-    animation.addAppearance("shotgun\\reload\\9");
-    animation.addAppearance("shotgun\\reload\\10");
-    animation.addAppearance("shotgun\\reload\\11");
-    animation.addAppearance("shotgun\\reload\\12");
-    animation.addAppearance("shotgun\\reload\\13");
-    animation.addAppearance("shotgun\\reload\\14");
-    animation.addAppearance("shotgun\\reload\\15");
-    animation.addAppearance("shotgun\\reload\\16");
-    animation.addAppearance("shotgun\\reload\\17");
-    animation.addAppearance("shotgun\\reload\\18");
-    animation.addAppearance("shotgun\\reload\\19");
-
-
-    zl::Animation animation2;
-
-    animation2.setDuration(2000);
-    animation2.setRepeatable(true);
-
-    animation2.addAppearance("shotgun\\idle\\0");
-    animation2.addAppearance("shotgun\\idle\\1");
-    animation2.addAppearance("shotgun\\idle\\2");
-    animation2.addAppearance("shotgun\\idle\\3");
-    animation2.addAppearance("shotgun\\idle\\4");
-    animation2.addAppearance("shotgun\\idle\\5");
-    animation2.addAppearance("shotgun\\idle\\6");
-    animation2.addAppearance("shotgun\\idle\\7");
-    animation2.addAppearance("shotgun\\idle\\8");
-    animation2.addAppearance("shotgun\\idle\\9");
-    animation2.addAppearance("shotgun\\idle\\10");
-    animation2.addAppearance("shotgun\\idle\\11");
-    animation2.addAppearance("shotgun\\idle\\12");
-    animation2.addAppearance("shotgun\\idle\\13");
-    animation2.addAppearance("shotgun\\idle\\14");
-    animation2.addAppearance("shotgun\\idle\\15");
-    animation2.addAppearance("shotgun\\idle\\16");
-    animation2.addAppearance("shotgun\\idle\\17");
-    animation2.addAppearance("shotgun\\idle\\18");
-    animation2.addAppearance("shotgun\\idle\\19");
-//
-//
-    addAnimation("shotgun\\reload", animation);
-    addAnimation("shotgun\\idle", animation2);
-
-//
-    showAnimation("shotgun\\idle");
+    showAnimation(m_sSelectedWeapon + "-" + m_sState);
 
 }
 
@@ -104,10 +73,17 @@ void Player::onInitializeActor() {
 void Player::onUpdateState() {
     turnToMouseCursor();
 
+    if (!isAnyAnimationActive()) {
+
+        m_sState = "idle";
+        showAnimation(m_sSelectedWeapon + "-" + m_sState);
+    }
+
 
     for (auto &iKey: getPressedKeys()) {
         switch (iKey) {
             case sf::Keyboard::W:
+
 
                 if (std::find(getPressedKeys().begin(), getPressedKeys().end(), sf::Keyboard::LShift) !=
                     getPressedKeys().end())
@@ -144,17 +120,17 @@ void Player::onSFMLEvent(sf::Event &event) {
                 break;
 
             case sf::Keyboard::W:
-
-                m_sAction = "move";
+                if (m_sState == "reload")break;
+                m_sState = "move";
+                showAnimation(m_sSelectedWeapon + "-" + m_sState);
                 break;
 
             case sf::Keyboard::S:
-                m_sAction = "move";
                 break;
 
             case sf::Keyboard::R:
-                m_sAction = "reload";
-                showAnimation("shotgun\\" + m_sAction);
+                m_sState = "reload";
+                showAnimation(m_sSelectedWeapon + "-" + m_sState);
                 break;
 
             default:
@@ -165,13 +141,15 @@ void Player::onSFMLEvent(sf::Event &event) {
     if (event.type == sf::Event::KeyReleased) {
         switch (event.key.code) {
             case sf::Keyboard::W:
-                if (m_sAction == "reload")break;
-                m_sAction = "idle";
+                if (m_sState == "reload")break;
+                m_sState = "idle";
+                showAnimation(m_sSelectedWeapon + "-" + m_sState);
                 break;
 
             case sf::Keyboard::S:
-                if (m_sAction == "reload")break;
-                m_sAction = "idle";
+                if (m_sState == "reload")break;
+                m_sState = "idle";
+                showAnimation(m_sSelectedWeapon + "-" + m_sState);
                 break;
 
 
@@ -182,10 +160,6 @@ void Player::onSFMLEvent(sf::Event &event) {
 }
 
 void Player::nextWeapon() {
-    m_iSelectedWeapon++;
-    if (m_iSelectedWeapon == 4) m_iSelectedWeapon = 0;
-
-    m_sSelectedWeapon = m_weapons[m_iSelectedWeapon];
 
 }
 

@@ -1,0 +1,37 @@
+{
+  "player": {
+    "flashlight": {
+      "idle": 2000,
+      "meleeattack": 600,
+      "move": 2000
+    },
+    "handgun": {
+      "idle": 2000,
+      "meleeattack": 600,
+      "move": 2000,
+      "reload": 1000,
+      "shoot": 100
+    },
+    "knife": {
+      "idle": 2000,
+      "meleeattack": 600,
+      "move": 2000,
+      "reload": 1000,
+      "shoot": 100
+    },
+    "rifle": {
+      "idle": 2000,
+      "meleeattack": 600,
+      "move": 2000,
+      "reload": 1000,
+      "shoot": 100
+    },
+    "shotgun": {
+      "idle": 2000,
+      "meleeattack": 600,
+      "move": 2000,
+      "reload": 1000,
+      "shoot": 100
+    }
+  }
+}

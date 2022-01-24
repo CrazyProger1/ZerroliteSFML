@@ -26,6 +26,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/CheckBox.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/CheckBox.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Image.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Image.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/GUI/Text.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/GUI/Text.cpp.obj"
+  "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Shapes/ArcShape.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Shapes/ArcShape.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/ButtonStyle.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/ButtonStyle.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/CheckBoxStyle.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/CheckBoxStyle.cpp.obj"
   "D:/Programming/C++/Projects/ZerroliteSFML/zerrolite/srcs/Styles/TextStyle.cpp" "D:/Programming/C++/Projects/ZerroliteSFML/cmake-build-debug/CMakeFiles/ZerroliteSFML.dir/zerrolite/srcs/Styles/TextStyle.cpp.obj"

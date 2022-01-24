@@ -10,6 +10,8 @@ void zl::Animation::initialize() {
 
     if (m_iNumberOfFrames > 0)
         m_iDelay = m_iDuration / m_iNumberOfFrames;
+
+
 }
 
 

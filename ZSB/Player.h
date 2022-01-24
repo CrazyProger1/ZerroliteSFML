@@ -13,19 +13,15 @@ private:
     sf::Sprite m_sprite;
 
 
-    zl::TStr m_sSelectedWeapon = "knife";
-
-    zl::TStr m_sAction = "idle";
+    zl::TStr m_sSelectedWeapon = "rifle";
+    zl::TStr m_sState = "idle";
 
     float m_fltSpeed = 8;
 
-    int m_iAnimationState = 0;
     int m_iSelectedWeapon = 0;
 
-    int m_iAnimationDelay = 5;
-    int m_iAnimationDelayCounter = 0;
-
     std::vector<zl::TStr> m_weapons = {"knife", "handgun", "rifle", "shotgun"};
+    std::vector<zl::TStr> m_states = {"idle", "meleeattack", "move", "reload", "shoot"};
 
 
 public:

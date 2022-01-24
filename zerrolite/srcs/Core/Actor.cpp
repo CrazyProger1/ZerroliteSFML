@@ -80,7 +80,7 @@ void zl::Actor::setAppearance(const TStr &appearance) {
     }
     m_size = texture.getSize();
     if (m_pSprite != nullptr) {
-        m_pSprite->setTexture(texture);
+        m_pSprite->setTexture(texture, true);
         m_pSprite->setOrigin(m_size.x / 2 + originOffset.x, m_size.y / 2 + originOffset.y);
     }
 }
@@ -110,6 +110,10 @@ sf::Vector2f &zl::Actor::getPosition() {
 
 sf::Clock &zl::Actor::getSceneClock() {
     return *m_sceneClock;
+}
+
+bool zl::Actor::isAnyAnimationActive() {
+    return !m_sActiveAnimation.empty();
 }
 
 
@@ -182,7 +186,11 @@ void zl::Actor::hideOrigin() {
 }
 
 void zl::Actor::showAnimation(const TStr &name) {
-    m_sActiveAnimation = name;
+    if (m_sActiveAnimation != name) {
+        m_sActiveAnimation = name;
+        m_animations[m_sActiveAnimation].reset();
+    }
+
 }
 
 
@@ -230,6 +238,8 @@ void zl::Actor::onDraw(sf::RenderTarget &rt) {}
 void zl::Actor::onUpdateState() {}
 
 void zl::Actor::onSFMLEvent(sf::Event &event) {}
+
+
 
 
 
